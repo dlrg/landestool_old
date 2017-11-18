@@ -1,0 +1,33 @@
+.sidebar{
+  .nav-dropdown-items {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 10px;
+  }
+
+  .navbar-dropdown-toggle{
+    &:before{
+      right:0.8rem;
+    }
+  }
+  .sidebar-nav{
+    .nav{
+      .nav-title{
+        color:$sidebar-nav-title-color;
+
+        span{
+          &:before, &:after{
+            border-bottom: 1px solid $sidebar-nav-title-color;
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+.sidebarClosed{
+  margin-left:-300px;
+}

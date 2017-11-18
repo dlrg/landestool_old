@@ -1,0 +1,20 @@
+@import "variables.scss";
+@import "layout-header.scss";
+@import "layout-sidebar.scss";
+
+//CORE
+@import "core/core.scss";
+
+
+//TAX Dashboard and Sites Elemets
+@import "tax-dashboard.scss";
+@import "forms/_form.scss";
+
+
+
+//custom
+@import "icons.scss";
+@import "font.scss";
+@import "main-dashboard.scss";
+
+@import "components.scss";

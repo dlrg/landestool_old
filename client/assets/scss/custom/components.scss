@@ -1,0 +1,66 @@
+@import "variables";
+//colors
+.c-white{
+  color: white;
+  border-color: white;
+}
+a.c-white:hover{
+  color: darken(white, 5);
+  border-color: white;
+}
+button.c-white:hover{
+  color: darken(white, 5);
+  border-color: white;
+}
+
+.c-grey{
+  color: $grey-5;
+  border-color: $grey-5;
+  background-color: transparent;
+}
+a.c-grey:hover{
+  color: darken($grey-5, 5);
+  border-color: $grey-5;
+  background-color: transparent;
+}
+button.c-grey:hover{
+  color: darken($grey-5, 5);
+  border-color: $grey-5;
+  background-color: transparent;
+}
+
+.c-primary{
+  color: $primary;
+  border-color: $primary;
+}
+a.c-primary:hover{
+  color: darken($primary-color, 5)
+}
+
+//span
+span.primary{
+  color: $primary-color;
+}
+span.tipp{
+  font-weight: 800;
+}
+
+a{
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+//lists
+ul {
+  list-style-type: circle;
+  padding-left: 20px;
+}
+
+.pointer{
+  cursor: pointer;
+}
+.big{
+  font-size: 4em;
+}

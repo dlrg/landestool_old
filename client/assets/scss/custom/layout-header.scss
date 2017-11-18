@@ -1,0 +1,45 @@
+@import "variables";
+.app-header.navbar {
+  background: $sidebar-color;
+
+  .navbar-brand {
+    background-image: linear-gradient(135deg,$orange-dark, $orange-light);
+    background-size: cover;
+    height:60px;
+    border-bottom:none;
+
+    .avatar-wrapper{
+      height:100%;
+      display: table;
+
+      .avatar{
+        float: left;
+        border:2px solid #fff;
+        margin-right:10px;
+        width:43px;
+        display: table-cell;
+      }
+
+      .avatar-name{
+        font-size: 0.7em;
+        text-transform: uppercase;
+        font-weight: bold;
+        white-space: normal;
+        color:#fff;
+        line-height: 1.3;
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.navbar{
+  .form-control{
+    background: none;
+  }
+}
+
+.breadcrumb{
+  padding-left:0;
+}

@@ -1,0 +1,52 @@
+//FORMS
+@import "_form-input-number.scss";
+@import "_form-input-email.scss";
+@import "_form-input-select.scss";
+@import "_form-input-toggle.scss";
+@import "_form-input-date.scss";
+
+
+
+
+//Zeilen Nummerierung
+
+.row-number{
+  margin-top:8px;
+  margin-right:7px;
+  font-size: 0.9em;
+}
+
+.form-group{
+  margin-bottom:0;
+  padding:5px 1.25rem;
+}
+
+.form-control{
+  font-size: .8rem;
+  font-weight: 100;
+  &:focus{
+    border: 1px solid $primary;
+    outline:none;
+  }
+
+}
+
+.help-text-connector{
+  position: absolute;
+  right: -2em;
+  padding: 10px 12px;
+  font-size: 15px;
+  width: 4em;
+  border-radius: 15px 0 0 15px;
+  color: $primary;
+  transform: translateY(-5px);
+  background: #fff;
+
+  -webkit-box-shadow: -4px 10px 51px -11px rgba(0,0,0,0.91);
+  -moz-box-shadow: -4px 10px 51px -11px rgba(0,0,0,0.91);
+  box-shadow: -4px 10px 51px -11px rgba(0,0,0,0.91);
+
+  i{
+    line-height:1;
+  }
+}

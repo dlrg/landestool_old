@@ -1,0 +1,50 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+
+h1, h2, h3, h4, h5, h6, span, p, body{
+  font-family: 'Montserrat', sans-serif;
+  vertical-align: middle;
+}
+h1, h2, h3, h4, h6{
+  color: $heading-color;
+}
+p{
+  color: $text-color;
+}
+
+/**
+light 300
+regular 400
+medium 500
+semibold 600
+bild 700
+ */
+h1{
+  font-size: 35px;
+  font-weight: 700;
+}
+h2{
+  font-size: 20px;
+  font-weight: 700;
+}
+h3{
+  font-size: 20px;
+  font-weight: 400;
+  vertical-align: middle;
+}
+h4{
+  font-size: 15px;
+  font-weight: 400;
+}
+h5{
+  font-size: 18px;
+  font-weight: 400;
+  color: $grey-1;
+}
+p{
+  font-size: 12px;
+  font-weight: 400;
+}
+span{
+  //font-size: 15px;
+}

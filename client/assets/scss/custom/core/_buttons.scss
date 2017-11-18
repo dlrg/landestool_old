@@ -1,0 +1,9 @@
+@import "../variables";
+.btn-rounded{
+  border-radius: 18px;
+  padding-left: $s-m;
+  padding-right: $s-m;
+}
+.btn-outlined{
+  border: 1px;
+}

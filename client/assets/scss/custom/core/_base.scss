@@ -1,0 +1,13 @@
+@import "../variables";
+
+body{
+  font-size: .8rem;
+}
+
+a{
+  color: $primary-color;
+  &:hover{
+    color: darken($primary-color, 5);
+  }
+}
+
