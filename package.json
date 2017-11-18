@@ -30,6 +30,7 @@
     "express": "^4.15.3",
     "feathers-mongoose": "^5.1.2",
     "helmet": "^3.9.0",
+    "moment": "^2.19.2",
     "mongoose": "^4.13.4",
     "nuxt": "^1.0.0-rc3",
     "serve-favicon": "^2.4.5",
@@ -59,6 +60,5 @@
     "sass-loader": "^6.0.6",
     "node-sass": "^4.6.0",
     "mocha": "^4.0.1"
-
   }
 }
