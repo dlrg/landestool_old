@@ -2,26 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34bae814-1cb1-43eb-9644-e570ffc0e9dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/layout/layout-breadcrumb.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/layout/layout-footer.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/layout/layout-header.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/layout/layout-sidebar.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/layouts/login.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/pages/program/index.vue" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/assets/scss/custom/_core-variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/components/Footer.vue" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/scss/custom/_custom-main.scss" afterPath="$PROJECT_DIR$/client/assets/scss/custom/_custom-main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/scss/custom/layout-header.scss" afterPath="$PROJECT_DIR$/client/assets/scss/custom/layout-header.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/scss/custom/layout-sidebar.scss" afterPath="$PROJECT_DIR$/client/assets/scss/custom/layout-sidebar.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/scss/custom/variables.scss" afterPath="$PROJECT_DIR$/client/assets/scss/custom/variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/layouts/default.vue" afterPath="$PROJECT_DIR$/client/layouts/default.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/index.vue" afterPath="$PROJECT_DIR$/client/pages/index.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/login/index.vue" afterPath="$PROJECT_DIR$/client/pages/login/index.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nuxt.config.js" afterPath="$PROJECT_DIR$/nuxt.config.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server/api/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server/api/users.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.eslintrc.js" afterPath="$PROJECT_DIR$/.eslintrc.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app.hooks.js" afterPath="$PROJECT_DIR$/server/app.hooks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/app.js" afterPath="$PROJECT_DIR$/server/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/channels.js" afterPath="$PROJECT_DIR$/server/channels.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/hooks/logger.js" afterPath="$PROJECT_DIR$/server/hooks/logger.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/index.js" afterPath="$PROJECT_DIR$/server/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/middleware/index.js" afterPath="$PROJECT_DIR$/server/middleware/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/user.model.js" afterPath="$PROJECT_DIR$/server/models/user.model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/mongoose.js" afterPath="$PROJECT_DIR$/server/mongoose.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/services/index.js" afterPath="$PROJECT_DIR$/server/services/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/services/user/user.hooks.js" afterPath="$PROJECT_DIR$/server/services/user/user.hooks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/services/user/user.service.js" afterPath="$PROJECT_DIR$/server/services/user/user.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/test/services/user.test.js" afterPath="$PROJECT_DIR$/server/test/services/user.test.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,7 +45,7 @@
             <entry file="file://$PROJECT_DIR$/client/components/layout/layout-header.vue">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="585">
-                  <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+                  <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
                   <folding />
                 </state>
               </provider>
@@ -100,7 +97,7 @@
             <entry file="file://$PROJECT_DIR$/client/pages/index.vue">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="15">
-                  <caret line="1" column="29" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="29" />
+                  <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="29" />
                   <folding />
                 </state>
               </provider>
@@ -110,7 +107,7 @@
             <entry file="file://$PROJECT_DIR$/client/pages/program/index.vue">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="195">
-                  <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+                  <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
                   <folding />
                 </state>
               </provider>
@@ -140,18 +137,6 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="default.vue" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/layouts/default.vue">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-                  <folding>
-                    <element signature="e#532#590#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="error.vue" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/layouts/error.vue">
               <provider selected="true" editor-type-id="text-editor">
@@ -166,7 +151,7 @@
             <entry file="file://$PROJECT_DIR$/client/components/layout/layout-breadcrumb.vue">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="150">
-                  <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+                  <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -182,11 +167,31 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="layout-header.scss" pinned="false" current-in-tab="true">
+          <file leaf-file-name="layout-header.scss" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/assets/scss/custom/layout-header.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="645">
-                  <caret line="43" column="17" lean-forward="false" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+                <state relative-caret-position="510">
+                  <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/package.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="806">
+                  <caret line="59" column="26" lean-forward="false" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/server/services/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -257,7 +262,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/client/assets/css/main.css" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/server/index.js" />
         <option value="$PROJECT_DIR$/server/services/program/program.service.js" />
         <option value="$PROJECT_DIR$/server/models/program.model.js" />
@@ -277,6 +281,8 @@
         <option value="$PROJECT_DIR$/client/components/layout/layout-breadcrumb.vue" />
         <option value="$PROJECT_DIR$/client/assets/scss/custom/layout-header.scss" />
         <option value="$PROJECT_DIR$/client/components/layout/layout-header.vue" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/server/services/index.js" />
       </list>
     </option>
   </component>
@@ -382,12 +388,6 @@
               <item name="landestool" type="b2602c69:ProjectViewProjectNode" />
               <item name="landestool" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="landestool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="landestool" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="landestool" type="b2602c69:ProjectViewProjectNode" />
@@ -535,12 +535,12 @@
       <option name="presentableId" value="Default" />
       <updated>1511013092626</updated>
       <workItem from="1511013099376" duration="1244000" />
-      <workItem from="1511014756392" duration="5852000" />
+      <workItem from="1511014756392" duration="5938000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7096000" />
+    <option name="totallyTimeSpent" value="7182000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2529" height="1334" extended-state="0" />
@@ -585,16 +585,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.nuxt/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.nuxt/utils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -734,14 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="822">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/services/user/user.service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -772,9 +754,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -967,7 +947,7 @@
     <entry file="file://$PROJECT_DIR$/client/pages/program/index.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -983,15 +963,7 @@
     <entry file="file://$PROJECT_DIR$/client/components/layout/layout-breadcrumb.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/scss/custom/layout-header.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="17" lean-forward="false" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -999,7 +971,7 @@
     <entry file="file://$PROJECT_DIR$/client/pages/index.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="29" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="29" />
+          <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1007,7 +979,31 @@
     <entry file="file://$PROJECT_DIR$/client/components/layout/layout-header.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
-          <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+          <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/assets/scss/custom/layout-header.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="806">
+          <caret line="59" column="26" lean-forward="false" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/services/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

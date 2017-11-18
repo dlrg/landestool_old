@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 module.exports = function (app) {
   mongoose.connect(app.get('mongodb'), {
     useMongoClient: true
-  });
-  mongoose.Promise = global.Promise;
+  })
+  mongoose.Promise = global.Promise
 
-  app.set('mongooseClient', mongoose);
-};
+  app.set('mongooseClient', mongoose)
+}
