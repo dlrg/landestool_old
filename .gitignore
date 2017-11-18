@@ -12,3 +12,6 @@ dist
 
 # Backpack build
 build
+
+coverage
+.nyc_output
