@@ -5,7 +5,10 @@ import api from './api'
 
 const app = express()
 const host = process.env.HOST || '127.0.0.1'
-const port = process.env.PORT || 3000
+
+const logger = require('winston');
+const feathers = require('./app');
+const port = feathers.get('port');
 
 app.set('port', port)
 
@@ -26,6 +29,8 @@ if (config.dev) {
 }
 
 // Give nuxt middleware to express
+
+app.use('/api', feathers);
 app.use(nuxt.render)
 
 // Listen the server
