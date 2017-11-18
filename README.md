@@ -1,5 +1,7 @@
 # landestool
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/dlrg/landestool.svg)](https://greenkeeper.io/)
+
 > Nuxt.js project
 
 ## Build Setup
