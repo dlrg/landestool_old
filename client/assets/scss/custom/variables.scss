@@ -29,9 +29,19 @@ $s-m: 15px;
 $s-l: 30px;
 $s-xl: 60px;
 
+$theme-colors: (
+        primary:                        $orange-dark,
+        secondary:                      $gray-300,
+        success:                        $green,
+        info:                           $cyan,
+        warning:                        $orange,
+        danger:                         $red,
+        light:                          $gray-100,
+        dark:                           $gray-800
+);
 
 //theme
-$primary:  rgb(111, 178, 154);
+$primary: $orange-dark;
 
 
 // core overrides

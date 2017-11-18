@@ -23,7 +23,7 @@ $pink:                            #e83e8c !default;
 $red:                             #ff5454;
 $orange:                          #fabb3d;
 $yellow:                          #ffc107 !default;
-$green:                           rgb(111, 178, 154);
+$green: rgb(39, 178, 69);
 $teal:                            #20c997 !default;
 $cyan:                            #67c2ef;
 
@@ -44,7 +44,7 @@ $colors: (
 );
 
 $theme-colors: (
-  primary:                        $green,
+  primary:                        rgb(255,89,0),
   secondary:                      $gray-300,
   success:                        $green,
   info:                           $cyan,

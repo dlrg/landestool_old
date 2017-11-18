@@ -8,14 +8,15 @@ module.exports = function (app) {
   const program = new Schema({
     name: { type: String, required: true },
     description: { type: String, required: true },
-    status: { type: String },
+    status: { type: String , default: 'planing'},
     category: { type: String },
     privacy: { type: String },
     dates: {
       start: { type: Date },
       end: { type: Date },
       deadline: { type: Date },
-      duration: { type: Number }
+      duration: { type: Number },
+      comment: { type: String }
     },
     person: {
       accountable: {type: String},
@@ -26,24 +27,26 @@ module.exports = function (app) {
       agemax: {type: Number}
     },
     location: {
-      local: { type: Boolean },
+      local: { type: Boolean, default: true },
       room: { type: String },
       zip: { type: Number },
       town: { type: String },
       street: { type: String },
       streetnr: { type: String },
       distance: { type: String },
-      transport: { type: String },
+      transport: { type: String, default: false },
       meetingpoint: { type: String },
       comment: { type: String }
     },
     finance: {
       payment: { type: String },
+      free: { type: Boolean, default: true },
       prices: [{
         count: { type: Number },
         price: { type: Number }
       }],
-      deadline: { type: Date }
+      deadline: { type: Date },
+      comment: { type: String }
     },
     info: {
       crewinfo: { type: String },
