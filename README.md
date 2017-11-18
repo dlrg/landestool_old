@@ -3,6 +3,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/dlrg/landestool.svg)](https://greenkeeper.io/)
 [![Code Climate](https://codeclimate.com/github/dlrg/landestool/badges/gpa.svg)](https://codeclimate.com/github/dlrg/landestool)
 [![Dependency Status](https://img.shields.io/david/dlrg/landestool.svg?style=flat-square)](https://david-dm.org/dlrg/landestool)
+[![Coverage Status](https://coveralls.io/repos/github/dlrg/landestool/badge.svg?branch=master)](https://coveralls.io/github/dlrg/landestool?branch=master)
 
 > Nuxt.js project
 
