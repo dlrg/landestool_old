@@ -8,26 +8,49 @@ module.exports = function (app) {
   const program = new Schema({
     name: { type: String, required: true },
     description: { type: String, required: true },
+    status: { type: String },
     category: { type: String },
-    accountable: { type: String },
-    datetimestart: { type: Date },
-    duration: { type: Number },
-    meetingpoint: { type: String },
-    location: { type: String },
-    payment: { type: String },
-    distance: { type: String },
-    transport: { type: String },
-    subscribermin: { type: Number },
-    subscribermax: { type: Number },
-    agemin: { type: Number },
-    agemax: { type: Number },
-    supervisor: { type: String },
-    comment: { type: String },
-    crewinfo: { type: String },
-    mediainfo: { type: String },
-    websiteinfo: { type: String },
     privacy: { type: String },
-    status: { type: String }
+    dates: {
+      start: { type: Date },
+      end: { type: Date },
+      deadline: { type: Date },
+      duration: { type: Number }
+    },
+    person: {
+      accountable: {type: String},
+      supervisor: {type: String},
+      subscribermin: {type: Number},
+      subscribermax: {type: Number},
+      agemin: {type: Number},
+      agemax: {type: Number}
+    },
+    location: {
+      local: { type: Boolean },
+      room: { type: String },
+      zip: { type: Number },
+      town: { type: String },
+      street: { type: String },
+      streetnr: { type: String },
+      distance: { type: String },
+      transport: { type: String },
+      meetingpoint: { type: String },
+      comment: { type: String }
+    },
+    finance: {
+      payment: { type: String },
+      prices: [{
+        count: { type: Number },
+        price: { type: Number }
+      }],
+      deadline: { type: Date }
+    },
+    info: {
+      crewinfo: { type: String },
+      mediainfo: { type: String },
+      websiteinfo: { type: String },
+      comment: { type: String }
+    }
   }, {
     timestamps: true
   })

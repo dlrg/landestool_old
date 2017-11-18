@@ -14,6 +14,9 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://static.codeanker.de/fonts/cl/styles.css' }
     ]
   },
+  plugins: [
+    { src: '~/plugins/date-picker', ssr: false }
+  ],
   /*
   ** Global scss
   */
