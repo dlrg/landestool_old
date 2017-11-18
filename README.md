@@ -1,5 +1,9 @@
 # landestool
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/dlrg/landestool.svg)](https://greenkeeper.io/)
+[![Code Climate](https://codeclimate.com/github/dlrg/landestool/badges/gpa.svg)](https://codeclimate.com/github/dlrg/landestool)
+[![Dependency Status](https://img.shields.io/david/dlrg/landestool.svg?style=flat-square)](https://david-dm.org/dlrg/landestool)
+
 > Nuxt.js project
 
 ## Build Setup
