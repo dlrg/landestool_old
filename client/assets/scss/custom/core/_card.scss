@@ -1,0 +1,65 @@
+@import "../variables";
+.card{
+  margin-bottom: $s-m;
+  &.bg-primary{
+    .card-header{
+      background-color: $primary;
+      h5{
+        margin-bottom: 5px;
+      }
+      .title{
+        margin-bottom: 19px;
+        color:#000;
+      }
+      i{
+        color:#fff;
+      }
+    }
+    .progress-bar{
+      &.bg-primary{
+        background-color: darken($primary, 13) !important;
+      }
+    }
+  }
+  .card-header{
+    border: none;
+    padding-top: 1.2em;
+  }
+  .card-footer{
+    background-color: inherit;
+    border: none;
+  }
+}
+.card-body{
+  font-weight:300;
+}
+
+.help-text-wrapper{
+  position: fixed;
+  margin-right:30px;
+  word-break: break-word;
+
+  .help-text{
+    p {
+      font-weight: 100;
+      font-size: 0.9em;
+    }
+  }
+
+}
+
+.card-steuer{
+  .card-body{
+   padding:10px 0;
+    .form-group{
+      padding:5px 1.25rem;
+      margin-left:0;
+      margin-right:0;
+
+      &:hover, &:focus{
+        background:rgb(204,236,225);
+      }
+    }
+  }
+
+}

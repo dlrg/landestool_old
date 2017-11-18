@@ -1,0 +1,22 @@
+// Override core variables
+@import "core-variables";
+
+@import "layout-header.scss";
+@import "layout-sidebar.scss";
+
+//CORE
+@import "core/core.scss";
+
+
+//TAX Dashboard and Sites Elemets
+@import "tax-dashboard.scss";
+@import "forms/_form.scss";
+
+
+
+//custom
+@import "icons.scss";
+@import "font.scss";
+@import "main-dashboard.scss";
+@import "variables.scss";
+@import "components.scss";

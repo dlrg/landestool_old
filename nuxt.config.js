@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'starter',
+    title: 'DLRG LJTr Verwaltungstool',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -14,9 +14,9 @@ module.exports = {
     ]
   },
   /*
-  ** Global CSS
+  ** Global scss
   */
-  css: ['~/assets/css/main.css'],
+  scss: ['~/assets/scss/main.scss'],
   srcDir: 'client/',
   /*
   ** Add axios globally
