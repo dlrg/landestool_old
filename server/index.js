@@ -1,12 +1,13 @@
-import express from 'express'
 import { Nuxt, Builder } from 'nuxt'
 
-const app = express()
-const host = process.env.HOST || '127.0.0.1'
-
+const feathers = require('@feathersjs/feathers')
+const express = require('@feathersjs/express')
+const app = express(feathers())
+const socketio = require('@feathersjs/socketio')
 const logger = require('winston')
-const feathers = require('./app')
-const port = feathers.get('port')
+const api = require('./app')
+const port = api.get('port')
+const host = api.get('host')
 
 app.set('port', port)
 
@@ -24,10 +25,14 @@ if (config.dev) {
 }
 
 // Give nuxt middleware to express
+app.configure(socketio({
+//  path: '/api/socket.io/'
+}))
 
-app.use('/api', feathers)
+app.use('/api', api)
 app.use(nuxt.render)
 
 // Listen the server
-app.listen(port, host)
+let server = app.listen(3000, host)
 logger.info('Server listening on ' + host + ':' + port) // eslint-disable-line no-console
+api.setup(server)
