@@ -1,5 +1,5 @@
 <template>
-    <section class="container">
+    <section class="container-fluid">
     <!-- Breadcrumb -->
         <ol class="breadcrumb">
             <li class="breadcrumb-item">Home</li>
