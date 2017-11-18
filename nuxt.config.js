@@ -10,13 +10,14 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://static.codeanker.de/fonts/cl/styles.css' }
     ]
   },
   /*
   ** Global scss
   */
-  scss: ['~/assets/scss/main.scss'],
+  css: ['~/assets/scss/main.scss'],
   srcDir: 'client/',
   /*
   ** Add axios globally

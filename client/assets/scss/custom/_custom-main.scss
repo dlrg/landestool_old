@@ -1,6 +1,4 @@
-// Override core variables
-@import "core-variables";
-
+@import "variables.scss";
 @import "layout-header.scss";
 @import "layout-sidebar.scss";
 
@@ -18,5 +16,5 @@
 @import "icons.scss";
 @import "font.scss";
 @import "main-dashboard.scss";
-@import "variables.scss";
+
 @import "components.scss";

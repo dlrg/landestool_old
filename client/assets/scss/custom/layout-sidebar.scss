@@ -11,6 +11,21 @@
       right:0.8rem;
     }
   }
+  .sidebar-nav{
+    .nav{
+      .nav-title{
+        color:$sidebar-nav-title-color;
+
+        span{
+          &:before, &:after{
+            border-bottom: 1px solid $sidebar-nav-title-color;
+          }
+        }
+      }
+    }
+  }
+
+
 }
 
 .sidebarClosed{

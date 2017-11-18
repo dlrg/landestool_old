@@ -41,7 +41,8 @@
 
 </template>
 
-<style lang="scss">
-    @import 'client/assets/scss/main.scss'
-</style>
-
+<script>
+    export default{
+      layout: 'login'
+    }
+</script>

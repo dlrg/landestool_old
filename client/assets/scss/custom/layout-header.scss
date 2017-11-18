@@ -3,9 +3,10 @@
   background: $sidebar-color;
 
   .navbar-brand {
-    background-image: linear-gradient(135deg, rgba(111, 178, 154, .9), rgba(111, 178, 154, .8)), url("https://crewlife-test.com/steuer/images/titel.jpg");
+    background-image: linear-gradient(135deg,$orange-dark, $orange-light);
     background-size: cover;
-    height:59px;
+    height:60px;
+    border-bottom:none;
 
     .avatar-wrapper{
       height:100%;
@@ -37,4 +38,8 @@
   .form-control{
     background: none;
   }
+}
+
+.breadcrumb{
+  padding-left:0;
 }
