@@ -2,14 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34bae814-1cb1-43eb-9644-e570ffc0e9dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/pages/program/_programId.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/landestool.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/layout/layout-breadcrumb.vue" afterPath="$PROJECT_DIR$/client/components/layout/layout-breadcrumb.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/index.vue" afterPath="$PROJECT_DIR$/client/pages/index.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/program/index.vue" afterPath="$PROJECT_DIR$/client/pages/program/index.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/channels.js" afterPath="$PROJECT_DIR$/server/channels.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/hooks/logger.js" afterPath="$PROJECT_DIR$/server/hooks/logger.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/program.model.js" afterPath="$PROJECT_DIR$/server/models/program.model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/services/index.js" afterPath="$PROJECT_DIR$/server/services/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/services/program/program.hooks.js" afterPath="$PROJECT_DIR$/server/services/program/program.hooks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/services/program/program.service.js" afterPath="$PROJECT_DIR$/server/services/program/program.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/test/services/program.test.js" afterPath="$PROJECT_DIR$/server/test/services/program.test.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,11 +89,21 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="program.model.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="program.model.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/server/models/program.model.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+                <state relative-caret-position="495">
+                  <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/package.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="747">
+                  <caret line="64" column="28" lean-forward="false" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
                   <folding />
                 </state>
               </provider>
@@ -139,7 +160,6 @@
         <option value="$PROJECT_DIR$/client/components/layout/layout-sidebar.vue" />
         <option value="$PROJECT_DIR$/client/assets/scss/custom/layout-header.scss" />
         <option value="$PROJECT_DIR$/client/components/layout/layout-header.vue" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/server/services/index.js" />
         <option value="$PROJECT_DIR$/client/pages/index.vue" />
         <option value="$PROJECT_DIR$/client/components/layout/layout-breadcrumb.vue" />
@@ -147,6 +167,7 @@
         <option value="$PROJECT_DIR$/client/pages/program/_id.vue" />
         <option value="$PROJECT_DIR$/client/pages/program/_programId.vue" />
         <option value="$PROJECT_DIR$/server/models/program.model.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -156,14 +177,12 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="2529" />
     <option name="height" value="1334" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -353,6 +372,18 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="landestool" />
+      <envs />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -405,12 +436,12 @@
       <option name="presentableId" value="Default" />
       <updated>1511013092626</updated>
       <workItem from="1511013099376" duration="1244000" />
-      <workItem from="1511014756392" duration="9750000" />
+      <workItem from="1511014756392" duration="9810000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10994000" />
+    <option name="totallyTimeSpent" value="11054000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2529" height="1334" extended-state="0" />
@@ -455,7 +486,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/models/program.model.js</url>
-          <line>17</line>
+          <line>15</line>
           <properties />
         </line-breakpoint>
       </breakpoints>
@@ -785,14 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="59" column="26" lean-forward="false" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/components/layout/layout-header.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
@@ -867,18 +890,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/program.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/program/_programId.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/program.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="64" column="28" lean-forward="false" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
           <folding />
         </state>
       </provider>

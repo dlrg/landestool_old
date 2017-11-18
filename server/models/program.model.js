@@ -3,8 +3,8 @@
 // See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
 module.exports = function (app) {
-  const mongooseClient = app.get('mongooseClient');
-  const { Schema } = mongooseClient;
+  const mongooseClient = app.get('mongooseClient')
+  const { Schema } = mongooseClient
   const program = new Schema({
     name: { type: String, required: true },
     description: { type: String, required: true },
@@ -30,7 +30,7 @@ module.exports = function (app) {
     status: { type: String }
   }, {
     timestamps: true
-  });
+  })
 
-  return mongooseClient.model('program', program);
-};
+  return mongooseClient.model('program', program)
+}
