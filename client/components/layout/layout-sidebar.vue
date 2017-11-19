@@ -3,7 +3,7 @@
         <nav class="sidebar-nav">
             <ul class="nav">
                 <li class="divider"></li>
-                <li class="nav-item">
+                <li class="nav-item d-none">
                     <nuxt-link class="nav-link" to="/" target="_top"><i class="ca ca-home-1"></i> Dashboard</nuxt-link>
                 </li>
                 <li class="nav-item">
@@ -11,10 +11,10 @@
                 </li>
                 <li class="divider"></li>
 
-                <li class="nav-title text-center">
+                <li class="nav-title text-center d-none">
                     <span>Administration</span>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item d-none">
                     <a class="nav-link" target="_top"><i class="ca ca-account-group-1"></i> Benutzerverwaltung</a>
                 </li>
                 <li class="nav-item px-3 pt-5 d-none">

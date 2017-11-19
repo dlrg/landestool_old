@@ -299,9 +299,13 @@
   const programMask = {
     dates: {},
     person: {},
-    location: {},
+    location: {
+      local: true,
+      transport: false
+    },
     finance: {
-      prices: [{}]
+      prices: [{}],
+      free: true
     },
     info: {}
   }
