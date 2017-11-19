@@ -6,7 +6,7 @@ import io from 'socket.io-client'
 let feathersClient = null
 
 if (process.browser) {
-  const socket = io('http://localhost:3000', {path: '/api/socket.io/'})
+  const socket = io('', {path: '/api/socket.io/'})
   socket.on('error', (err) => console.log(err))
   feathersClient = feathers()
     .configure(socketio(socket))
