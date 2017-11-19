@@ -1,0 +1,20 @@
+{
+  "name": "landestool",
+  "description": "",
+  "scripts": {
+  },
+  "env": {
+    "NODE_ENV": "production",
+    "NPM_CONFIG_PRODUCTION": "false"
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
