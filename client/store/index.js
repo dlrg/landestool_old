@@ -10,6 +10,7 @@ Vue.use(Vuex)
 export default () => new Vuex.Store({
   plugins: [
     service('user'),
+    service('program'),
 
     auth()
   ]

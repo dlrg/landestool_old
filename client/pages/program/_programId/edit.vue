@@ -296,32 +296,25 @@
 </template>
 
 <script>
-  import axios from '~/plugins/axios'
-  const programMask = {
-    dates: {},
-    person: {},
-    location: {},
-    finance: {
-      prices: [{}]
-    },
-    info: {}
-  }
-
   export default {
-    async asyncData ({params}) {
-      let { data } = await axios.get('/api/program/' + params.programId)
-      return { program: {...programMask, ...data} }
+    computed: {
+      program () {
+        return this.$store.getters['program/get'](this.$route.params.programId)
+      }
     },
     methods: {
       save () {
         console.log(this.program)
-        axios.patch('/api/program/' + this.$route.params.programId, this.program)
+        this.$store.dispatch('program/patch', [this.program._id, this.program])
         this.$router.push('/program/' + this.$route.params.programId)
       },
       remove () {
-        axios.delete('/api/program/' + this.$route.params.programId)
+        this.$store.dispatch('program/remove', this.program._id)
         this.$router.push('/program/')
       }
+    },
+    async fetch ({ store, params }) {
+      await store.dispatch('program/get', params.programId)
     }
   }
 </script>

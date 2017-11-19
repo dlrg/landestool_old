@@ -24,11 +24,8 @@ module.exports = {
   */
   css: ['~/assets/scss/main.scss'],
   srcDir: 'client/',
-  /*
-  ** Add axios globally
-  */
   build: {
-    vendor: ['axios'],
+    vendor: [],
     /*
     ** Run ESLINT on save
     */

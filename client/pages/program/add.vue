@@ -295,7 +295,6 @@
 </template>
 
 <script>
-  import axios from '~/plugins/axios'
   const programMask = {
     dates: {},
     person: {},
@@ -316,7 +315,7 @@
     },
     methods: {
       save () {
-        axios.post('/api/program/', this.program)
+        this.$store.dispatch('program/create', this.program)
         this.$router.push('/program/')
       }
     }

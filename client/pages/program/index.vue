@@ -23,7 +23,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                    <nuxt-link tag="tr" :to="item._id" append v-for="item in program.data" :key="item._id">
+                                    <nuxt-link tag="tr" :to="item._id" append v-for="item in program" :key="item._id">
                                         <td>{{item.name}}</td>
                                         <td>{{item.category}}</td>
                                         <td>{{item.dates.start}} - {{item.dates.end}}</td>
@@ -45,19 +45,23 @@
 </template>
 
 <script>
-  import axios from '~/plugins/axios'
+  import { mapGetters } from 'vuex'
   import NuxtLink from '../../../.nuxt/components/nuxt-link'
 
   export default {
     components: {NuxtLink},
-    async asyncData () {
-      let { data } = await axios.get('/api/program')
-      return { program: data }
+    computed: {
+      ...mapGetters({
+        program: 'program/list'
+      })
     },
     methods: {
       add () {
         this.$router.push('/program/add')
       }
+    },
+    async fetch ({ store }) {
+      store.dispatch('program/find')
     }
   }
 </script>

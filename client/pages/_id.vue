@@ -14,23 +14,20 @@
 </template>
 
 <script>
-import axios from '~/plugins/axios'
-
 export default {
   name: 'id',
-  asyncData ({ params, error }) {
-    return axios.get('/api/users/' + params.id)
-      .then((res) => {
-        return { user: res.data }
-      })
-      .catch((e) => {
-        error({ statusCode: 404, message: 'User not found' })
-      })
+  computed: {
+    user () {
+      return this.$store.getters['user/get'](this.$route.params.id)
+    }
   },
   head () {
     return {
       title: `User: ${this.user.name}`
     }
+  },
+  async fetch ({ store, params }) {
+    await store.dispatch('user/get', params.id)
   }
 }
 </script>
