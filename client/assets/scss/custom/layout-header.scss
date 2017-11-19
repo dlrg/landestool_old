@@ -43,3 +43,12 @@
 .breadcrumb{
   padding-left:0;
 }
+
+.app-header,
+.app-footer,
+.sidebar,
+.main,
+.aside-menu,
+.navbar-brand{
+  transition: margin-left $layout-transition-speed, margin-right $layout-transition-speed, width $layout-transition-speed, flex $layout-transition-speed;
+}

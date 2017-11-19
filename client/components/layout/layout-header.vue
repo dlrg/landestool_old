@@ -3,7 +3,7 @@
         <button class="navbar-toggler mobile-sidebar-toggler d-lg-none" @click="toggleSidebar" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand">
+        <a class="navbar-brand" v-bind:class="{sidebarClosed: toggle}">
             <div class="avatar-wrapper">
                 <img src="http://i.pravatar.cc/300" class="img-avatar avatar" alt="avatar">
                 <div class="avatar-name">
@@ -22,7 +22,7 @@
         </ul>
         <ul class="nav navbar-nav d-md-down-none ml-4 mr-auto">
             <li class="nav-item">
-                <img src="https://static.codeanker.de/images/logo-white.svg" height="25px"/>
+                <img src="~assets/img/Logo-WM-Gelb.gif" height="15px"/>
             </li>
         </ul>
         <ul class="nav navbar-nav ml-auto">
@@ -43,8 +43,14 @@
 
 <script>
   export default {
+    data () {
+      return {
+        toggle: false
+      }
+    },
     methods: {
       toggleSidebar () {
+        this.toggle = !this.toggle
         this.$emit('toggleSidebar')
       }
     }
