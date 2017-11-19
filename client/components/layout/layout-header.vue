@@ -5,7 +5,7 @@
         </button>
         <a class="navbar-brand" v-bind:class="{sidebarClosed: toggle}">
             <div class="avatar-wrapper">
-                <img src="http://i.pravatar.cc/300" class="img-avatar avatar" alt="avatar">
+                <img src="https://api.adorable.io/avatars/50/abott@adorable.png" class="img-avatar avatar" alt="avatar">
                 <div class="avatar-name">
                     Daniel Swiatek
                 </div>
