@@ -33,6 +33,6 @@ app.use('/api', api)
 app.use(nuxt.render)
 
 // Listen the server
-let server = app.listen(3000, host)
+let server = app.listen(port, host)
 logger.info('Server listening on ' + host + ':' + port) // eslint-disable-line no-console
 api.setup(server)
