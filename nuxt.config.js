@@ -1,3 +1,5 @@
+const BabiliPlugin = require('babili-webpack-plugin')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -31,12 +33,17 @@ module.exports = {
     ** Run ESLINT on save
     */
     extend (config, ctx) {
+      if (!ctx.dev) {
+        config.plugins = config.plugins.filter((plugin) => plugin.constructor.name !== 'UglifyJsPlugin')
+        config.plugins.push(new BabiliPlugin())
+      }
+
       if (ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/
+          exclude: /(node_modules(?!\/striptags)|bower_components)/
         })
       }
     }
