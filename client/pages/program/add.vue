@@ -10,7 +10,6 @@
                         <div class="card-header">
                             <i class="ca ca-anchor"></i> Stammdaten
                             <button class="btn btn-success btn-sm float-right" @click="save">Speichern</button>
-                            <button class="btn btn-danger btn-sm float-right mr-1" @click="remove">Löschen</button>
                         </div>
                         <div class="card-body">
                             <div class="form-group row">
@@ -36,17 +35,17 @@
                                 <label class="col-form-label col-xl-3"><span>Kategorie</span></label>
                                 <div class="col-xl-9 text-right">
                                     <div class="select-wrapper">
-                                        <select class="form-control  float-left" name="selectForm" id="selectCategory" v-model="program.category">
+                                        <select class="form-control  float-left" name="selectForm" id="selectForm">
                                             <!-- @ToDo: add Categories Dynamic -->
-                                            <option :value="'ck'">Café Kontakt</option>
-                                            <option :value="'fahrdienst'">Fahrdienst</option>
-                                            <option :value="'hasi'">Haussicherheit</option>
-                                            <option :value="'helfer'" selected="">Helfer</option>
-                                            <option :value="'pbetreuung'">Programmbetreuung</option>
-                                            <option :value="'klassenraeume'">Rödeltruppe Schule</option>
-                                            <option :value="'roedel'">Rödeltruppe Wettkampf</option>
-                                            <option :value="'sanitaeter'">Sanitäter</option>
-                                            <option :value="'essen'">Verpflegung</option>
+                                            <option value="ck">Café Kontakt</option>
+                                            <option value="fahrdienst">Fahrdienst</option>
+                                            <option value="hasi">Haussicherheit</option>
+                                            <option value="helfer" selected="">Helfer</option>
+                                            <option value="pbetreuung">Programmbetreuung</option>
+                                            <option value="klassenraeume">Rödeltruppe Schule</option>
+                                            <option value="roedel">Rödeltruppe Wettkampf</option>
+                                            <option value="sanitaeter">Sanitäter</option>
+                                            <option value="essen">Verpflegung</option>
                                         </select>
                                     </div>
                                 </div>
@@ -309,17 +308,11 @@
 
   export default {
     async asyncData ({params}) {
-      let { data } = await axios.get('/api/program/' + params.programId)
-      return { program: {...programMask, ...data} }
+      return { program: {...programMask} }
     },
     methods: {
       save () {
-        console.log(this.program)
-        axios.patch('/api/program/' + this.$route.params.programId, this.program)
-        this.$router.push('/program/' + this.$route.params.programId)
-      },
-      remove () {
-        axios.delete('/api/program/' + this.$route.params.programId)
+        axios.post('/api/program/', this.program)
         this.$router.push('/program/')
       }
     }
