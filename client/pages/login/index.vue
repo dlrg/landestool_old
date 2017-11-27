@@ -9,15 +9,15 @@
                             <p class="text-muted">Log dich zu deinem Account ein</p>
                             <div class="input-group mb-3">
                                 <span class="input-group-addon"><i class="ca ca-email-2"></i></span>
-                                <input type="email" class="form-control" placeholder="Email">
+                                <input type="email" class="form-control" placeholder="Email" v-model="email">
                             </div>
                             <div class="input-group mb-4">
                                 <span class="input-group-addon"><i class="ca ca-key-1"></i></span>
-                                <input type="password" class="form-control" placeholder="Passwort">
+                                <input type="password" class="form-control" placeholder="Passwort" v-model="password">
                             </div>
                             <div class="row">
                                 <div class="col-6">
-                                    <button type="button" class="btn btn-primary px-4">Login</button>
+                                    <button type="button" class="btn btn-primary px-4" @click="login">Login</button>
                                 </div>
                                 <div class="col-6 text-right d-none">
                                     <button type="button"  class="btn btn-link px-0">Passwort vergessen?</button>
@@ -42,7 +42,26 @@
 </template>
 
 <script>
-    export default{
-      layout: 'login'
+  import { mapActions } from 'vuex'
+  const data = {
+    email: '',
+    password: ''
+  }
+  export default{
+    layout: 'login',
+    data: () => data,
+    methods: {
+      ...mapActions({
+        authenticate: 'auth/authenticate'
+      }),
+      login () {
+        const { email, password, authenticate } = this
+        authenticate({ strategy: 'local', email, password })
+          .then(() => this.$router.replace({ path: '/' }))
+          .catch(err => {
+            console.error(err)
+          })
+      }
     }
+  }
 </script>

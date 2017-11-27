@@ -32,7 +32,7 @@
                     <input class="form-control" type="text" placeholder="Suchen...">
                 </form>
             </li>
-            <li class="nav-item dropdown d-md-down-none">
+            <li class="nav-item dropdown d-md-down-none" @click="logout()">
                 <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     <i class="ca ca-logout-3 ca-2x"></i>
                 </a>
@@ -52,6 +52,9 @@
       toggleSidebar () {
         this.toggle = !this.toggle
         this.$emit('toggleSidebar')
+      },
+      logout () {
+        this.$store.dispatch('auth/logout')
       }
     }
   }

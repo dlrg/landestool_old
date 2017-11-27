@@ -6,5 +6,29 @@
     "default": 10,
     "max": 50
   },
-  "mongodb": "mongodb://localhost:27017/landestool"
+  "mongodb": "mongodb://localhost:27017/landestool",
+  "authentication": {
+    "secret": "773f00106f8fc699f3fb2a1198edd9ff151a6038caf4f758c27197221220676fccb0556de049eecdae239ab2afc154857c0daaf4b272f77621103cdd6bc3a5b2af64128e7b96c96a86bf90b3c55f2bd5774bb794bac7edfeeb780cf68277e5605990ccada40594af1226a51c24d3bd43786c693acef1b02c15cfb2c89f0ca9fc322e55c4b68ff629773a4cfa6c800fd08e8b0ca4e8c003bfba59e1c6848eb6ef60e986489bd563bc6eae4eb40ada787134aaa5ba4eaca743d1aa8a8f2d02bb0f70d5b7e673c06dccb20130fa4a70b66b7c97d72041f6d381ce0a5d929c34372bab186fca85d2c1d2b383400666ea7d97c7c44a98fa02a8e1c8ba3d1d43972a64",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "user",
+    "jwt": {
+      "header": {
+        "type": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  }
 }
