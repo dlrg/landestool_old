@@ -25,6 +25,7 @@ module.exports = {
   after: {
     all: [
       commonHooks.when(
+        /* istanbul ignore next */
         hook => hook.params.provider,
         commonHooks.discard('password')
       )

@@ -4,6 +4,7 @@ const createModel = require('../../models/user.model')
 const hooks = require('./user.hooks')
 const filters = require('./user.filters')
 
+/* istanbul ignore next */
 module.exports = function () {
   const app = this
   const Model = createModel(app)
