@@ -4,6 +4,9 @@
   "description": "Nuxt.js project",
   "author": "",
   "private": true,
+  "engines": {
+    "node": "8.0.0"
+  },
   "scripts": {
     "dev": "backpack dev",
     "build": "nuxt build && backpack build",
