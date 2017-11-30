@@ -7,7 +7,7 @@
             <div class="avatar-wrapper">
                 <img src="https://api.adorable.io/avatars/50/abott@adorable.png" class="img-avatar avatar" alt="avatar">
                 <div class="avatar-name">
-                    {{ $store.state.auth.user.email }}
+                    {{ $store.state.auth.user.firstname }} {{ $store.state.auth.user.lastname }}
                 </div>
             </div>
         </a>
