@@ -58,6 +58,8 @@
         const { email, password, authenticate } = this
         authenticate({ strategy: 'local', email, password })
           .then(() => this.$router.replace({ path: '/' }))
+          .then(() => { this.email = '' })
+          .then(() => { this.password = '' })
           .catch(err => {
             console.error(err)
           })

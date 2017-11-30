@@ -7,7 +7,7 @@
             <div class="avatar-wrapper">
                 <img src="https://api.adorable.io/avatars/50/abott@adorable.png" class="img-avatar avatar" alt="avatar">
                 <div class="avatar-name">
-                    Daniel Swiatek
+                    {{ $store.state.auth.user.email }}
                 </div>
             </div>
         </a>
@@ -33,9 +33,9 @@
                 </form>
             </li>
             <li class="nav-item dropdown d-md-down-none" @click="logout()">
-                <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <button class="nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     <i class="ca ca-logout-3 ca-2x"></i>
-                </a>
+                </button>
             </li>
         </ul>
     </header>
@@ -54,7 +54,9 @@
         this.$emit('toggleSidebar')
       },
       logout () {
+        console.log('Logout?')
         this.$store.dispatch('auth/logout')
+          .then(() => this.$router.push('/login'))
       }
     }
   }

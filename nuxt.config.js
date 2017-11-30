@@ -4,6 +4,7 @@ module.exports = {
   /*
   ** Headers of the page
   */
+  mode: 'spa',
   router: {
     middleware: ['auth']
   },
