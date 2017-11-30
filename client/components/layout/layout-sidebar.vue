@@ -11,11 +11,11 @@
                 </li>
                 <li class="divider"></li>
 
-                <li class="nav-title text-center d-none">
+                <li class="nav-title text-center">
                     <span>Administration</span>
                 </li>
-                <li class="nav-item d-none">
-                    <a class="nav-link" target="_top"><i class="ca ca-account-group-1"></i> Benutzerverwaltung</a>
+                <li class="nav-item">
+                    <nuxt-link class="nav-link" to="/admin/users" target="_top"><i class="ca ca-account-group-1"></i> Benutzerverwaltung</nuxt-link>
                 </li>
                 <li class="nav-item px-3 pt-5 d-none">
                     <div class="text-uppercase mb-1">
