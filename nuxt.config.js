@@ -4,6 +4,10 @@ module.exports = {
   /*
   ** Headers of the page
   */
+  mode: 'spa',
+  router: {
+    middleware: ['auth']
+  },
   head: {
     title: 'DLRG LJTr Verwaltungstool',
     meta: [
