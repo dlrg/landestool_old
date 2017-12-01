@@ -13,7 +13,7 @@ export default function (context) {
     })
     .catch(err => {
       console.error(err)
-      if (err.message === 'Could not find stored JWT and no authentication strategy was given' && route.name !== 'login') {
+      if (err.message === 'Could not find stored JWT and no authentication strategy was given' && !auth.publicPages.includes(route.name)) {
         return redirect('/login')
       }
     })

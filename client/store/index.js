@@ -15,10 +15,12 @@ export default () => new Vuex.Store({
       userService: '/user',
       state: {
         publicPages: [
-          'login'
+          'login',
+          'signup'
         ],
         forbiddenOnAuth: [
-          'login'
+          'login',
+          'signup'
         ]
       }
     })
