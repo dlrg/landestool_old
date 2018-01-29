@@ -41,7 +41,7 @@
     "feathers-authentication-hooks": "^0.1.5",
     "feathers-authentication-jwt": "^0.3.2",
     "feathers-authentication-local": "^0.4.4",
-    "feathers-hooks-common": "^3.10.0",
+    "feathers-hooks-common": "^4.3.0",
     "feathers-mongoose": "^6.0.0",
     "feathers-socketio": "^2.0.1",
     "feathers-vuex": "^1.0.4",
