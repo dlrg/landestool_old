@@ -4,7 +4,6 @@ module.exports = {
   /*
   ** Headers of the page
   */
-  mode: 'spa',
   router: {
     middleware: ['auth']
   },
@@ -21,7 +20,8 @@ module.exports = {
     ]
   },
   plugins: [
-    { src: '~/plugins/date-picker', ssr: false }
+    { src: '~/plugins/date-picker', ssr: false },
+    { src: '~/plugins/nuxt-client-init.js', ssr: false }
   ],
   /*
   ** Global scss
