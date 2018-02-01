@@ -21,7 +21,7 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
-    "@feathersjs/authentication-client": "^1.0.1",
+    "@feathersjs/authentication-client": "^1.0.2",
     "@feathersjs/client": "^3.1.0",
     "@feathersjs/configuration": "^1.0.1",
     "@feathersjs/errors": "^3.1.0",
@@ -33,6 +33,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "bootstrap": "^4.0.0-beta.2",
     "compression": "^1.7.1",
+    "cookie-storage": "^3.1.0",
     "cors": "^2.8.4",
     "cross-env": "^5.0.1",
     "express": "^4.15.3",
@@ -41,6 +42,7 @@
     "feathers-authentication-hooks": "^0.1.5",
     "feathers-authentication-jwt": "^0.3.2",
     "feathers-authentication-local": "^0.4.4",
+    "feathers-hooks": "^2.1.2",
     "feathers-hooks-common": "^4.3.0",
     "feathers-mongoose": "^6.0.0",
     "feathers-socketio": "^2.0.1",
