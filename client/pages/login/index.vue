@@ -6,7 +6,7 @@
                     <div class="card p-4">
                         <div class="card-body">
                             <h1>Login</h1>
-                            <p class="text-muted">Log dich zu deinem Account ein</p>
+                            <p class="text-muted">Log dich in deinen Account ein</p>
                             <div class="input-group mb-3">
                                 <span class="input-group-addon"><i class="ca ca-email-2"></i></span>
                                 <input type="email" class="form-control" placeholder="Email" v-model="email">

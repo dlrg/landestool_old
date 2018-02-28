@@ -66,7 +66,7 @@
                             <div class="form-group row">
                                 <label class="col-xl-3 col-form-label">CREW Info</label>
                                 <div class="col-xl-9">
-                                    <p class="form-control-static mt-2 mb-0">{{program.info.crewinfo}}</p>
+                                    <p class="form-control-static mt-2 mb-0" v-if="program.info">{{program.info.crewinfo}}</p>
                                 </div>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                             <div class="form-group row">
                                 <label class="col-xl-3 col-form-label">Medienredaktion</label>
                                 <div class="col-xl-9">
-                                    <p class="form-control-static mt-2 mb-0">{{program.info.mediainfo}}</p>
+                                    <p class="form-control-static mt-2 mb-0" v-if="program.info">{{program.info.mediainfo}}</p>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -236,12 +236,9 @@
     </section>
 </template>
 <script>
+  import getProgramFromRoute from '@/mixins/getProgramFromRoute'
   export default {
-    computed: {
-      program () {
-        return this.$store.getters['program/get'](this.$route.params.programId)
-      }
-    },
+    mixins: [getProgramFromRoute],
     methods: {
       edit () {
         this.$router.push('/program/' + this.$route.params.programId + '/edit')

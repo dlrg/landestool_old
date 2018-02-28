@@ -67,7 +67,7 @@
                     <!-- Datum/Uhrzeit-->
                     <div class="card">
                         <div class="card-header">
-                          <i class="ca ca-map-pin-2"></i> Address
+                            <i class="ca ca-map-pin-2"></i>Addresse
                         </div>
                         <div class="card-body">
 
@@ -102,12 +102,9 @@
     </section>
 </template>
 <script>
+  import getUserFromRoute from '@/mixins/getUserFromRoute'
   export default {
-    computed: {
-      user () {
-        return this.$store.getters['user/get'](this.$route.params.userId)
-      }
-    },
+    mixins: [getUserFromRoute],
     methods: {
       edit () {
         this.$router.push('/admin/users/' + this.$route.params.userId + '/edit')

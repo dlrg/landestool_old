@@ -53,7 +53,7 @@
       }
     },
     async fetch ({ store }) {
-      store.dispatch('user/find')
+      await store.dispatch('user/find')
     }
   }
 </script>

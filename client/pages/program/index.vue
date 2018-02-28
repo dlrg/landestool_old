@@ -26,7 +26,7 @@
                                     <nuxt-link tag="tr" :to="item._id" append v-for="item in program" :key="item._id">
                                         <td>{{item.name}}</td>
                                         <td>{{item.category}}</td>
-                                        <td>{{item.dates.start}} - {{item.dates.end}}</td>
+                                        <td><span v-if="item.dates">{{item.dates.start}} - {{item.dates.end}}</span></td>
                                         <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
                                         <td>{{item.location.meetingpoint}}</td>
                                         <td>{{item.agemin}} - {{item.agemax}}</td>
@@ -61,7 +61,7 @@
       }
     },
     async fetch ({ store }) {
-      store.dispatch('program/find')
+      await store.dispatch('program/find')
     }
   }
 </script>
