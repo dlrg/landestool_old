@@ -57,6 +57,7 @@
     "source-map-support": "^0.5.0",
     "vue-bootstrap-datetimepicker": "^4.1.0",
     "vue-datetime-picker": "^0.2.1",
+    "vuejs-datepicker": "^0.9.26",
     "winston": "^2.4.0"
   },
   "babel": {

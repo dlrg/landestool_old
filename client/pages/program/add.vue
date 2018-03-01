@@ -1,7 +1,7 @@
 <template>
     <section class="container-fluid">
         <div class="animated fadeIn">
-            <h1>Programm bearbeiten</h1>
+            <h1>Programm hinzufügen</h1>
             <form @submit.prevent="save">
                 <div class="row">
                     <div class="col-lg-6">
@@ -51,9 +51,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Verantwortlich*</label>
+                                    <label class="col-xl-3 col-form-label" for="text-input">Verantwortlich</label>
                                     <div class="col-xl-9">
-                                        <input type="text" v-model="program.person.accountable" name="text-input" class="form-control" required>
+                                        <input type="text" v-model="program.person.accountable" name="text-input" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -66,9 +66,9 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Betreuer/in*</label>
+                                    <label class="col-xl-3 col-form-label" for="text-input">Betreuer/in</label>
                                     <div class="col-xl-9">
-                                        <input type="text" v-model="program.person.supervisor" name="text-input" class="form-control" required>
+                                        <input type="text" v-model="program.person.supervisor" name="text-input" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -132,10 +132,14 @@
                                 <div class="form-group row">
                                     <label class="col-xl-3 col-form-label" for="text-input">Start/Ende</label>
                                     <div class="col-xl-4">
-                                        <!-- @ToDo: Datepicker function is buggy -->
+                                        <no-ssr>
+                                            <datepicker bootstrap-styling language="de" monday-first v-model="program.dates.start"></datepicker>
+                                        </no-ssr>
                                     </div>
                                     <div class="col-xl-4">
-                                        <!-- @ToDo: Datepicker function is buggy -->
+                                        <no-ssr>
+                                            <datepicker bootstrap-styling language="de" monday-first v-model="program.dates.end"></datepicker>
+                                        </no-ssr>
                                     </div>
                                 </div>
 
@@ -149,7 +153,9 @@
                                 <div class="form-group row">
                                     <label class="col-xl-3 col-form-label" for="text-input">Meldeschluss</label>
                                     <div class="col-xl-9">
-                                        <!-- @ToDo: Datepicker function is buggy -->
+                                        <no-ssr>
+                                            <datepicker bootstrap-styling language="de" monday-first v-model="program.dates.deadline"></datepicker>
+                                        </no-ssr>
                                     </div>
                                 </div>
 
@@ -169,9 +175,9 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Treffpunkt*</label>
+                                    <label class="col-xl-3 col-form-label" for="text-input">Treffpunkt</label>
                                     <div class="col-xl-9">
-                                        <input type="text" v-model="program.location.meetingpoint" name="text-input" class="form-control" required>
+                                        <input type="text" v-model="program.location.meetingpoint" name="text-input" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -192,21 +198,21 @@
                                     </div>
                                 </div>
                                 <div class="form-group row animated fadeIn" v-if="!program.location.local">
-                                    <label class="col-xl-3 col-form-label" for="text-input">PLZ/Ort*</label>
+                                    <label class="col-xl-3 col-form-label" for="text-input">PLZ/Ort</label>
                                     <div class="col-md-4 col-xl-2">
-                                        <input type="text" v-model="program.location.zip" name="text-input" class="form-control" required>
+                                        <input type="text" v-model="program.location.zip" name="text-input" class="form-control">
                                     </div>
                                     <div class="col-sm-8 col-xl-7">
-                                        <input type="text" v-model="program.location.town" name="text-input" class="form-control" required>
+                                        <input type="text" v-model="program.location.town" name="text-input" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group row animated fadeIn" v-if="!program.location.local">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Straße/Nr*</label>
+                                    <label class="col-xl-3 col-form-label" for="text-input">Straße/Nr</label>
                                     <div class="col-sm-8 col-xl-7">
-                                        <input type="text" v-model="program.location.street" name="text-input" class="form-control" required>
+                                        <input type="text" v-model="program.location.street" name="text-input" class="form-control">
                                     </div>
                                     <div class="col-md-4 col-xl-2">
-                                        <input type="text" v-model="program.location.streetnr" name="text-input" class="form-control" required>
+                                        <input type="text" v-model="program.location.streetnr" name="text-input" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group row animated fadeIn" v-if="!program.location.local">
@@ -254,9 +260,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group row" v-if="!program.finance.free">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Kosten*</label>
+                                    <label class="col-xl-3 col-form-label" for="text-input">Kosten</label>
                                     <div class="col-xl-9">
-                                        <input type="text" v-model="program.finance.price" name="text-input" class="form-control" required>
+                                        <input type="text" v-model="program.finance.price" name="text-input" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group row" v-if="!program.finance.free">
@@ -275,8 +281,9 @@
                                 <div class="form-group row" v-if="!program.finance.free">
                                     <label class="col-xl-3 col-form-label" for="text-input">Zahlungsfrist</label>
                                     <div class="col-xl-9">
-                                        <!-- @ToDo: Datepicker function is buggy -->
-
+                                        <no-ssr>
+                                            <datepicker bootstrap-styling language="de" monday-first v-model="program.finance.deadline"></datepicker>
+                                        </no-ssr>
                                     </div>
                                 </div>
                                 <div class="form-group row" v-if="!program.finance.free">
@@ -296,6 +303,23 @@
 </template>
 
 <script>
+  import getProgramFromRoute from '@/mixins/getProgramFromRoute'
+  import datepicker from 'vuejs-datepicker'
+  export default {
+    mixins: [getProgramFromRoute],
+    components: {
+      datepicker
+    },
+    methods: {
+      save () {
+        this.$store.dispatch('program/create', this.program)
+        this.$router.push('/program/')
+      }
+    },
+    async asyncData ({params}) {
+      return { program: {...programMask} }
+    }
+  }
   const programMask = {
     dates: {},
     person: {},
@@ -308,17 +332,5 @@
       free: true
     },
     info: {}
-  }
-
-  export default {
-    async asyncData ({params}) {
-      return { program: {...programMask} }
-    },
-    methods: {
-      save () {
-        this.$store.dispatch('program/create', this.program)
-        this.$router.push('/program/')
-      }
-    }
   }
 </script>

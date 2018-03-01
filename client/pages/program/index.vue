@@ -26,7 +26,7 @@
                                     <nuxt-link tag="tr" :to="item._id" append v-for="item in program" :key="item._id">
                                         <td>{{item.name}}</td>
                                         <td>{{item.category}}</td>
-                                        <td><span v-if="item.dates">{{item.dates.start}} - {{item.dates.end}}</span></td>
+                                        <td><span v-if="item.dates">{{item.dates.start | dateFormatter('DD.MM.YYYY')}} - {{item.dates.end | dateFormatter('DD.MM.YYYY')}}</span></td>
                                         <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
                                         <td>{{item.location.meetingpoint}}</td>
                                         <td>{{item.agemin}} - {{item.agemax}}</td>
@@ -47,9 +47,11 @@
 <script>
   import { mapGetters } from 'vuex'
   import NuxtLink from '../../../.nuxt/components/nuxt-link'
+  import dateFormatter from '@/filters/date-formatter'
 
   export default {
     components: {NuxtLink},
+    filters: { dateFormatter },
     computed: {
       ...mapGetters({
         program: 'program/list'
