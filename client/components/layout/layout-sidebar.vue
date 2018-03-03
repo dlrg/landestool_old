@@ -35,8 +35,8 @@
 
 <script>
   export default {
+    name: 'layout-sidebar',
     props: ['open'],
-
     methods: {
       toggleOpen (elem) {
         if (!elem.classList.contains('open')) {
