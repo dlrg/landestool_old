@@ -1,7 +1,7 @@
 <template>
     <section class="container-fluid">
         <div class="animated fadeIn">
-            <h1>Programm bearbeiten</h1>
+            <h1>Programm Übersicht</h1>
 
             <div class="row">
                 <div class="col-lg-6">
@@ -66,7 +66,7 @@
                             <div class="form-group row">
                                 <label class="col-xl-3 col-form-label">CREW Info</label>
                                 <div class="col-xl-9">
-                                    <p class="form-control-static mt-2 mb-0">{{program.info.crewinfo}}</p>
+                                    <p class="form-control-static mt-2 mb-0" v-if="program.info">{{program.info.crewinfo}}</p>
                                 </div>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                             <div class="form-group row">
                                 <label class="col-xl-3 col-form-label">Medienredaktion</label>
                                 <div class="col-xl-9">
-                                    <p class="form-control-static mt-2 mb-0">{{program.info.mediainfo}}</p>
+                                    <p class="form-control-static mt-2 mb-0" v-if="program.info">{{program.info.mediainfo}}</p>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -106,7 +106,7 @@
                             <div class="form-group row">
                                 <label class="col-xl-3 col-form-label">Start/Ende</label>
                                 <div class="col-xl-4">
-                                    <p class="form-control-static mt-2 mb-0">{{program.dates.start}} - {{program.dates.end}}</p>
+                                    <p class="form-control-static mt-2 mb-0">{{program.dates.start | dateFormatter('DD.MM.YYYY')}} - {{program.dates.end | dateFormatter('DD.MM.YYYY')}}</p>
                                 </div>
                             </div>
 
@@ -120,7 +120,7 @@
                             <div class="form-group row">
                                 <label class="col-xl-3 col-form-label">Meldeschluss</label>
                                 <div class="col-xl-9">
-                                    <p class="form-control-static mt-2 mb-0">{{program.dates.deadline}}</p>
+                                    <p class="form-control-static mt-2 mb-0">{{program.dates.deadline | dateFormatter('DD.MM.YYYY')}}</p>
                                 </div>
                             </div>
 
@@ -236,12 +236,11 @@
     </section>
 </template>
 <script>
+  import getProgramFromRoute from '@/mixins/getProgramFromRoute'
+  import dateFormatter from '@/filters/date-formatter'
   export default {
-    computed: {
-      program () {
-        return this.$store.getters['program/get'](this.$route.params.programId)
-      }
-    },
+    mixins: [getProgramFromRoute],
+    filters: { dateFormatter },
     methods: {
       edit () {
         this.$router.push('/program/' + this.$route.params.programId + '/edit')

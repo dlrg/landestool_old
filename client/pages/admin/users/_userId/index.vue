@@ -1,7 +1,7 @@
 <template>
     <section class="container-fluid">
         <div class="animated fadeIn">
-            <h1>Programm bearbeiten</h1>
+            <h1>User bearbeiten</h1>
 
             <div class="row">
                 <div class="col-lg-6">
@@ -39,7 +39,7 @@
                             <div class="form-group row">
                                 <label class="col-xl-3 col-form-label">Geburtstag</label>
                                 <div class="col-xl-9">
-                                    <p class="form-control-static mt-2 mb-0">{{user.birthday}}</p>
+                                    <p class="form-control-static mt-2 mb-0">{{user.birthday | dateFormatter('DD.MM.YYYY')}}</p>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -67,7 +67,7 @@
                     <!-- Datum/Uhrzeit-->
                     <div class="card">
                         <div class="card-header">
-                          <i class="ca ca-map-pin-2"></i> Address
+                            <i class="ca ca-map-pin-2"></i>Addresse
                         </div>
                         <div class="card-body">
 
@@ -98,16 +98,41 @@
 
                 </div>
             </div>
+             <div class="row">
+                <div class="col-lg-6">
+                     <div class="card">
+                        <div class="card-header">
+                            <i class="ca ca-map-pin-2"></i>Organisation
+                        </div>
+                        <div class="card-body">
+
+                            <div class="form-group row">
+                                <label class="col-xl-3 col-form-label">Unterkunft</label>
+                                <div class="col-xl-4">
+                                    <p class="form-control-static mt-2 mb-0">{{user.housing}}</p>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-xl-3 col-form-label">Gliederung</label>
+                                <div class="col-xl-9">
+                                    <p class="form-control-static mt-2 mb-0">{{user.division}}</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+             </div>       
         </div>
     </section>
 </template>
 <script>
+  import getUserFromRoute from '@/mixins/getUserFromRoute'
+  import dateFormatter from '@/filters/date-formatter'
   export default {
-    computed: {
-      user () {
-        return this.$store.getters['user/get'](this.$route.params.userId)
-      }
-    },
+    mixins: [getUserFromRoute],
+    filters: { dateFormatter },
     methods: {
       edit () {
         this.$router.push('/admin/users/' + this.$route.params.userId + '/edit')
