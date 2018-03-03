@@ -22,7 +22,7 @@
         </ul>
         <ul class="nav navbar-nav d-md-down-none ml-4 mr-auto">
             <li class="nav-item">
-                <img src="~assets/img/Logo-WM-Gelb.gif" height="15px"/>
+                <img src="../../assets/img/Logo-WM-Gelb.gif" height="15px"/>
             </li>
         </ul>
         <ul class="nav navbar-nav ml-auto">
@@ -43,6 +43,7 @@
 
 <script>
   export default {
+    name: 'layout-header',
     data () {
       return {
         toggle: false
