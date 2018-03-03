@@ -8,3 +8,9 @@
         </ol>
     </section>
 </template>
+
+<script>
+export default {
+  name: 'layout-breadcrumb'
+}
+</script>

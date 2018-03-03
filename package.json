@@ -18,7 +18,9 @@
     "test:server": "npm run mocha",
     "mocha": "nyc --reporter=html --reporter=text  mocha server/test/ --recursive --exit",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "styleguide": "vue-styleguidist server",
+    "styleguide:build": "vue-styleguidist build"
   },
   "dependencies": {
     "@feathersjs/authentication-client": "^1.0.2",
@@ -84,6 +86,7 @@
     "mocha": "^5.0.1",
     "node-sass": "^4.6.0",
     "nyc": "^11.5.0",
-    "sass-loader": "^6.0.6"
+    "sass-loader": "^6.0.6",
+    "vue-styleguidist": "^1.4.8"
   }
 }
