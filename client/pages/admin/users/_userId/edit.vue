@@ -114,13 +114,13 @@
                             <div class="form-group row">
                                 <label class="col-xl-3 col-form-label" for="text-input">Passwort*</label>
                                 <div class="col-xl-9">
-                                    <input type="password" id="text-input" v-model="user.password" name="text-input" class="form-control" required>
+                                    <input type="password" id="text-input" v-model="user.password" name="text-input" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-xl-3 col-form-label" for="text-input">Passwort wiederholen*</label>
                                 <div class="col-xl-9">
-                                    <input type="password" id="text-input" v-model="passwordConfirm" name="text-input" class="form-control" required>
+                                    <input type="password" id="text-input" v-model="passwordConfirm" name="text-input" class="form-control">
                                     <small class="text-danger" v-if="passwordError">Deine Passwörter stimmen nicht überein!</small>
                                 </div>
                             </div>
@@ -294,7 +294,8 @@
     },
     methods: {
       save () {
-        if (this.user.password !== this.passwordConfirm) {
+        if (this.user.password === '') this.user.password = undefined
+        if (this.user.password !== undefined && this.user.password !== this.passwordConfirm) {
           this.passwordError = true
           return
         }
