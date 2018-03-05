@@ -16,3 +16,5 @@ build
 coverage
 .nyc_output
 .idea
+
+uploads/
