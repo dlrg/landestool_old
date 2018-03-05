@@ -13,31 +13,31 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Vorname*</label>
+                                    <label class="col-xl-3 col-form-label" for="firstname">Vorname*</label>
                                     <div class="col-xl-9">
-                                        <input type="text" id="text-input" v-model="user.firstname" name="text-input" class="form-control" required>
+                                        <input type="text" id="firstname" v-model="user.firstname" name="text-input" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Nachname*</label>
+                                    <label class="col-xl-3 col-form-label" for="lastname">Nachname*</label>
                                     <div class="col-xl-9">
-                                        <input type="text" id="text-input" v-model="user.lastname" name="text-input" class="form-control" required>
+                                        <input type="text" id="lastname" v-model="user.lastname" name="text-input" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Email*</label>
+                                    <label class="col-xl-3 col-form-label" for="email">Email*</label>
                                     <div class="col-xl-9">
-                                        <input type="email" id="text-input" v-model="user.email" name="text-input" class="form-control" required>
+                                        <input type="email" id="email" v-model="user.email" name="text-input" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Telefon*</label>
+                                    <label class="col-xl-3 col-form-label" for="telephone">Telefon*</label>
                                     <div class="col-xl-9">
-                                        <input type="text" id="text-input" v-model="user.phone" name="text-input" class="form-control" required>
+                                        <input type="text" id="telephone" v-model="user.phone" name="text-input" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Geburtsdatum*</label>
+                                    <label class="col-xl-3 col-form-label" for="birthdate">Geburtsdatum*</label>
                                     <div class="col-xl-9">
                                         <no-ssr>
                                             <datepicker bootstrap-styling language="de" monday-first v-model="user.birthday"></datepicker>
@@ -45,10 +45,10 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-form-label col-xl-3"><span>Geschlecht*</span></label>
+                                    <label class="col-form-label col-xl-3" for="gender"><span>Geschlecht*</span></label>
                                     <div class="col-xl-9 text-right">
                                         <div class="select-wrapper">
-                                            <select class="form-control  float-left" name="selectForm" id="selectForm" v-model="user.gender" required>
+                                            <select class="form-control  float-left" name="selectForm" id="gender" v-model="user.gender" required>
                                                 <option value="m">Mann</option>
                                                 <option value="w">Frau</option>
                                             </select>
@@ -56,10 +56,10 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-form-label col-xl-3"><span>Essensverträglichkeit*</span></label>
+                                    <label class="col-form-label col-xl-3" for="diet"><span>Essensverträglichkeit*</span></label>
                                     <div class="col-xl-9 text-right">
                                         <div class="select-wrapper">
-                                            <select class="form-control  float-left" name="selectForm" id="selectForm" v-model="user.diet" required>
+                                            <select class="form-control  float-left" name="selectForm" id="diet" v-model="user.diet" required>
                                                 <option value="none">keine Unverträglichkeiten</option>
                                                 <option value="vegetarian">vegetarisch</option>
                                                 <option value="vegan">vegan</option>
@@ -82,21 +82,21 @@
 
 
                             <div class="form-group row">
-                                <label class="col-xl-3 col-form-label" for="text-input">Straße*</label>
+                                <label class="col-xl-3 col-form-label" for="street">Straße*</label>
                                 <div class="col-xl-9">
-                                    <input type="text" id="text-input" v-model="user.address.street" name="text-input" class="form-control" required>
+                                    <input type="text" id="street" v-model="user.address.street" name="text-input" class="form-control" required>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-xl-3 col-form-label" for="text-input">Postleitzahl*</label>
+                                <label class="col-xl-3 col-form-label" for="zip">Postleitzahl*</label>
                                 <div class="col-xl-9">
-                                    <input type="text" id="text-input" v-model="user.address.zip" name="text-input" class="form-control" required>
+                                    <input type="text" id="zip" v-model="user.address.zip" name="text-input" class="form-control" required>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-xl-3 col-form-label" for="text-input">Ort / Stadt*</label>
+                                <label class="col-xl-3 col-form-label" for="city">Ort / Stadt*</label>
                                 <div class="col-xl-9">
-                                    <input type="text" id="text-input" v-model="user.address.city" name="text-input" class="form-control" required>
+                                    <input type="text" id="city" v-model="user.address.city" name="text-input" class="form-control" required>
                                 </div>
                             </div>
 
@@ -111,16 +111,16 @@
                             <div class="card-body">
 
                             <div class="form-group row">
-                                <label class="col-xl-3 col-form-label" for="text-input">Passwort*</label>
+                                <label class="col-xl-3 col-form-label" for="password">Passwort*</label>
                                 <div class="col-xl-9">
-                                    <input type="password" id="text-input" v-model="user.password" name="text-input" class="form-control" required>
+                                    <input type="password" id="password" v-model="user.password" name="text-input" class="form-control" required>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-xl-3 col-form-label" for="text-input">Passwort wiederholen*</label>
+                                <label class="col-xl-3 col-form-label" for="passwordConfirm">Passwort wiederholen*</label>
                                 <div class="col-xl-9">
-                                    <input type="password" id="text-input" v-model="passwordConfirm" name="text-input" class="form-control" required>
-                                    <small class="text-danger" v-if="passwordError">Deine Passwörter stimmen nicht überein!</small>
+                                    <input type="password" id="passwordConfirm" v-model="passwordConfirm" name="text-input" class="form-control" required>
+                                    <small class="text-danger" v-if="passwordError">Deine Passwörter stimmen nicht überein! ¯\_(ツ)_/¯</small>
                                 </div>
                             </div>
 
@@ -128,7 +128,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+               <div class="row">
                             <div class="col-lg-6">
                                 <div class="card">
                                     <div class="card-header">
@@ -137,10 +137,10 @@
                                     <div class="card-body">
 
                                     <div class="form-group row">
-                                        <label class="col-xl-3 col-form-label" for="text-input">Unterkunft*</label>
+                                        <label class="col-xl-3 col-form-label" for="hpusing">Unterkunft*</label>
                                         <div class="col-xl-9">
                                             <div class="select-wrapper">
-                                                    <select class="form-control  float-left" name="selectForm" id="selectForm" v-model="user.housing" required>
+                                                    <select class="form-control  float-left" name="selectForm" id="housing" v-model="user.housing" required>
                                                         <option value="zu Hause">zu Hause</option>
                                                         <option value="im Helferzimmer">im Helferzimmer</option>
                                                         <option value="Zimmer einer Gliederung">Zimmer einer Gliederung</option>
@@ -150,10 +150,10 @@
                                     </div>
 
                                     <div class="form-group row">
-                                        <label class="col-xl-3 col-form-label" for="text-input">Gliederung*</label>
+                                        <label class="col-xl-3 col-form-label" for="division">Gliederung*</label>
                                         <div class="col-xl-9">
                                             <div class="select-wrapper">
-                                                    <select class="form-control  float-left" name="selectForm" id="selectForm" v-model="user.division">
+                                                    <select class="form-control  float-left" name="selectForm" id="division" v-model="user.division">
                                                         <option value=" ">--keine--</option>
                                                         <option value="89">DLRG Ahrensburg e.V.</option>
                                                         <option value="26">DLRG Amt Süderlügum e.V.</option>
@@ -260,25 +260,46 @@
                                                 </div>
                                         </div>
                                     </div>
+                                    
+
                                     <div class="form-group row">
-                                        <label class="col-xl-3 col-form-label" for="selectFormEinsatz">Einsatz*</label>
+                                        <label class="col-xl-3 col-form-label" for="helper">Gliederungshelfer</label>
+                                        <div class="col-xl-9">
+                                            <p class="form-control-static mt-2 mb-0">nein</p>    
+                                        </div>
+                                    </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                       
+
+                         
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <i class="ca ca-map-pin-1"></i> Anwesenheit
+                                    </div>
+                                    <div class="card-body">
+                                         <div class="form-group row">
+                                        <label class="col-xl-3 col-form-label" for="presence">Einsatz*</label>
                                         <div class="col-xl-9">
                                             <div class="select-wrapper">
-                                                <select class="form-control  float-left" name="selectFormEinsatz" id="selectFormEinsatz" v-model="user.presence" required>
-                                                    <option value="ae">Ausweis / Einsetzbar</option>
-                                                    <option value="ke"> kein Ausweis / Einsetzbar</option>
-                                                    <option value="an">Ausweis / nicht Einsetzbar bzw. anderweitig verplant</option>
-                                                    <option value="kn">kein Ausweis / nicht Einsetzbar bzw. anderweitig verplant</option>
-                                                    <option value="ag">Arbeitsgruppe </option>
+                                                <select class="form-control  float-left" name="selectFormEinsatz" id="presence" v-model="user.presence" required>
+                                                    <option value="Ausweis / Einsetzbar">Ausweis / Einsetzbar</option>
+                                                    <option value="kein Ausweis / Einsetzbar">kein Ausweis / Einsetzbar</option>
+                                                    <option value="Ausweis / nicht Einsetzbar bzw. anderweitig verplant">Ausweis / nicht Einsetzbar bzw. anderweitig verplant</option>
+                                                    <option value="kein Ausweis / nicht Einsetzbar bzw. anderweitig verplant">kein Ausweis / nicht Einsetzbar bzw. anderweitig verplant</option>
+                                                    <option value="Arbeitsgruppe">Arbeitsgruppe </option>
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group row" v-if="user.presence=='ag'">
-                                        <label class="col-xl-3 col-form-label" for="text-input">Arbeitsgruppe</label>
+                                    <div class="form-group row" v-if="user.presence=='Arbeitsgruppe'">
+                                        <label class="col-xl-3 col-form-label" for="workgroup">Arbeitsgruppe</label>
                                         <div class="col-xl-9">
                                             <div class="select-wrapper">
-                                                    <select class="form-control  float-left" name="selectFormArbeitsgruppe" id="selectFormArbeitsgruppe" v-model="user.workgroup">
+                                                    <select class="form-control  float-left" name="selectFormArbeitsgruppe" id="workgroup" v-model="user.workgroup">
                                                         <option value="-">-</option>
                                                         <option value="AK FLiB">AK FLiB</option>
                                                         <option value="AK Juga">AK Juga</option>
@@ -301,14 +322,28 @@
                                                 </div>
                                         </div>
                                     </div>
-                                    </div>
 
+                                    <div class="form-group row">
+                                        <label class="col-xl-3 col-form-label" for="presenceDay">Tage*</label>
+                                        <div class="col-xl-9">   
+                                           <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDay" name="day" v-model="user.presenceDay.wednesday">
+                                           <label class="mt-2 mb-0 mr-3" for="subscribeNews">Mittwoch</label>
+                                           <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDay" name="day" v-model="user.presenceDay.thursday">
+                                           <label class="mt-2 mb-0 mr-3" for="subscribeNews">Donnerstag</label>
+                                           <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDay" name="day" v-model="user.presenceDay.friday">
+                                           <label class="mt-2 mb-0 mr-3" for="subscribeNews">Freitag</label>
+                                           <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDay" name="day" v-model="user.presenceDay.saturday">
+                                           <label class="mt-2 mb-0 mr-3" for="subscribeNews">Samstag</label>
+                                           <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDay" name="day" v-model="user.presenceDay.sunday">
+                                           <label class="mt-2 mb-0 mr-3" for="subscribeNews">Sonntag</label>
+                                        </div>   
+                                    </div>
                                     </div>
                                 </div>
-                            </div>
+                             </div>          
+                        </div>
             </form>
         </div>
-        <pre>{{user}}</pre>
     </section>
 </template>
 
@@ -326,6 +361,13 @@
       gender: '',
       diet: '',
       presence: '',
+      presenceDay: {
+        wednesday: false,
+        thursday: false,
+        friday: false,
+        saturday: false,
+        sunday: false
+      },
       address: {
         street: '',
         zip: '',

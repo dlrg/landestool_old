@@ -16,6 +16,13 @@ module.exports = function (app) {
     diet: { type: String, required: true },
     housing: { type: String, required: true },
     presence: { type: String, required: true },
+    presenceDay: {
+      wednesday: { type: Boolean, required: false },
+      thursday: { type: Boolean, required: false },
+      friday: { type: Boolean, required: false },
+      saturday: { type: Boolean, required: false },
+      sunday: { type: Boolean, required: false }
+    },
 
     address: {
       street: { type: String, required: true },

@@ -13,16 +13,16 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Name*</label>
+                                    <label class="col-xl-3 col-form-label" for="name">Name*</label>
                                     <div class="col-xl-9">
-                                        <input type="text" id="text-input" v-model="program.name" name="text-input" class="form-control" required>
+                                        <input type="text" id="name" v-model="program.name" name="text-input" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-form-label col-xl-3"><span>Status</span></label>
+                                    <label class="col-form-label col-xl-3" for="status"><span>Status</span></label>
                                     <div class="col-xl-9 text-right">
                                         <div class="select-wrapper">
-                                            <select class="form-control  float-left" name="selectForm" id="statusSelect" v-model="program.status">
+                                            <select class="form-control  float-left" name="selectForm" id="status" v-model="program.status">
                                                 <!-- @ToDo: add Categories Dynamic -->
                                                 <option :value="'Aktiv'">Aktiv</option>
                                                 <option :value="'Geplant'">Geplant</option>
@@ -32,10 +32,10 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-form-label col-xl-3"><span>Kategorie</span></label>
+                                    <label class="col-form-label col-xl-3" for="category"><span>Kategorie</span></label>
                                     <div class="col-xl-9 text-right">
                                         <div class="select-wrapper">
-                                            <select class="form-control  float-left" name="selectForm" id="selectForm" v-model="program.category">
+                                            <select class="form-control  float-left" name="selectForm" id="category" v-model="program.category">
                                                 <!-- @ToDo: add Categories Dynamic -->
                                                 <option value="Café Kontakt">Café Kontakt</option>
                                                 <option value="Fahrdienst">Fahrdienst</option>
@@ -51,9 +51,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Verantwortlich</label>
+                                    <label class="col-xl-3 col-form-label" for="accountable">Verantwortlich</label>
                                     <div class="col-xl-9">
-                                        <input type="text" v-model="program.person.accountable" name="text-input" class="form-control">
+                                        <input type="text" v-model="program.person.accountable" id="accountable" name="text-input" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -66,33 +66,33 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Betreuer/in</label>
+                                    <label class="col-xl-3 col-form-label" for="supervisor">Betreuer/in</label>
                                     <div class="col-xl-9">
-                                        <input type="text" v-model="program.person.supervisor" name="text-input" class="form-control">
+                                        <input type="text" v-model="program.person.supervisor" id="supervisor" name="text-input" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">min/max TN</label>
+                                    <label class="col-xl-3 col-form-label" for="minmax-subscriber">min/max TN</label>
                                     <div class="col-sm-6 col-xl-3">
-                                        <input type="number" v-model="program.person.subscribermin" name="text-input" class="form-control">
+                                        <input type="number" v-model="program.person.subscribermin" name="text-input" id="minmax-subscriber" class="form-control">
                                     </div>
                                     <div class="col-sm-6 col-xl-3">
-                                        <input type="number" v-model="program.person.subscribermax" name="text-input" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">min/max Alter</label>
-                                    <div class="col-sm-6 col-xl-3">
-                                        <input type="number" v-model="program.person.agemin" name="text-input" class="form-control">
-                                    </div>
-                                    <div class="col-sm-6 col-xl-3">
-                                        <input type="number" v-model="program.person.agemax" name="text-input" class="form-control">
+                                        <input type="number" v-model="program.person.subscribermax" name="text-input" id="minmax-subscriber" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">CREW Info</label>
+                                    <label class="col-xl-3 col-form-label" for="minmax-age">min/max Alter</label>
+                                    <div class="col-sm-6 col-xl-3">
+                                        <input type="number" v-model="program.person.agemin" name="text-input" id="minmax-age" class="form-control">
+                                    </div>
+                                    <div class="col-sm-6 col-xl-3">
+                                        <input type="number" v-model="program.person.agemax" name="text-input" id="minmax-age" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-xl-3 col-form-label" for="crewinfo">CREW Info</label>
                                     <div class="col-xl-9">
-                                        <textarea type="number" v-model="program.info.crewinfo" name="text-input" class="form-control"></textarea>
+                                        <textarea type="number" v-model="program.info.crewinfo" name="text-input" id="crewinfo" class="form-control"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -105,15 +105,15 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Medienredaktion</label>
+                                    <label class="col-xl-3 col-form-label" for="mediainfo">Medienredaktion</label>
                                     <div class="col-xl-9">
-                                        <textarea type="number" v-model="program.info.mediainfo" name="text-input" class="form-control"></textarea>
+                                        <textarea type="number" v-model="program.info.mediainfo" name="text-input" id="mediainfo" class="form-control"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Website/Tool</label>
+                                    <label class="col-xl-3 col-form-label" for="websiteinfo">Website/Tool</label>
                                     <div class="col-xl-9">
-                                        <textarea type="number" v-model="program.info.websiteinfo" name="text-input" class="form-control"></textarea>
+                                        <textarea type="number" v-model="program.info.websiteinfo" name="text-input" id="websiteinfo" class="form-control"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -130,7 +130,7 @@
                             <div class="card-body">
 
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Start/Ende</label>
+                                    <label class="col-xl-3 col-form-label" for="startend-date">Start/Ende</label>
                                     <div class="col-xl-4">
                                         <no-ssr>
                                             <datepicker bootstrap-styling language="de" monday-first v-model="program.dates.start"></datepicker>
@@ -144,14 +144,14 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Dauer</label>
+                                    <label class="col-xl-3 col-form-label" for="duration">Dauer</label>
                                     <div class="col-xl-9">
-                                        <input type="text" v-model="program.dates.duration" name="text-input" class="form-control">
+                                        <input type="text" v-model="program.dates.duration" name="text-input" id="duration" class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Meldeschluss</label>
+                                    <label class="col-xl-3 col-form-label" for="deadline">Meldeschluss</label>
                                     <div class="col-xl-9">
                                         <no-ssr>
                                             <datepicker bootstrap-styling language="de" monday-first v-model="program.dates.deadline"></datepicker>
@@ -160,9 +160,9 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Hinweise zum Datum & Uhrzeit</label>
+                                    <label class="col-xl-3 col-form-label" for="comment">Hinweise zum Datum & Uhrzeit</label>
                                     <div class="col-xl-9">
-                                        <textarea type="text" v-model="program.dates.comment" name="text-input" class="form-control"></textarea>
+                                        <textarea type="text" v-model="program.dates.comment" name="text-input" id="comment" class="form-control"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -175,9 +175,9 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Treffpunkt</label>
+                                    <label class="col-xl-3 col-form-label" for="meetingpoint">Treffpunkt</label>
                                     <div class="col-xl-9">
-                                        <input type="text" v-model="program.location.meetingpoint" name="text-input" class="form-control">
+                                        <input type="text" v-model="program.location.meetingpoint" name="text-input" id="meetingpoint" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -192,40 +192,40 @@
                                     </div>
                                 </div>
                                 <div class="form-group row" v-if="program.location.local">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Raum</label>
+                                    <label class="col-xl-3 col-form-label" for="room">Raum</label>
                                     <div class="col-xl-9">
-                                        <input type="text" v-model="program.location.room" name="text-input" class="form-control">
+                                        <input type="text" v-model="program.location.room" name="text-input" id="room" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group row animated fadeIn" v-if="!program.location.local">
-                                    <label class="col-xl-3 col-form-label" for="text-input">PLZ/Ort</label>
+                                    <label class="col-xl-3 col-form-label" for="ziptown">PLZ/Ort</label>
                                     <div class="col-md-4 col-xl-2">
-                                        <input type="text" v-model="program.location.zip" name="text-input" class="form-control">
+                                        <input type="text" v-model="program.location.zip" name="text-input" id="ziptown" class="form-control">
                                     </div>
                                     <div class="col-sm-8 col-xl-7">
-                                        <input type="text" v-model="program.location.town" name="text-input" class="form-control">
+                                        <input type="text" v-model="program.location.town" name="text-input" id="ziptown" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group row animated fadeIn" v-if="!program.location.local">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Straße/Nr</label>
+                                    <label class="col-xl-3 col-form-label" for="street">Straße/Nr</label>
                                     <div class="col-sm-8 col-xl-7">
-                                        <input type="text" v-model="program.location.street" name="text-input" class="form-control">
+                                        <input type="text" v-model="program.location.street" name="text-input" id="street" class="form-control">
                                     </div>
                                     <div class="col-md-4 col-xl-2">
-                                        <input type="text" v-model="program.location.streetnr" name="text-input" class="form-control">
+                                        <input type="text" v-model="program.location.streetnr" name="text-input" id="street" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group row animated fadeIn" v-if="!program.location.local">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Distanz</label>
+                                    <label class="col-xl-3 col-form-label" for="distance">Distanz</label>
                                     <div class="col-xl-9">
-                                        <input type="text" v-model="program.location.distance" name="text-input" class="form-control">
+                                        <input type="text" v-model="program.location.distance" name="text-input" id="distance" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group row animated fadeIn" v-if="!program.location.local">
-                                    <label class="col-form-label col-xl-3"><span>Transport</span></label>
+                                    <label class="col-form-label col-xl-3" for="transport"><span>Transport</span></label>
                                     <div class="col-xl-9 text-right">
                                         <div class="select-wrapper">
-                                            <select class="form-control  float-left" name="selectForm" id="transportSelect" v-model="program.location.transport">
+                                            <select class="form-control  float-left" name="selectForm" id="transport" v-model="program.location.transport">
                                                 <!-- @ToDo: add Values Dynamic -->
                                                 <option :value="false">kein Transport</option>
                                                 <option :value="'fulei'">Fahrdienst</option>
@@ -234,9 +234,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group row animated fadeIn" v-if="!program.location.local && program.location.transport === 'fulei'">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Hinweise für den Fahrdienst</label>
+                                    <label class="col-xl-3 col-form-label" for="location-comment">Hinweise für den Fahrdienst</label>
                                     <div class="col-xl-9">
-                                        <textarea type="text" v-model="program.location.comment" name="text-input" class="form-control"></textarea>
+                                        <textarea type="text" v-model="program.location.comment" name="text-input" id="location-comment" class="form-control"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -260,16 +260,16 @@
                                     </div>
                                 </div>
                                 <div class="form-group row" v-if="!program.finance.free">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Kosten</label>
+                                    <label class="col-xl-3 col-form-label" for="price">Kosten</label>
                                     <div class="col-xl-9">
-                                        <input type="text" v-model="program.finance.price" name="text-input" class="form-control">
+                                        <input type="text" v-model="program.finance.price" name="text-input" id="price" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group row" v-if="!program.finance.free">
-                                    <label class="col-form-label col-xl-3"><span>Zahlungsart</span></label>
+                                    <label class="col-form-label col-xl-3" for="payment"><span>Zahlungsart</span></label>
                                     <div class="col-xl-9 text-right">
                                         <div class="select-wrapper">
-                                            <select class="form-control  float-left" name="selectForm" id="selectForm" v-model="program.finance.payment">
+                                            <select class="form-control  float-left" name="selectForm" id="payment" v-model="program.finance.payment">
                                                 <!-- @ToDo: add Categories Dynamic -->
                                                 <option :value="'cash'">Bar</option>
                                                 <option :value="'transfer'">Übeweisung</option>
@@ -279,7 +279,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row" v-if="!program.finance.free">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Zahlungsfrist</label>
+                                    <label class="col-xl-3 col-form-label" for="finance-deadline">Zahlungsfrist</label>
                                     <div class="col-xl-9">
                                         <no-ssr>
                                             <datepicker bootstrap-styling language="de" monday-first v-model="program.finance.deadline"></datepicker>
@@ -287,9 +287,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group row" v-if="!program.finance.free">
-                                    <label class="col-xl-3 col-form-label" for="text-input">Hinweise zur Bezahlung</label>
+                                    <label class="col-xl-3 col-form-label" for="finance-comment">Hinweise zur Bezahlung</label>
                                     <div class="col-xl-9">
-                                        <textarea type="text" v-model="program.finance.comment" name="text-input" class="form-control"></textarea>
+                                        <textarea type="text" v-model="program.finance.comment" name="text-input" id="finance-comment" class="form-control"></textarea>
                                     </div>
                                 </div>
                             </div>

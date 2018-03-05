@@ -95,6 +95,72 @@
                         </div>
                     </div>
 
+                    
+                
+                     <div class="card">
+                        <div class="card-header">
+                            <i class="ca ca-map-pin-2"></i>Anwesenheit
+                        </div>
+                        <div class="card-body">
+
+                            <div class="form-group row">
+                                <label class="col-xl-3 col-form-label">Einsatz</label>
+                                <div class="col-xl-9">
+                                    <p class="form-control-static mt-2 mb-0">{{user.presence}}</p>
+                                </div>
+                            </div>
+                             <div class="form-group row" v-if="user.presence=='Arbeitsgruppe'">
+                                 <label class="col-xl-3 col-form-label">Arbeitsgruppe</label>
+                                <div class="col-xl-9">
+                                    <p class="form-control-static mt-2 mb-0">{{user.workgroup}}</p>
+                                </div>
+                             </div>
+                              <div class="form-group row">
+                                 <label class="col-xl-3 col-form-label">Tage</label>
+                                <div class="col-xl-3">
+                                    <p class="form-control-static mt-2">Mittwoch:</p>
+                                </div>    
+                                <div class="col-xl-6">
+                                    <p class="form-control-static mt-2" v-if="user.presenceDay.wednesday==true">ja <i class="ca ca-check-2 ml-5"></i></p>
+                                    <p class="form-control-static mt-2" v-else>nein <i class="ca ca-remove-2 ml-5"></i></p>
+                                </div>
+                                <div class="col-xl-3"></div>
+                                 <div class="col-xl-3">
+                                    <p class="form-control-static mt-2">Donnerstag:</p>
+                                </div>    
+                                <div class="col-xl-6">
+                                    <p class="form-control-static mt-2" v-if="user.presenceDay.thursday==true">ja <i class="ca ca-check-2 ml-5"></i></p>
+                                    <p class="form-control-static mt-2" v-else>nein <i class="ca ca-remove-2 ml-5"></i></p>
+                                </div>
+                                <div class="col-xl-3"></div>
+                                 <div class="col-xl-3">
+                                    <p class="form-control-static mt-2">Freitag:</p>
+                                </div>    
+                                <div class="col-xl-6">
+                                    <p class="form-control-static mt-2" v-if="user.presenceDay.friday==true">ja <i class="ca ca-check-2 ml-5"></i></p>
+                                    <p class="form-control-static mt-2" v-else>nein <i class="ca ca-remove-2 ml-5"></i></p>
+                                </div>
+                                <div class="col-xl-3"></div>
+                                 <div class="col-xl-3">
+                                    <p class="form-control-static mt-2">Samstag:</p>
+                                </div>    
+                                <div class="col-xl-6">
+                                    <p class="form-control-static mt-2" v-if="user.presenceDay.saturday==true">ja <i class="ca ca-check-2 ml-5"></i></p>
+                                    <p class="form-control-static mt-2" v-else>nein <i class="ca ca-remove-2 ml-5"></i></p>
+                                </div>
+                                <div class="col-xl-3"></div>
+                                 <div class="col-xl-3">
+                                    <p class="form-control-static mt-2">Sonntag:</p>
+                                </div>    
+                                <div class="col-xl-6">
+                                    <p class="form-control-static mt-2" v-if="user.presenceDay.sunday==true">ja <i class="ca ca-check-2 ml-5"></i></p>
+                                    <p class="form-control-static mt-2" v-else>nein <i class="ca ca-remove-2 ml-5"></i></p>
+                                </div>
+                             </div>  
+                        </div>
+                    </div>
+                
+
 
                 </div>
             </div>
@@ -119,11 +185,18 @@
                                     <p class="form-control-static mt-2 mb-0">{{user.division}}</p>
                                 </div>
                             </div>
-
+                                <div class="form-group row">
+                                    <label class="col-xl-3 col-form-label" for="helper">Gliederungshelfer</label>
+                                    <div class="col-xl-9">
+                                        <p class="form-control-static mt-2 mb-0">nein</p>    
+                                   </div>
+                                </div>    
                         </div>
                     </div>
                 </div>
-             </div>       
+             </div> 
+              
+               
         </div>
     </section>
 </template>
