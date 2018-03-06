@@ -231,10 +231,10 @@
                               <div class="col-xl-9 text-right">
                                   <div class="select-wrapper">
                                       <select class="form-control  float-left" name="selectForm" id="selectForm" v-model="user.diet" required>
-                                          <option value="none">keine Unverträglichkeiten</option>
-                                          <option value="vegetarian">vegetarisch</option>
+                                          <option value="keine Unverträglichkeiten">keine Unverträglichkeiten</option>
+                                          <option value="vegetarisch">vegetarisch</option>
                                           <option value="vegan">vegan</option>
-                                          <option value="glutenfree">glutenfrei</option>
+                                          <option value="glutenfrei">glutenfrei</option>
                                       </select>
                                   </div>
                               </div>
@@ -253,21 +253,21 @@
 
 
                       <div class="form-group row">
-                          <label class="col-xl-3 col-form-label" for="text-input">Straße*</label>
+                          <label class="col-xl-3 col-form-label" for="street">Straße*</label>
                           <div class="col-xl-9">
-                              <input type="text" id="text-input" v-model="user.address.street" name="text-input" class="form-control" required>
+                              <input type="text" id="street" v-model="user.address.street" name="text-input" class="form-control" required>
                           </div>
                       </div>
                       <div class="form-group row">
-                          <label class="col-xl-3 col-form-label" for="text-input">Postleitzahl*</label>
+                          <label class="col-xl-3 col-form-label" for="zip">Postleitzahl*</label>
                           <div class="col-xl-9">
-                              <input type="text" id="text-input" v-model="user.address.zip" name="text-input" class="form-control" required>
+                              <input type="text" id="zip" v-model="user.address.zip" name="text-input" class="form-control" required>
                           </div>
                       </div>
                       <div class="form-group row">
-                          <label class="col-xl-3 col-form-label" for="text-input">Ort / Stadt*</label>
+                          <label class="col-xl-3 col-form-label" for="city">Ort / Stadt*</label>
                           <div class="col-xl-9">
-                              <input type="text" id="text-input" v-model="user.address.city" name="text-input" class="form-control" required>
+                              <input type="text" id="city" v-model="user.address.city" name="text-input" class="form-control" required>
                           </div>
                       </div>
 
@@ -282,15 +282,15 @@
                       <div class="card-body">
 
                       <div class="form-group row">
-                          <label class="col-xl-3 col-form-label" for="text-input">Passwort*</label>
+                          <label class="col-xl-3 col-form-label" for="password">Passwort*</label>
                           <div class="col-xl-9">
-                              <input type="password" id="text-input" v-model="user.password" name="text-input" class="form-control" required>
+                              <input type="password" id="password" v-model="user.password" name="text-input" class="form-control" required>
                           </div>
                       </div>
                       <div class="form-group row">
-                          <label class="col-xl-3 col-form-label" for="text-input">Passwort wiederholen*</label>
+                          <label class="col-xl-3 col-form-label" for="passwordConfirm">Passwort wiederholen*</label>
                           <div class="col-xl-9">
-                              <input type="password" id="text-input" v-model="passwordConfirm" name="text-input" class="form-control" required>
+                              <input type="password" id="passwordConfirm" v-model="passwordConfirm" name="text-input" class="form-control" required>
                               <small class="text-danger" v-if="passwordError">Deine Passwörter stimmen nicht überein! ¯\_(ツ)_/¯</small>
                           </div>
                       </div>
@@ -431,21 +431,33 @@
                                           </div>
                                   </div>
                               </div>
-                              <div class="form-group row">
+                              
+                              </div>
+
+                              </div>
+                          </div>
+
+                          <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <i class="ca ca-map-pin-1"></i> Anwesenheit
+                                    </div>
+                                    <div class="card-body">
+                                    <div class="form-group row">
                                   <label class="col-xl-3 col-form-label" for="selectFormEinsatz">Einsatz*</label>
                                   <div class="col-xl-9">
                                       <div class="select-wrapper">
                                           <select class="form-control  float-left" name="selectFormEinsatz" id="selectFormEinsatz" v-model="user.presence" required>
-                                              <option value="ae">Ausweis / Einsetzbar</option>
-                                              <option value="ke"> kein Ausweis / Einsetzbar</option>
-                                              <option value="an">Ausweis / nicht Einsetzbar bzw. anderweitig verplant</option>
-                                              <option value="kn">kein Ausweis / nicht Einsetzbar bzw. anderweitig verplant</option>
-                                              <option value="ag">Arbeitsgruppe </option>
+                                              <option value="Ausweis / Einsetzbar">Ausweis / Einsetzbar</option>
+                                              <option value="kein Ausweis / Einsetzbar">kein Ausweis / Einsetzbar</option>
+                                              <option value="Ausweis / nicht Einsetzbar bzw. anderweitig verplant">Ausweis / nicht Einsetzbar bzw. anderweitig verplant</option>
+                                              <option value="kein Ausweis / nicht Einsetzbar bzw. anderweitig verplant">kein Ausweis / nicht Einsetzbar bzw. anderweitig verplant</option>
+                                              <option value="Arbeitsgruppe">Arbeitsgruppe </option>
                                           </select>
                                       </div>
                                   </div>
                               </div>
-                              <div class="form-group row" v-if="user.presence=='ag'">
+                              <div class="form-group row" v-if="user.presence=='Arbeitsgruppe'">
                                   <label class="col-xl-3 col-form-label" for="text-input">Arbeitsgruppe</label>
                                   <div class="col-xl-9">
                                       <div class="select-wrapper">
@@ -471,13 +483,224 @@
                                               </select>
                                           </div>
                                   </div>
+                              </div> 
+                                    <div class="form-group row">
+                                        <label class="col-xl-3 col-form-label" for="presenceDay">Tage*</label>
+                                        <div class="col-xl-9">   
+                                           <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayWednesday" name="day" v-model="user.presenceDay.wednesday">
+                                           <label class="mt-2 mb-0 mr-3" for="subscribeNews">Mittwoch</label>
+                                           <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayThursday" name="day" v-model="user.presenceDay.thursday">
+                                           <label class="mt-2 mb-0 mr-3" for="subscribeNews">Donnerstag</label>
+                                           <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayFriday" name="day" v-model="user.presenceDay.friday">
+                                           <label class="mt-2 mb-0 mr-3" for="subscribeNews">Freitag</label>
+                                           <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDaySaturday" name="day" v-model="user.presenceDay.saturday">
+                                           <label class="mt-2 mb-0 mr-3" for="subscribeNews">Samstag</label>
+                                           <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDaySunday" name="day" v-model="user.presenceDay.sunday">
+                                           <label class="mt-2 mb-0 mr-3" for="subscribeNews">Sonntag</label>
+                                        </div>   
+                                    </div>
+                                    </div>
+                                </div>
+                             </div>   
+
+                          
+                      </div>
+
+                    <div class="row">
+                      <div class="col-lg-6">
+                          <div class="card">
+                              <div class="card-header">
+                                  <i class="ca ca-map-pin-1"></i> Aufgaben
                               </div>
+                              <div class="card-body">
+                              <div class="col-xl-3"></div>
+                              <div class="col-xl-9">
+                                    <i class="ca ca-smiley-woops mr-3"></i>
+                                    <i class="ca ca-smiley-frown-2 mr-3"></i>
+                                    <i class="ca ca-smiley-poker-face mr-3"></i>
+                                    <i class="ca ca-smiley-smile-4 mr-3"></i>
+                                    <i class="ca ca-smiley-smile-1 mr-3"></i>
+                                   </div>
+                              <div class="form-group row">
+                                  <label class="col-xl-3 col-form-label" for="carpool">Fahrdienst</label>
+                                   <div class="col-xl-3">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="carpool0" value="0" v-model="user.assignment.carpool">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="carpool1" value="1" v-model="user.assignment.carpool">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="carpool2" value="2" v-model="user.assignment.carpool">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="carpool3" value="3" v-model="user.assignment.carpool">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="carpool4" value="4" v-model="user.assignment.carpool">       
+                                  </div>
+                                  <div class="col-xl-6">
+                                      <p>	Der Fahrdienst ist die logistische Zentrale des LJTr. Notwendige Materialtransporte und Zubringerdienste von Teilnehmern zu Programmpunkten werden durchgeführt. Wenn Du seit min. zwei Jahren über einen gültigen Führerschein für Pkw verfügst und min. 21 Jahre alt bist, kannst Du beim Fahrdienst mithelfen.
+                                      </p>
+                                  </div>       
+                              </div>
+
+                                <div class="form-group row">
+                                  <label class="col-xl-3 col-form-label" for="carpool">Sanitäter</label>
+                                   <div class="col-xl-3">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="medic0" value="0" v-model="user.assignment.medic">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="medic1" value="1" v-model="user.assignment.medic">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="medic2" value="2" v-model="user.assignment.medic">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="medic3" value="3" v-model="user.assignment.medic">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="medic4" value="4" v-model="user.assignment.medic">       
+                                  </div>
+                                  <div class="col-xl-6">
+                                      <p>Du verfügst über eine gültige (nicht älter als 2 Jahre) San A und/oder B Ausbildung und möchtest Dich am Sanitätsdienst der Veranstaltung beteiligen? Dann melde Dich als Sanitäter an. (Eine Teilnahme am im Seminarheft ausgeschriebenen Vorbereitungswochenende ist gewünscht. Hier kann ggf. eine Auffrischung der San-Ausbildung erfolgen.)
+                                      </p>
+                                  </div>     
+                              </div>
+
+                              <div class="form-group row">
+                                  <label class="col-xl-3 col-form-label" for="carpool">Haussicherheit</label>
+                                   <div class="col-xl-3">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="homeSecurity0" value="0" v-model="user.assignment.homeSecurity">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="homeSecurity1" value="1" v-model="user.assignment.homeSecurity">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="homeSecurity2" value="2" v-model="user.assignment.homeSecurity">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="homeSecurity3" value="3" v-model="user.assignment.homeSecurity">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="homeSecurity4" value="4" v-model="user.assignment.homeSecurity">       
+                                  </div>
+                                  <div class="col-xl-6">
+                                      <p>Du bist für die Sicherheit auf der Veranstaltung verantwortlich. Es wird dafür gesorgt, dass keine Fremden unsere Veranstaltung stören können und wichtige Vorsichtsmaßnahmen, wie z. B. der geregelte Einlass zum Essen und der Abendveranstaltung, umgesetzt werden. Wenn Du mind. 18 Jahre alt bist und verantwortungsbewußt handelst, dann mach mit bei der HausSicherheit!		
+                                      </p>
+                                  </div>     
+                              </div>
+                              
+                              <div class="form-group row">
+                                  <label class="col-xl-3 col-form-label" for="carpool">Café Kontakt</label>
+                                   <div class="col-xl-3">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="cafe0" value="0" v-model="user.assignment.cafe">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="cafe1" value="1" v-model="user.assignment.cafe">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="cafe2" value="2" v-model="user.assignment.cafe">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="cafe3" value="3" v-model="user.assignment.cafe">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="cafe4" value="4" v-model="user.assignment.cafe">       
+                                  </div>
+                                  <div class="col-xl-6">
+                                      <p>Willkommen im sozialen Mittelpunkt des LJTr. Hier wird geklönt, sich ausgetauscht oder einfach nur mal relaxt. Als CafeKontakler versorgst Du die Gäste mit Kaffee, Saft, Waffeln, Eis,… Wenn Du gerne backst oder im Verkauf helfen möchtest und min. 16 Jahre alt bist, dann ist das Cafe Kontakt der richtige Ort für Dich. (Eine Teilnahme am im Seminarheft ausgeschriebenen Vorbereitungswochenende ist gewünscht.)
+                                      </p>
+                                  </div>     
+                              </div>
+
+                               <div class="form-group row">
+                                  <label class="col-xl-3 col-form-label" for="carpool">Helfer</label>
+                                   <div class="col-xl-3">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="assistant0" value="0" v-model="user.assignment.assistant">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="assistant1" value="1" v-model="user.assignment.assistant">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="assistant2" value="2" v-model="user.assignment.assistant">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="assistant3" value="3" v-model="user.assignment.assistant">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="assistant4" value="4" v-model="user.assignment.assistant">       
+                                  </div>
+                                  <div class="col-xl-6">
+                                      <p>Als Helfer bist Du in allen anderen wichtigen Bereichen des LJTr tätig. Hier kannst Du selber wählen, ob Du in einem Bereich während der ganzen Veranstaltung helfen möchtest oder zwischendurch wechselst. Wir werden versuchen Deine Wünsche so gut wie möglich zu erfüllen.
+                                      </p>
+                                  </div>     
+                              </div>
+
+                              <div class="form-group row">
+                                  <label class="col-xl-3 col-form-label" for="carpool">Rödeltruppe Wettkampf</label>
+                                   <div class="col-xl-3">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="contest0" value="0" v-model="user.assignment.contest">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="contest1" value="1" v-model="user.assignment.contest">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="contest2" value="2" v-model="user.assignment.contest">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="contest3" value="3" v-model="user.assignment.contest">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="contest4" value="4" v-model="user.assignment.contest">       
+                                  </div>
+                                  <div class="col-xl-6">
+                                      <p>In der Rödeltruppe Schwimmhalle bist Du zuständig z.B. für den Puppentransport, Auf- und Abbau der Hindernisse und sonstige Logistik in der Halle. Du solltest über gute Kondition, Badesachen und eigene Schwimmflossen verfügen.
+                                      </p>
+                                  </div>     
+                              </div>
+
+                              <div class="form-group row">
+                                  <label class="col-xl-3 col-form-label" for="carpool">Verpflegung</label>
+                                   <div class="col-xl-3">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="catering0" value="0" v-model="user.assignment.catering">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="catering1" value="1" v-model="user.assignment.catering">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="catering2" value="2" v-model="user.assignment.catering">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="catering3" value="3" v-model="user.assignment.catering">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="catering4" value="4" v-model="user.assignment.catering">       
+                                  </div>
+                                  <div class="col-xl-6">
+                                      <p>Die Verpflegung füllt Gläser und Teller, spült Becher und transportiert Geschirr und Besteck von der Küche zur Ausgabe und zurück. Ohne Deinen Einsatz in diesem Bereich, würden alle hungrig bleiben.
+                                      </p>
+                                  </div>     
+                              </div>
+
+                              <div class="form-group row">
+                                  <label class="col-xl-3 col-form-label" for="carpool">Rödeltruppe Schule</label>
+                                   <div class="col-xl-3">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="school0" value="0" v-model="user.assignment.school">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="school1" value="1" v-model="user.assignment.school">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="school2" value="2" v-model="user.assignment.school">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="school3" value="3" v-model="user.assignment.school">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="school4" value="4" v-model="user.assignment.school">       
+                                  </div>
+                                  <div class="col-xl-6">
+                                      <p>Die Rödeltruppe Schule erledigt alle spontanen und notwendigen Tätigkeiten. Dies können Auf- und Umbauarbeiten, Beschilderungen anbringen, kurzfristige Vertretungen, die Abnahme von Klassenräumen usw. sein.
+                                      </p>
+                                  </div>     
+                              </div>
+
+                               <div class="form-group row">
+                                  <label class="col-xl-3 col-form-label" for="carpool">Programmbetreuung</label>
+                                   <div class="col-xl-3">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="programSupport0" value="0" v-model="user.assignment.programSupport">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="programSupport1" value="1" v-model="user.assignment.programSupport">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="programSupport2" value="2" v-model="user.assignment.programSupport">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="programSupport3" value="3" v-model="user.assignment.programSupport">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="programSupport4" value="4" v-model="user.assignment.programSupport">       
+                                  </div>
+                                  <div class="col-xl-6">
+                                      <p>Einige Programmpunkte werden von Helfern betreut. So müssen z. B. Spielgeräte beaufsichtigt, Fahrten zum Museum begleitet und Teilnehmer bei bestimmten Angeboten unterstützt werden.
+                                      </p>
+                                  </div>     
                               </div>
 
                               </div>
                           </div>
-                      </div>
-                      <div class ="row justify-content-center">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                    <div class="card-header">
+                                        <i class="ca ca-map-pin-1"></i> Einverständis
+                                    </div>
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <label class="col-xl-1 col-form-label" for="agreement">Einverständnis</label>
+                                    <input class="mt-2 mb-0 mr-4" type="checkbox" id="agreement" required>
+                                    <div class="col-xl-7 mt-1">
+                                        <p>
+                                            Ich melde mich hiermit als Helfer zum Landesjugendtreffen 2018 an. <br>
+                                            <strong>Bei Minderjährigen:</strong> Meine Eltern/gesetzlichen Vertreter haben zugestimmt. Das schriftliche Einverständnis meiner Eltern/gesetzlichen Vertreter bringe ich zur Veranstaltung mit. Das Formular erhalte ich mit meiner Anmeldemail zugesendet.
+                                        </p>
+                                    </div>
+                                </div>
+                                 <div class="form-group row">
+                                    <label class="col-xl-1 col-form-label" for="agb">Helfer-AGB</label>
+                                    <input class="mt-2 mb-0 mr-4" type="checkbox" id="agb" required>
+                                    <div class="col-xl-7 mt-1">
+                                        <p>
+                                            Auszug aus den Allgemeinen Geschäftsbedingungen (Teilnahmebedingungen): <br>
+                                            § 5 – Teilnahmegebühr <br>
+                                            (1) Für die Teilnahme an der Veranstaltung ist von jedem Teilnehmenden die Teilnahmegebühr gemäß der jeweils gültigen Ausschreibung im Voraus zu zahlen. <br>
+                                            (2) Helfende sind von der Zahlung des Teilnahmebeitrags befreit, sofern diese für die gesamte Dauer der Veranstaltung als Helfende zur Verfügung steht oder die Unterstützung im Rahmen der Vor- oder/und Nachbereitung erheblich war. <br>
+                                            (3) Für Helfende wird der volle Teilnahmebeitrag fällig, wenn diese ohne Einhaltung der Abmeldefristen und –voraussetzungen nicht zur Veranstaltung anreisen, vorzeitig abreisen oder ihre Arbeitskraft nicht im vereinbarten Umfang zur Verfügung stellen und durch die verbindliche Anmeldung Kosten entstanden sind. Teilnehmenden Gliederungen wird dieser in Form der Strafgebühr berechnet. <br>
+                                            (4) Der Landesjugendvorstand ist berechtigt auch höhere Kosten, die nachzuweisen sind, in Rechnung zu stellen. <br>
+                                            <br>
+
+                                            Die vollständigen Helfer-AGB kannst du <a href="https://sh.dlrg.de/dlrg-jugend/veranstaltungen/landesmeisterschaften-mit-dem-landesjugendtreffen/agb.html" target="_blank" style="text-decoration: underline;">hier</a> einsehen.
+                                        </p>
+                                    </div>
+                                </div>          
+                            </div>
+                            </div>
+                        </div>   
+                    </div>           
+
+                      <div class ="row justify-content-center mb-5">
                         <div class ="col-lg-6">
                             <button type="submit" class="btn btn-block btn-success">Registrieren</button>
                             <button class="btn btn-block btn-primary" type="button" @click="login">Schon ein Account? Zur Anmeldung!</button>
@@ -502,6 +725,25 @@
       birthday: '',
       gender: 'm',
       diet: 'none',
+      presence: '',
+      presenceDay: {
+        wednesday: false,
+        thursday: false,
+        friday: false,
+        saturday: false,
+        sunday: false
+      },
+      assignment: {
+        carpool: null,
+        medic: null,
+        homeSecurity: null,
+        café: null,
+        assistant: null,
+        contest: null,
+        catering: null,
+        school: null,
+        programSupport: null
+      },
       address: {
         street: '',
         zip: '',

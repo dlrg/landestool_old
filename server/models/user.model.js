@@ -33,6 +33,17 @@ module.exports = function (app) {
     comment: { type: String, required: false },
     division: { type: String, required: false },
     workgroup: { type: String, required: false },
+    assignment: {
+      carpool: { type: Number, required: false },
+      medic: { type: Number, required: false },
+      homeSecurity: { type: Number, required: false },
+      cafe: { type: Number, required: false },
+      assistant: { type: Number, required: false },
+      contest: { type: Number, required: false },
+      catering: { type: Number, required: false },
+      school: { type: Number, required: false },
+      programSupport: { type: Number, required: false }
+    },
 
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }

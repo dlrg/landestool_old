@@ -139,7 +139,7 @@
                                     <div class="card-body">
 
                                     <div class="form-group row">
-                                        <label class="col-xl-3 col-form-label" for="hpusing">Unterkunft*</label>
+                                        <label class="col-xl-3 col-form-label" for="housing">Unterkunft*</label>
                                         <div class="col-xl-9">
                                             <div class="select-wrapper">
                                                     <select class="form-control  float-left" name="selectForm" id="housing" v-model="user.housing" required>
@@ -342,7 +342,160 @@
                                     </div>
                                     </div>
                                 </div>
-                             </div>          
+                             </div>
+                            
+                                <div class="col-lg-6">
+                                <div class="card">
+                              <div class="card-header">
+                                  <i class="ca ca-task-2"></i> Aufgaben
+                              </div>
+                              <div class="card-body">
+                              <div class="col-xl-3"></div>
+                              <div class="col-xl-9">
+                                    <i class="ca ca-smiley-woops mr-3"></i>
+                                    <i class="ca ca-smiley-frown-2 mr-3"></i>
+                                    <i class="ca ca-smiley-poker-face mr-3"></i>
+                                    <i class="ca ca-smiley-smile-4 mr-3"></i>
+                                    <i class="ca ca-smiley-smile-1 mr-3"></i>
+                                   </div>
+                              <div class="form-group row">
+                                  <label class="col-xl-3 col-form-label" for="carpool">Fahrdienst</label>
+                                   <div class="col-xl-3">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="carpool0" value="0" v-model="user.assignment.carpool">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="carpool1" value="1" v-model="user.assignment.carpool">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="carpool2" value="2" v-model="user.assignment.carpool">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="carpool3" value="3" v-model="user.assignment.carpool">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="carpool4" value="4" v-model="user.assignment.carpool">       
+                                  </div>
+                                  <div class="col-xl-6">
+                                      <p>	Der Fahrdienst ist die logistische Zentrale des LJTr. Notwendige Materialtransporte und Zubringerdienste von Teilnehmern zu Programmpunkten werden durchgeführt. Wenn Du seit min. zwei Jahren über einen gültigen Führerschein für Pkw verfügst und min. 21 Jahre alt bist, kannst Du beim Fahrdienst mithelfen.
+                                      </p>
+                                  </div>       
+                              </div>
+
+                                <div class="form-group row">
+                                  <label class="col-xl-3 col-form-label" for="carpool">Sanitäter</label>
+                                   <div class="col-xl-3">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="medic0" value="0" v-model="user.assignment.medic">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="medic1" value="1" v-model="user.assignment.medic">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="medic2" value="2" v-model="user.assignment.medic">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="medic3" value="3" v-model="user.assignment.medic">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="medic4" value="4" v-model="user.assignment.medic">       
+                                  </div>
+                                  <div class="col-xl-6">
+                                      <p>Du verfügst über eine gültige (nicht älter als 2 Jahre) San A und/oder B Ausbildung und möchtest Dich am Sanitätsdienst der Veranstaltung beteiligen? Dann melde Dich als Sanitäter an. (Eine Teilnahme am im Seminarheft ausgeschriebenen Vorbereitungswochenende ist gewünscht. Hier kann ggf. eine Auffrischung der San-Ausbildung erfolgen.)
+                                      </p>
+                                  </div>     
+                              </div>
+
+                              <div class="form-group row">
+                                  <label class="col-xl-3 col-form-label" for="carpool">Haussicherheit</label>
+                                   <div class="col-xl-3">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="homeSecurity0" value="0" v-model="user.assignment.homeSecurity">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="homeSecurity1" value="1" v-model="user.assignment.homeSecurity">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="homeSecurity2" value="2" v-model="user.assignment.homeSecurity">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="homeSecurity3" value="3" v-model="user.assignment.homeSecurity">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="homeSecurity4" value="4" v-model="user.assignment.homeSecurity">       
+                                  </div>
+                                  <div class="col-xl-6">
+                                      <p>Du bist für die Sicherheit auf der Veranstaltung verantwortlich. Es wird dafür gesorgt, dass keine Fremden unsere Veranstaltung stören können und wichtige Vorsichtsmaßnahmen, wie z. B. der geregelte Einlass zum Essen und der Abendveranstaltung, umgesetzt werden. Wenn Du mind. 18 Jahre alt bist und verantwortungsbewußt handelst, dann mach mit bei der HausSicherheit!		
+                                      </p>
+                                  </div>     
+                              </div>
+                              
+                              <div class="form-group row">
+                                  <label class="col-xl-3 col-form-label" for="carpool">Café Kontakt</label>
+                                   <div class="col-xl-3">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="cafe0" value="0" v-model="user.assignment.cafe">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="cafe1" value="1" v-model="user.assignment.cafe">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="cafe2" value="2" v-model="user.assignment.cafe">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="cafe3" value="3" v-model="user.assignment.cafe">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="cafe4" value="4" v-model="user.assignment.cafe">       
+                                  </div>
+                                  <div class="col-xl-6">
+                                      <p>Willkommen im sozialen Mittelpunkt des LJTr. Hier wird geklönt, sich ausgetauscht oder einfach nur mal relaxt. Als CafeKontakler versorgst Du die Gäste mit Kaffee, Saft, Waffeln, Eis,… Wenn Du gerne backst oder im Verkauf helfen möchtest und min. 16 Jahre alt bist, dann ist das Cafe Kontakt der richtige Ort für Dich. (Eine Teilnahme am im Seminarheft ausgeschriebenen Vorbereitungswochenende ist gewünscht.)
+                                      </p>
+                                  </div>     
+                              </div>
+
+                               <div class="form-group row">
+                                  <label class="col-xl-3 col-form-label" for="carpool">Helfer</label>
+                                   <div class="col-xl-3">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="assistant0" value="0" v-model="user.assignment.assistant">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="assistant1" value="1" v-model="user.assignment.assistant">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="assistant2" value="2" v-model="user.assignment.assistant">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="assistant3" value="3" v-model="user.assignment.assistant">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="assistant4" value="4" v-model="user.assignment.assistant">       
+                                  </div>
+                                  <div class="col-xl-6">
+                                      <p>Als Helfer bist Du in allen anderen wichtigen Bereichen des LJTr tätig. Hier kannst Du selber wählen, ob Du in einem Bereich während der ganzen Veranstaltung helfen möchtest oder zwischendurch wechselst. Wir werden versuchen Deine Wünsche so gut wie möglich zu erfüllen.
+                                      </p>
+                                  </div>     
+                              </div>
+
+                              <div class="form-group row">
+                                  <label class="col-xl-3 col-form-label" for="carpool">Rödeltruppe Wettkampf</label>
+                                   <div class="col-xl-3">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="contest0" value="0" v-model="user.assignment.contest">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="contest1" value="1" v-model="user.assignment.contest">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="contest2" value="2" v-model="user.assignment.contest">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="contest3" value="3" v-model="user.assignment.contest">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="contest4" value="4" v-model="user.assignment.contest">       
+                                  </div>
+                                  <div class="col-xl-6">
+                                      <p>In der Rödeltruppe Schwimmhalle bist Du zuständig z.B. für den Puppentransport, Auf- und Abbau der Hindernisse und sonstige Logistik in der Halle. Du solltest über gute Kondition, Badesachen und eigene Schwimmflossen verfügen.
+                                      </p>
+                                  </div>     
+                              </div>
+
+                              <div class="form-group row">
+                                  <label class="col-xl-3 col-form-label" for="carpool">Verpflegung</label>
+                                   <div class="col-xl-3">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="catering0" value="0" v-model="user.assignment.catering">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="catering1" value="1" v-model="user.assignment.catering">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="catering2" value="2" v-model="user.assignment.catering">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="catering3" value="3" v-model="user.assignment.catering">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="catering4" value="4" v-model="user.assignment.catering">       
+                                  </div>
+                                  <div class="col-xl-6">
+                                      <p>Die Verpflegung füllt Gläser und Teller, spült Becher und transportiert Geschirr und Besteck von der Küche zur Ausgabe und zurück. Ohne Deinen Einsatz in diesem Bereich, würden alle hungrig bleiben.
+                                      </p>
+                                  </div>     
+                              </div>
+
+                              <div class="form-group row">
+                                  <label class="col-xl-3 col-form-label" for="carpool">Rödeltruppe Schule</label>
+                                   <div class="col-xl-3">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="school0" value="0" v-model="user.assignment.school">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="school1" value="1" v-model="user.assignment.school">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="school2" value="2" v-model="user.assignment.school">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="school3" value="3" v-model="user.assignment.school">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="school4" value="4" v-model="user.assignment.school">       
+                                  </div>
+                                  <div class="col-xl-6">
+                                      <p>Die Rödeltruppe Schule erledigt alle spontanen und notwendigen Tätigkeiten. Dies können Auf- und Umbauarbeiten, Beschilderungen anbringen, kurzfristige Vertretungen, die Abnahme von Klassenräumen usw. sein.
+                                      </p>
+                                  </div>     
+                              </div>
+
+                               <div class="form-group row">
+                                  <label class="col-xl-3 col-form-label" for="carpool">Programmbetreuung</label>
+                                   <div class="col-xl-3">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="programSupport0" value="0" v-model="user.assignment.programSupport">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="programSupport1" value="1" v-model="user.assignment.programSupport">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="programSupport2" value="2" v-model="user.assignment.programSupport">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="programSupport3" value="3" v-model="user.assignment.programSupport">
+                                    <input class="mt-1 mb-0 mr-4" type="radio" id="programSupport4" value="4" v-model="user.assignment.programSupport">       
+                                  </div>
+                                  <div class="col-xl-6">
+                                      <p>Einige Programmpunkte werden von Helfern betreut. So müssen z. B. Spielgeräte beaufsichtigt, Fahrten zum Museum begleitet und Teilnehmer bei bestimmten Angeboten unterstützt werden.
+                                      </p>
+                                  </div>     
+                              </div>
+
+                              </div>
+                          </div>
+                          </div>        
                         </div>
             </form>
         </div>
