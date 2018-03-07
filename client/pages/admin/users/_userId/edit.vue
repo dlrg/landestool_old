@@ -114,23 +114,18 @@
                             <div class="form-group row">
                                 <label class="col-xl-3 col-form-label" for="password">Passwort ändern</label>
                                 <div class="col-xl-9">
-<<<<<<< HEAD
-                                    <input type="password" id="text-input" v-model="user.password" name="text-input" class="form-control">
-=======
+
                                     <input type="password" id="password" v-model="user.password" name="text-input" class="form-control" required>
->>>>>>> feature/kadda-ist-verwirrt
+
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-xl-3 col-form-label" for="passwordConfirm">Passwort wiederholen*</label>
                                 <div class="col-xl-9">
-<<<<<<< HEAD
-                                    <input type="password" id="text-input" v-model="passwordConfirm" name="text-input" class="form-control">
-                                    <small class="text-danger" v-if="passwordError">Deine Passwörter stimmen nicht überein!</small>
-=======
+
                                     <input type="password" id="passwordConfirm" v-model="passwordConfirm" name="text-input" class="form-control" required>
                                     <small class="text-danger" v-if="passwordError">Deine Passwörter stimmen nicht überein! ¯\_(ツ)_/¯</small>
->>>>>>> feature/kadda-ist-verwirrt
+
                                 </div>
                             </div>
 
@@ -353,7 +348,7 @@
                                 </div>
                              </div>
                             
-                                <div class="col-lg-6">
+                                <div class="col-lg-12">
                                 <div class="card">
                               <div class="card-header">
                                   <i class="ca ca-task-2"></i> Aufgaben
