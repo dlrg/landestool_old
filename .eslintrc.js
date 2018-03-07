@@ -12,6 +12,8 @@ module.exports = {
     'html'
   ],
   // add your custom rules here
-  rules: {},
+  rules: {
+    "indent": ["error", 2]
+  },
   globals: {}
 }

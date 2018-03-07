@@ -59,8 +59,10 @@
     "serve-favicon": "^2.4.5",
     "socket.io-client": "^2.0.4",
     "source-map-support": "^0.5.3",
+    "vue-avatar": "^2.1.3",
     "vue-bootstrap-datetimepicker": "^4.1.3",
     "vue-datetime-picker": "^0.2.1",
+    "vue-form-wizard": "^0.8.4",
     "vuejs-datepicker": "^0.9.26",
     "winston": "^2.4.0"
   },
