@@ -116,6 +116,7 @@
                   <div class="card">
                     <div class="card-header">
                       <i class="ca ca-anchor"></i> Foto
+                      <vue-dropzone ref="myVueDropzone" id="dropzone" :options="dropzoneOptions"/>
                     </div>
                     <div class="card-body">
                       <div class="form-group row">
@@ -491,7 +492,8 @@
                   <div class="form-group row">
                     <label class="col-xl-3 col-form-label" for="password">Passwort*</label>
                     <div class="col-xl-9">
-                      <input type="password" id="password" v-model="user.password" name="text-input" class="form-control" required>
+                      <vue-password id="password" v-model="user.password" name="text-input" class="form-control" required>
+                      </vue-password>
                     </div>
                   </div>
                   <div class="form-group row">
@@ -517,6 +519,9 @@
   import dateFormatter from '@/filters/date-formatter'
   import { FormWizard, TabContent } from 'vue-form-wizard'
   import 'vue-form-wizard/dist/vue-form-wizard.min.css'
+  import vue2Dropzone from 'vue2-dropzone'
+  import 'vue2-dropzone/dist/vue2Dropzone.css'
+  import VuePassword from 'vue-password'
 
   const data = {
     user: {
@@ -561,14 +566,25 @@
   }
 
   export default {
+    name: 'app',
     filters: { dateFormatter },
     components: {
+      vueDropzone: vue2Dropzone,
       datepicker,
       FormWizard,
-      TabContent
+      TabContent,
+      VuePassword
     },
     data () {
-      return data
+      return {
+        ...data,
+        dropzoneOptions: {
+          url: 'upload',
+          thumbnailWidth: 150,
+          maxFilesize: 0.5,
+          headers: { 'My-Awesome-Header': 'header value' }
+        }
+      }
     },
     methods: {
       add () {

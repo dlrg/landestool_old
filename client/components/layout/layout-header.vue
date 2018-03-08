@@ -9,7 +9,7 @@
                     <avatar :username="`${$store.state.auth.user.firstname} ${$store.state.auth.user.lastname}`"></avatar>
                 </div>
                 <div class="avatar-name">
-                    {{ $store.state.auth.user.firstname }} {{ $store.state.auth.user.lastname }}
+                     <router-link :to="`/admin/users/${$store.state.auth.user._id}`"> {{ $store.state.auth.user.firstname }} {{ $store.state.auth.user.lastname }} </router-link>
                 </div>
             </div>
         </a>

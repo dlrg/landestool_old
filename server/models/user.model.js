@@ -45,6 +45,8 @@ module.exports = function (app) {
       programSupport: { type: Number, required: false }
     },
 
+    role: { type: String, enum: ['admin', 'user'] },
+
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
   })
