@@ -28,9 +28,9 @@
                     <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%">
                         <div class="card-body text-center">
                             <div>
-                                <h2>Jetzt registrieren</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <button type="button" class="btn btn-primary active mt-3" @click="registrate()">Jetzt Registrieren!</button>
+                                <h2>Jetzt registrieren!</h2>
+                                <p>Unser Landesjugendtreffen kann nur funktionieren, wenn sich genügend Freiwillige melden, die bereit sind zu helfen. Möchtest du Teil unseres Teams werden?</p>
+                                <button type="button" class="btn btn-primary active mt-3" @click="registrate()">Zur Registrierung</button>
                             </div>
                         </div>
                     </div>

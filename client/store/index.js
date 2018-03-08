@@ -38,7 +38,8 @@ export default () => new Vuex.Store({
       state: {
         publicPages: [
           'login',
-          'signup'
+          'signup',
+          'signup-success'
         ],
         forbiddenOnAuth: [
           'login',
