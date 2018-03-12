@@ -13,10 +13,11 @@
                             <table class="table table-striped">
                                 <thead>
                                 <tr >
-                                    <th>Firstname</th>
-                                    <th>Lastname</th>
+                                    <th>Vorname</th>
+                                    <th>Nachname</th>
                                     <th>Email</th>
                                     <th>Ort/Stadt</th>
+                                    <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -25,6 +26,7 @@
                                         <td>{{ item.lastname}}</td>
                                         <td>{{ item.email }}</td>
                                         <td>{{ item.address.city }}</td>
+                                        <td><button class="btn btn-sm btn-danger" @click.stop="remove(item._id)">Löschen</button></td>
                                     </nuxt-link>
                                 </tbody>
                             </table>
@@ -50,7 +52,14 @@
     methods: {
       add () {
         this.$router.push('/admin/users/add')
+      },
+      async remove (_id) {
+        await this.$store.dispatch('user/remove', _id)
+        alert('Benutzer geöscht')
       }
+    },
+    showAlert: () => {
+      alert('Löschen erfolgreich')
     },
     async fetch ({ store }) {
       await store.dispatch('user/find')

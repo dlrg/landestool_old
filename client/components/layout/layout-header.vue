@@ -9,17 +9,18 @@
                     <avatar :username="`${$store.state.auth.user.firstname} ${$store.state.auth.user.lastname}`"></avatar>
                 </div>
                 <div class="avatar-name">
-                     <router-link :to="`/admin/users/${$store.state.auth.user._id}`"> {{ $store.state.auth.user.firstname }} {{ $store.state.auth.user.lastname }} </router-link>
+                     <!--router-link :to="`/admin/users/${$store.state.auth.user._id}`">{{ $store.state.auth.user.firstname }} {{ $store.state.auth.user.lastname }}</router-link-->
                 </div>
             </div>
         </a>
+        
         <button class="navbar-toggler sidebar-toggler d-md-down-none h-100 px-3" @click="toggleSidebar" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
         <ul class="nav navbar-nav d-md-down-none d-none mr-auto">
             <form class="form-inline px-4">
                 <i class="fa fa-search"></i>
-                <input class="form-control" type="text" placeholder="Search...">
+                <input class="form-control" type="text" placeholder="Search..."/>
             </form>
         </ul>
         <ul class="nav navbar-nav d-md-down-none ml-4 mr-auto">

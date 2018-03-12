@@ -61,7 +61,7 @@
                </div>
             </div>
             <div class="col-lg-6">
-               <!-- Datum/Uhrzeit-->
+               <!-- Profilbild -->
                <div class="card">
                   <div class="card-header">
                      <i class="ca ca-map-pin-2"></i>Profilbild
@@ -72,7 +72,7 @@
                </div>
             </div>
             <div class="col-lg-6">
-               <!-- Datum/Uhrzeit-->
+               <!-- Adresse -->
                <div class="card">
                   <div class="card-header">
                      <i class="ca ca-map-pin-2"></i>Addresse
