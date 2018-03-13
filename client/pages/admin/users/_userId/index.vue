@@ -64,7 +64,7 @@
                <!-- Profilbild -->
                <div class="card">
                   <div class="card-header">
-                     <i class="ca ca-map-pin-2"></i>Profilbild
+                     <i class="ca ca-person-2"></i>Profilbild
                   </div>
                   <div class="card-body">
                     <!--<img src="../../../../assets/img/BOATY.jpg"/>-->
@@ -104,7 +104,7 @@
           <div class="col-lg-6">
             <div class="card">
               <div class="card-header">
-                  <i class="ca ca-map-pin-2"></i>Anwesenheit
+                  <i class="ca ca-clock-2"></i>Anwesenheit
               </div>
               <div class="card-body">
                   <div class="form-group row">
@@ -167,7 +167,7 @@
             <div class="col-lg-6">
                <div class="card">
                   <div class="card-header">
-                     <i class="ca ca-map-pin-2"></i>Organisation
+                     <i class="ca ca-map-pin-1"></i>Organisation
                   </div>
                   <div class="card-body">
                      <div class="form-group row">

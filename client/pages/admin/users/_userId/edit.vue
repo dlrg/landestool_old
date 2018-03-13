@@ -107,7 +107,7 @@
                         <!-- Ort -->
                         <div class="card">
                             <div class="card-header">
-                                <i class="ca ca-map-pin-1"></i> Anmeldung
+                                <i class="ca ca-key-1"></i> Anmeldung
                             </div>
                             <div class="card-body">
 
@@ -284,7 +284,7 @@
                             <div class="col-lg-6">
                                 <div class="card">
                                     <div class="card-header">
-                                        <i class="ca ca-map-pin-1"></i> Anwesenheit
+                                        <i class="ca ca-clock-2"></i> Anwesenheit
                                     </div>
                                     <div class="card-body">
                                          <div class="form-group row">

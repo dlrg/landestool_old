@@ -17,6 +17,8 @@ module.exports = function (app) {
     housing: { type: String, required: true },
     presence: { type: String, required: true },
     presenceDay: {
+      monday: { type: Boolean, required: false },
+      tuesday: { type: Boolean, required: false },
       wednesday: { type: Boolean, required: false },
       thursday: { type: Boolean, required: false },
       friday: { type: Boolean, required: false },
@@ -42,23 +44,7 @@ module.exports = function (app) {
       contest: { type: Number, required: false },
       catering: { type: Number, required: false },
       school: { type: Number, required: false },
-      programSupport: { type: Number, required: false },
-      akFLiB: { type: Number, required: false },
-      akJuga: { type: Number, required: false },
-      akKiGA: { type: Number, required: false },
-      akMedienredaktion: { type: Number, required: false },
-      akRettungssport: { type: Number, required: false },
-      akUweP: { type: Number, required: false },
-      ausrichter: { type: Number, required: false },
-      bierWeinstube: { type: Number, required: false },
-      ehrengaeste: { type: Number, required: false },
-      externe: { type: Number, required: false },
-      helferbuero: { type: Number, required: false },
-      infostand: { type: Number, required: false },
-      jetteam: { type: Number, required: false },
-      pgLandes: { type: Number, required: false },
-      programAusrichter: { type: Number, required: false },
-      regatta: { type: Number, required: false }
+      programSupport: { type: Number, required: false }
     },
 
     role: {

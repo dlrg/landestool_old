@@ -115,7 +115,7 @@
                   <!--Stammdaten -->
                   <div class="card">
                     <div class="card-header">
-                      <i class="ca ca-anchor"></i> Foto
+                      <i class="ca ca-person-2"></i> Profilbild
                       <vue-dropzone ref="myVueDropzone" id="dropzone" :options="dropzoneOptions"/>
                     </div>
                     <div class="card-body">
@@ -268,7 +268,7 @@
               <div class="col-lg-6">
                 <div class="card">
                   <div class="card-header">
-                    <i class="ca ca-map-pin-1"></i> Anwesenheit
+                    <i class="ca ca-clock-2"></i> Anwesenheit
                   </div>
                   <div class="card-body">
                     <div class="form-group row">
@@ -294,7 +294,7 @@
                             <option value="AK FLiB">AK FLiB</option>
                             <option value="AK Juga">AK Juga</option>
                             <option value="AK KiGA">AK KiGA</option>
-                            <option value="AK OekA">AK OekA</option>
+                            <option value="AK Medienredation">AK Medienreaktion</option>
                             <option value="AK Rettungssport">AK Rettungssport</option>
                             <option value="AK Uwe P.">AK Uwe P.</option>
                             <option value="Ausrichter">Ausrichter</option>
