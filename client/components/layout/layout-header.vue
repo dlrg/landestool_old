@@ -5,7 +5,9 @@
         </button>
         <a class="navbar-brand" v-bind:class="{sidebarClosed: toggle}">
             <div class="avatar-wrapper">
-                <img src="https://api.adorable.io/avatars/50/abott@adorable.png" class="img-avatar avatar" alt="avatar">
+                <div class="avatar-picture mr-3">
+                    <avatar :username="`${$store.state.auth.user.firstname} ${$store.state.auth.user.lastname}`"></avatar>
+                </div>
                 <div class="avatar-name">
                     {{ $store.state.auth.user.firstname }} {{ $store.state.auth.user.lastname }}
                 </div>
@@ -22,7 +24,7 @@
         </ul>
         <ul class="nav navbar-nav d-md-down-none ml-4 mr-auto">
             <li class="nav-item">
-                <img src="~assets/img/Logo-WM-Gelb.gif" height="15px"/>
+                <img src="../../assets/img/Logo-WM-Gelb.gif" height="15px"/>
             </li>
         </ul>
         <ul class="nav navbar-nav ml-auto">
@@ -42,11 +44,16 @@
 </template>
 
 <script>
+  import Avatar from 'vue-avatar'
   export default {
+    name: 'layout-header',
     data () {
       return {
         toggle: false
       }
+    },
+    components: {
+      Avatar
     },
     methods: {
       toggleSidebar () {

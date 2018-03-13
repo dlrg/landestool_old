@@ -1,15 +1,21 @@
 <template>
   <section class="container-fluid">
-    <form-wizard @on-complete="add"
-      subtitle="Trage Schritt für Schritt die Daten ein"
+    <form-wizard @on-complete="signup"
+      subtitle="Trage Schritt für Schritt deine Daten ein"
       back-button-text="Zurück"
       next-button-text="Weiter"
-      finish-button-text="Hinzufügen"
+      finish-button-text="Registrieren"
       color="#ff5900">
-      <h1 slot="title">Benutzer hinzufügen</h1>
+      <h1 slot="title">Registrieren</h1>
 
       <tab-content title="Stammdaten">
         <div class ="container">
+          <div class ="row justify-content-end mb-1">
+            <div class ="col-lg-4">
+              <button class="btn btn-block btn-primary" type="button" @click="login">Schon ein Account? Zur Anmeldung!</button>
+            </div>
+          </div>
+
           <div class="animated fadeIn">
             <form>
               <div class="row">
@@ -82,7 +88,7 @@
               </div>
               <div class ="row">
                 <div class="col-lg-12">
-                  <!-- Adresse-->
+                  <!-- Datum/Uhrzeit-->
                   <div class="card">
                     <div class="card-header">
                       <i class="ca ca-map-pin-2"></i> Adresse
@@ -105,20 +111,6 @@
                         <div class="col-xl-9">
                           <input type="text" id="city" v-model="user.address.city" name="text-input" class="form-control" required>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-12">
-                  <!--Stammdaten -->
-                  <div class="card">
-                    <div class="card-header">
-                      <i class="ca ca-anchor"></i> Foto
-                    </div>
-                    <div class="card-body">
-                      <div class="form-group row">
                       </div>
                     </div>
                   </div>
@@ -482,6 +474,43 @@
                   </div>
                 </div>
               </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <i class="ca ca-map-pin-1"></i> Einverständis
+                    </div>
+                    <div class="card-body">
+                      <div class="form-group row">
+                        <label class="col-xl-3 col-form-label" for="agreement">Einverständnis*</label>
+                        <input class="mt-2 mb-0 mr-4" type="checkbox" id="agreement" required>
+                        <div class="col-xl-7 mt-1">
+                          <p>
+                            Ich melde mich hiermit als Helfer zum Landesjugendtreffen 2018 an. <br>
+                            <strong>Bei Minderjährigen:</strong> Meine Eltern/gesetzlichen Vertreter haben zugestimmt. Das schriftliche Einverständnis meiner Eltern/gesetzlichen Vertreter bringe ich zur Veranstaltung mit. Das Formular erhalte ich mit meiner Anmeldemail zugesendet.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-xl-3 col-form-label" for="agb">Helfer-AGB*</label>
+                        <input class="mt-2 mb-0 mr-4" type="checkbox" id="agb" required>
+                        <div class="col-xl-7 mt-1">
+                          <p>
+                            Auszug aus den Allgemeinen Geschäftsbedingungen (Teilnahmebedingungen): <br>
+                            § 5 – Teilnahmegebühr <br>
+                            (1) Für die Teilnahme an der Veranstaltung ist von jedem Teilnehmenden die Teilnahmegebühr gemäß der jeweils gültigen Ausschreibung im Voraus zu zahlen. <br>
+                            (2) Helfende sind von der Zahlung des Teilnahmebeitrags befreit, sofern diese für die gesamte Dauer der Veranstaltung als Helfende zur Verfügung steht oder die Unterstützung im Rahmen der Vor- oder/und Nachbereitung erheblich war. <br>
+                            (3) Für Helfende wird der volle Teilnahmebeitrag fällig, wenn diese ohne Einhaltung der Abmeldefristen und –voraussetzungen nicht zur Veranstaltung anreisen, vorzeitig abreisen oder ihre Arbeitskraft nicht im vereinbarten Umfang zur Verfügung stellen und durch die verbindliche Anmeldung Kosten entstanden sind. Teilnehmenden Gliederungen wird dieser in Form der Strafgebühr berechnet. <br>
+                            (4) Der Landesjugendvorstand ist berechtigt auch höhere Kosten, die nachzuweisen sind, in Rechnung zu stellen. <br>
+                            <br>
+                            Die vollständigen Helfer-AGB kannst du <a href="https://sh.dlrg.de/dlrg-jugend/veranstaltungen/landesmeisterschaften-mit-dem-landesjugendtreffen/agb.html" target="_blank" style="text-decoration: underline;">hier</a> einsehen.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <!-- Passwort -->
               <div class="card">
                 <div class="card-header">
@@ -498,7 +527,7 @@
                     <label class="col-xl-3 col-form-label" for="passwordConfirm">Passwort wiederholen*</label>
                     <div class="col-xl-9">
                       <input type="password" id="passwordConfirm" v-model="passwordConfirm" name="text-input" class="form-control" required>
-                      <small class="text-danger" v-if="passwordError">Die Passwörter stimmen nicht überein! ¯\_(ツ)_/¯</small>
+                      <small class="text-danger" v-if="passwordError">Deine Passwörter stimmen nicht überein! ¯\_(ツ)_/¯</small>
                     </div>
                   </div>
                 </div>
@@ -511,74 +540,78 @@
   </section>
 </template>
 
-
 <script>
-  import datepicker from 'vuejs-datepicker'
-  import dateFormatter from '@/filters/date-formatter'
-  import { FormWizard, TabContent } from 'vue-form-wizard'
-  import 'vue-form-wizard/dist/vue-form-wizard.min.css'
+import datepicker from 'vuejs-datepicker'
+import dateFormatter from '@/filters/date-formatter'
+import { mapActions } from 'vuex'
+import { FormWizard, TabContent } from 'vue-form-wizard'
+import 'vue-form-wizard/dist/vue-form-wizard.min.css'
 
-  const data = {
-    user: {
-      email: '',
-      password: '',
-      firstname: '',
-      lastname: '',
-      phone: '',
-      birthday: '',
-      gender: '',
-      diet: '',
-      presence: '',
-      presenceDay: {
-        wednesday: false,
-        thursday: false,
-        friday: false,
-        saturday: false,
-        sunday: false
-      },
-      assignment: {
-        carpool: null,
-        medic: null,
-        homeSecurity: null,
-        café: null,
-        assistant: null,
-        contest: null,
-        catering: null,
-        school: null,
-        programSupport: null
-      },
-      address: {
-        street: '',
-        zip: '',
-        city: ''
-      },
-      comment: '',
-      division: '',
-      workgroup: ''
+const data = {
+  user: {
+    email: '',
+    password: '',
+    firstname: '',
+    lastname: '',
+    phone: '',
+    birthday: '',
+    gender: 'm',
+    diet: 'none',
+    presence: '',
+    presenceDay: {
+      wednesday: false,
+      thursday: false,
+      friday: false,
+      saturday: false,
+      sunday: false
     },
-    passwordConfirm: '',
-    passwordError: false
-  }
-
-  export default {
-    filters: { dateFormatter },
-    components: {
-      datepicker,
-      FormWizard,
-      TabContent
+    assignment: {
+      carpool: null,
+      medic: null,
+      homeSecurity: null,
+      café: null,
+      assistant: null,
+      contest: null,
+      catering: null,
+      school: null,
+      programSupport: null
     },
-    data () {
-      return data
+    address: {
+      street: '',
+      zip: '',
+      city: ''
     },
-    methods: {
-      add () {
-        if (this.user.password !== this.passwordConfirm) {
-          this.passwordError = true
-          return
-        }
-        this.$store.dispatch('user/create', this.user)
-        this.$router.push('/admin/users')
+    comment: '',
+    division: '',
+    workgroup: ''
+  },
+  passwordConfirm: '',
+  passwordError: false
+}
+export default {
+  filters: { dateFormatter },
+  components: {
+    datepicker,
+    FormWizard,
+    TabContent
+  },
+  layout: 'login',
+  data: () => data,
+  methods: {
+    ...mapActions({
+      createUser: 'user/create'
+    }),
+    async signup () {
+      if (this.user.password !== this.passwordConfirm) {
+        this.passwordError = true
+        return
       }
+      await this.$store.dispatch('user/create', this.user)
+      this.$router.push({ path: 'signup/success' })
+    },
+    login () {
+      this.$router.replace({ path: '/login' })
     }
   }
+}
 </script>
