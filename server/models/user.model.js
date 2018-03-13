@@ -46,7 +46,7 @@ module.exports = function (app) {
       akFLiB: { type: Number, required: false },
       akJuga: { type: Number, required: false },
       akKiGA: { type: Number, required: false },
-      akOekA: { type: Number, required: false },
+      akMedienredaktion: { type: Number, required: false },
       akRettungssport: { type: Number, required: false },
       akUweP: { type: Number, required: false },
       ausrichter: { type: Number, required: false },
