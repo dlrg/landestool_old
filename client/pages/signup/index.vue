@@ -558,6 +558,11 @@ const data = {
       school: null,
       programSupport: null
     },
+    time: {
+      day: '',
+      start: null,
+      end: null
+    },
     address: {
       street: '',
       zip: '',

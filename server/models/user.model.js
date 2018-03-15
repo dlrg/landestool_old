@@ -46,6 +46,11 @@ module.exports = function (app) {
       school: { type: Number, required: false },
       programSupport: { type: Number, required: false }
     },
+    time: {
+      day: { type: String, required: false },
+      start: { type: String, required: false },
+      end: { type: String, required: false }
+    },
 
     role: {
       type: String,

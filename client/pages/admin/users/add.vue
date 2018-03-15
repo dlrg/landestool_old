@@ -313,8 +313,12 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label class="col-xl-3 col-form-label" for="presenceDay">Tage*</label>
-                      <div class="col-xl-9">   
+                      <label class="col-xl-2 col-form-label" for="presenceDay">Tage*</label>
+                      <div class="col-xl-10">  
+                        <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayMonday" name="day" v-model="user.presenceDay.monday">
+                        <label class="mt-2 mb-0 mr-3" for="subscribeNews">Montag</label>
+                        <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayTuesday" name="day" v-model="user.presenceDay.tuesday">
+                        <label class="mt-2 mb-0 mr-3" for="subscribeNews">Dienstag</label>    
                         <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayWednesday" name="day" v-model="user.presenceDay.wednesday">
                         <label class="mt-2 mb-0 mr-3" for="subscribeNews">Mittwoch</label>
                         <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayThursday" name="day" v-model="user.presenceDay.thursday">
@@ -535,6 +539,8 @@
       diet: '',
       presence: '',
       presenceDay: {
+        monday: false,
+        tuesday: false,
         wednesday: false,
         thursday: false,
         friday: false,
@@ -551,6 +557,11 @@
         catering: null,
         school: null,
         programSupport: null
+      },
+      time: {
+        day: '',
+        start: null,
+        end: null
       },
       address: {
         street: '',
