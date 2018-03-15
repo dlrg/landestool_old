@@ -506,11 +506,9 @@
     </section>
 </template>
 <script>
-  import dateFormatter from '@/filters/date-formatter'
   import datepicker from 'vuejs-datepicker'
 
   export default {
-    filters: { dateFormatter },
     data () {
       return {
         passwordConfirm: '',
