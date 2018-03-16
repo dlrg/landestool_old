@@ -29,7 +29,7 @@
                                         <td><span v-if="item.dates">{{item.dates.start | dateFormatter('DD.MM.YYYY')}} - {{item.dates.end | dateFormatter('DD.MM.YYYY')}}</span></td>
                                         <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
                                         <td>{{item.location.meetingpoint}}</td>
-                                        <td>{{item.agemin}} - {{item.agemax}}</td>
+                                        <td>{{item.person.agemin}} - {{item.person.agemax}}</td>
                                         <td>
                                             <span class="badge badge-success c-white">{{item.status}}</span>
                                         </td>

@@ -16,7 +16,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://static.codeanker.de/fonts/cl/styles.css' }
+      { rel: 'stylesheet', href: 'https://static.codeanker.de/fonts/dlrg/styles.css' }
     ]
   },
   plugins: [

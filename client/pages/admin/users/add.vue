@@ -115,7 +115,8 @@
                   <!--Stammdaten -->
                   <div class="card">
                     <div class="card-header">
-                      <i class="ca ca-anchor"></i> Foto
+                      <i class="ca ca-person-2"></i> Profilbild
+                      <vue-dropzone ref="myVueDropzone" id="dropzone" :options="dropzoneOptions"/>
                     </div>
                     <div class="card-body">
                       <div class="form-group row">
@@ -267,7 +268,7 @@
               <div class="col-lg-6">
                 <div class="card">
                   <div class="card-header">
-                    <i class="ca ca-map-pin-1"></i> Anwesenheit
+                    <i class="ca ca-clock-2"></i> Anwesenheit
                   </div>
                   <div class="card-body">
                     <div class="form-group row">
@@ -293,7 +294,7 @@
                             <option value="AK FLiB">AK FLiB</option>
                             <option value="AK Juga">AK Juga</option>
                             <option value="AK KiGA">AK KiGA</option>
-                            <option value="AK OekA">AK OekA</option>
+                            <option value="AK Medienredation">AK Medienreaktion</option>
                             <option value="AK Rettungssport">AK Rettungssport</option>
                             <option value="AK Uwe P.">AK Uwe P.</option>
                             <option value="Ausrichter">Ausrichter</option>
@@ -312,8 +313,12 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label class="col-xl-3 col-form-label" for="presenceDay">Tage*</label>
-                      <div class="col-xl-9">   
+                      <label class="col-xl-2 col-form-label" for="presenceDay">Tage*</label>
+                      <div class="col-xl-10">  
+                        <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayMonday" name="day" v-model="user.presenceDay.monday">
+                        <label class="mt-2 mb-0 mr-3" for="subscribeNews">Montag</label>
+                        <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayTuesday" name="day" v-model="user.presenceDay.tuesday">
+                        <label class="mt-2 mb-0 mr-3" for="subscribeNews">Dienstag</label>    
                         <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayWednesday" name="day" v-model="user.presenceDay.wednesday">
                         <label class="mt-2 mb-0 mr-3" for="subscribeNews">Mittwoch</label>
                         <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayThursday" name="day" v-model="user.presenceDay.thursday">
@@ -491,7 +496,8 @@
                   <div class="form-group row">
                     <label class="col-xl-3 col-form-label" for="password">Passwort*</label>
                     <div class="col-xl-9">
-                      <input type="password" id="password" v-model="user.password" name="text-input" class="form-control" required>
+                      <vue-password id="password" v-model="user.password" name="text-input" class="form-control" required>
+                      </vue-password>
                     </div>
                   </div>
                   <div class="form-group row">
@@ -517,6 +523,9 @@
   import dateFormatter from '@/filters/date-formatter'
   import { FormWizard, TabContent } from 'vue-form-wizard'
   import 'vue-form-wizard/dist/vue-form-wizard.min.css'
+  import vue2Dropzone from 'vue2-dropzone'
+  import 'vue2-dropzone/dist/vue2Dropzone.css'
+  import VuePassword from 'vue-password'
 
   const data = {
     user: {
@@ -530,6 +539,8 @@
       diet: '',
       presence: '',
       presenceDay: {
+        monday: false,
+        tuesday: false,
         wednesday: false,
         thursday: false,
         friday: false,
@@ -547,6 +558,11 @@
         school: null,
         programSupport: null
       },
+      time: {
+        day: '',
+        start: null,
+        end: null
+      },
       address: {
         street: '',
         zip: '',
@@ -561,14 +577,25 @@
   }
 
   export default {
+    name: 'app',
     filters: { dateFormatter },
     components: {
+      vueDropzone: vue2Dropzone,
       datepicker,
       FormWizard,
-      TabContent
+      TabContent,
+      VuePassword
     },
     data () {
-      return data
+      return {
+        ...data,
+        dropzoneOptions: {
+          url: 'upload',
+          thumbnailWidth: 150,
+          maxFilesize: 0.5,
+          headers: { 'My-Awesome-Header': 'header value' }
+        }
+      }
     },
     methods: {
       add () {
