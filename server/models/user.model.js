@@ -17,6 +17,8 @@ module.exports = function (app) {
     housing: { type: String, required: true },
     presence: { type: String, required: true },
     presenceDay: {
+      monday: { type: Boolean, required: false },
+      tuesday: { type: Boolean, required: false },
       wednesday: { type: Boolean, required: false },
       thursday: { type: Boolean, required: false },
       friday: { type: Boolean, required: false },
@@ -44,9 +46,18 @@ module.exports = function (app) {
       school: { type: Number, required: false },
       programSupport: { type: Number, required: false }
     },
+    time: {
+      day: { type: String, required: false },
+      start: { type: String, required: false },
+      end: { type: String, required: false }
+    },
 
-    createdAt: { type: Date, default: Date.now },
-    updatedAt: { type: Date, default: Date.now }
+    role: {
+      type: String,
+      enum: ['admin', 'user', 'leader']
+    }
+  }, {
+    timestamps: true
   })
   return mongooseClient.model('user', user)
 }

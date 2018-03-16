@@ -207,7 +207,7 @@
                             </div>
                             <div class="form-group row" v-if="!program.finance.free">
                                 <label class="col-xl-3 col-form-label">Kosten</label>
-                                <p class="form-control-static mt-2 mb-0">{{program.finance.prices}}</p>
+                                <p class="form-control-static mt-2 mb-0">{{program.finance.price}}</p>
                             </div>
                             <div class="form-group row" v-if="!program.finance.free">
                                 <label class="col-form-label col-xl-3"><span>Zahlungsart</span></label>
@@ -220,7 +220,7 @@
                             <div class="form-group row" v-if="!program.finance.free">
                                 <label class="col-xl-3 col-form-label">Zahlungsfrist</label>
                                 <div class="col-xl-9">
-                                    <p class="form-control-static mt-2 mb-0">{{program.finance.deadline}}</p>
+                                    <p class="form-control-static mt-2 mb-0">{{program.finance.deadline | dateFormatter('DD.MM.YYYY')}}</p>
                                 </div>
                             </div>
                             <div class="form-group row" v-if="!program.finance.free">

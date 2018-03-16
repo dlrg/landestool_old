@@ -116,6 +116,19 @@
                   </div>
                 </div>
               </div>
+              <div class ="row">
+                <div class="col-lg-12">
+                  <!-- Foto -->
+                  <div class="card">
+                    <div class="card-header">
+                      <i class="ca ca-person-2"></i> Profilbild
+                    </div>
+                    <div class="card-body">
+                      <vue-dropzone ref="myVueDropzone" id="dropzone" :options="dropzoneOptions"/>
+                    </div>
+                  </div>
+                </div>
+              </div>       
             </form>
           </div>
         </div>
@@ -259,53 +272,16 @@
               <div class="col-lg-6">
                 <div class="card">
                   <div class="card-header">
-                    <i class="ca ca-map-pin-1"></i> Anwesenheit
+                    <i class="ca ca-clock-2"></i> Anwesenheit
                   </div>
                   <div class="card-body">
                     <div class="form-group row">
-                      <label class="col-xl-3 col-form-label" for="selectFormEinsatz">Einsatz*</label>
-                      <div class="col-xl-9">
-                        <div class="select-wrapper">
-                          <select class="form-control  float-left" name="selectFormEinsatz" id="selectFormEinsatz" v-model="user.presence" required>
-                            <option value="Ausweis / Einsetzbar">Ausweis / Einsetzbar</option>
-                            <option value="kein Ausweis / Einsetzbar">kein Ausweis / Einsetzbar</option>
-                            <option value="Ausweis / nicht Einsetzbar bzw. anderweitig verplant">Ausweis / nicht Einsetzbar bzw. anderweitig verplant</option>
-                            <option value="kein Ausweis / nicht Einsetzbar bzw. anderweitig verplant">kein Ausweis / nicht Einsetzbar bzw. anderweitig verplant</option>
-                            <option value="Arbeitsgruppe">Arbeitsgruppe </option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group row" v-if="user.presence=='Arbeitsgruppe'">
-                      <label class="col-xl-3 col-form-label" for="text-input">Arbeitsgruppe</label>
-                      <div class="col-xl-9">
-                        <div class="select-wrapper">
-                          <select class="form-control  float-left" name="selectFormArbeitsgruppe" id="selectFormArbeitsgruppe" v-model="user.workgroup">
-                            <option value="-">-</option>
-                            <option value="AK FLiB">AK FLiB</option>
-                            <option value="AK Juga">AK Juga</option>
-                            <option value="AK KiGA">AK KiGA</option>
-                            <option value="AK OekA">AK OekA</option>
-                            <option value="AK Rettungssport">AK Rettungssport</option>
-                            <option value="AK Uwe P.">AK Uwe P.</option>
-                            <option value="Ausrichter">Ausrichter</option>
-                            <option value="Bier- und Weinstube">Bier- und Weinstube</option>
-                            <option value="Café Kontakt">Café Kontakt</option>
-                            <option value="Ehrengäste">Ehrengäste</option>
-                            <option value="externer Mitarbeiter">externer Mitarbeiter</option>
-                            <option value="Funkleit/Fahrdienst">Funkleit/Fahrdienst</option>
-                            <option value="HaSi">Haussicherheit</option>
-                            <option value="Helferbüro">Helferbüro</option>
-                            <option value="PG Landes">PG Landes</option>
-                            <option value="Rödeltruppe">Rödeltruppe</option>
-                            <option value="Sanitäter">Sanitäter</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-xl-3 col-form-label" for="presenceDay">Tage*</label>
-                      <div class="col-xl-9">   
+                      <label class="col-xl-2 col-form-label" for="presenceDay">Tage*</label>
+                      <div class="col-xl-10">
+                        <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayMonday" name="day" v-model="user.presenceDay.monday">
+                        <label class="mt-2 mb-0 mr-3" for="subscribeNews">Montag</label>
+                        <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayTuesday" name="day" v-model="user.presenceDay.tuesday">
+                        <label class="mt-2 mb-0 mr-3" for="subscribeNews">Dienstag</label>   
                         <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayWednesday" name="day" v-model="user.presenceDay.wednesday">
                         <label class="mt-2 mb-0 mr-3" for="subscribeNews">Mittwoch</label>
                         <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayThursday" name="day" v-model="user.presenceDay.thursday">
@@ -520,8 +496,9 @@
                   <div class="form-group row">
                     <label class="col-xl-3 col-form-label" for="password">Passwort*</label>
                     <div class="col-xl-9">
-                      <input type="password" id="password" v-model="user.password" name="text-input" class="form-control" required>
-                    </div>
+                      <vue-password id="password" v-model="user.password" name="text-input" class="form-control" required>
+                      </vue-password>
+                  </div>
                   </div>
                   <div class="form-group row">
                     <label class="col-xl-3 col-form-label" for="passwordConfirm">Passwort wiederholen*</label>
@@ -546,6 +523,9 @@ import dateFormatter from '@/filters/date-formatter'
 import { mapActions } from 'vuex'
 import { FormWizard, TabContent } from 'vue-form-wizard'
 import 'vue-form-wizard/dist/vue-form-wizard.min.css'
+import VuePassword from 'vue-password'
+import vue2Dropzone from 'vue2-dropzone'
+import 'vue2-dropzone/dist/vue2Dropzone.css'
 
 const data = {
   user: {
@@ -559,6 +539,8 @@ const data = {
     diet: 'none',
     presence: '',
     presenceDay: {
+      monday: false,
+      tuesday: false,
       wednesday: false,
       thursday: false,
       friday: false,
@@ -576,6 +558,11 @@ const data = {
       school: null,
       programSupport: null
     },
+    time: {
+      day: '',
+      start: null,
+      end: null
+    },
     address: {
       street: '',
       zip: '',
@@ -591,12 +578,24 @@ const data = {
 export default {
   filters: { dateFormatter },
   components: {
+    vueDropzone: vue2Dropzone,
     datepicker,
     FormWizard,
-    TabContent
+    TabContent,
+    VuePassword
   },
   layout: 'login',
-  data: () => data,
+  data () {
+    return {
+      ...data,
+      dropzoneOptions: {
+        url: 'upload',
+        thumbnailWidth: 150,
+        maxFilesize: 0.5,
+        headers: { 'My-Awesome-Header': 'header value' }
+      }
+    }
+  },
   methods: {
     ...mapActions({
       createUser: 'user/create'

@@ -4,10 +4,15 @@
             <ul class="nav">
                 <li class="divider"></li>
                 <li class="nav-item d-none">
-                    <nuxt-link class="nav-link" to="/" target="_top"><i class="ca ca-home-1"></i> Dashboard</nuxt-link>
+                    <nuxt-link class="nav-link" to="/" target="_top"><i class="ca ca-home-1"></i>Dashboard</nuxt-link>
                 </li>
                 <li class="nav-item">
-                    <nuxt-link class="nav-link" to="/program" target="_top"><i class="ca ca-anchor"></i> Programm</nuxt-link>
+                    <nuxt-link class="nav-link" to="/program" target="_top"><i class="ca ca-anchor"></i>Programm</nuxt-link>
+                </li>
+                <li class="divider"></li>
+
+                 <li class="nav-item">
+                    <nuxt-link class="nav-link" to="/shirt" target="_top"><i class="ca ca-high-heels"></i>Shirt Bestellung</nuxt-link>
                 </li>
                 <li class="divider"></li>
 
@@ -15,7 +20,7 @@
                     <span>Administration</span>
                 </li>
                 <li class="nav-item">
-                    <nuxt-link class="nav-link" to="/admin/users" target="_top"><i class="ca ca-account-group-1"></i> Benutzerverwaltung</nuxt-link>
+                    <nuxt-link class="nav-link" to="/admin/users" target="_top"><i class="ca ca-account-group-1"></i>Benutzerverwaltung</nuxt-link>
                 </li>
                 <li class="nav-item px-3 pt-5 d-none">
                     <div class="text-uppercase mb-1">
