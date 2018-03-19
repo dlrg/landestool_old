@@ -20,10 +20,12 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                  <td>{{ user.time.day }}</td>
-                                  <td>{{ user.time.start }}</td>
-                                  <td>{{ user.time.end }}</td>
-                                  <td><!--<button class="btn btn-sm btn-danger float-right" @click.stop="remove()">Löschen</button>--></td>
+                                  <tr v-for='(item, index) in user.time' :key="'time'+index">
+                                    <td>{{ item.day }}</td>
+                                    <td>{{ item.start }}</td>
+                                    <td>{{ item.end }}</td>
+                                    <td><button class="btn btn-sm btn-danger float-right" @click.stop="remove(index)">Löschen</button></td>
+                                  </tr>
                                 </tbody>
                             </table>
                         </div>
