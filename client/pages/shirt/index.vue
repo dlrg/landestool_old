@@ -2,31 +2,39 @@
 
    <section class="container-fluid">
       <div class="animated fadeIn">
+        <form @submit.prevent="order">
          <div class="row">
             <div class="col-12">
                <h1>Shirt Bestellung</h1>
                <div class="card">
                   <div class="card-header">
+                    <i class="ca ca-high-heels"></i> Veranstaltungs T-Shirts 2018
+                  </div>  
                      <div class="card-body">
-                      <div>
-                        <h3>Veranstaltungs T-Shirts 2018</h3>
+                      <p>
+                         Bestelle jetzt ein richtig cooles Shirt in deiner Lieblingsfarbe!
+                      </p>
+                      <div class="form-group row">
+                        <div class="col-xl-12">
+                          <button class="btn btn-lg btn-info c-white" type="order">Jetzt bestellen!</button>
+                        </div>
                       </div>
-                        <div class="form-group row justify-content-start">
+                        <div class="form-group row justify-content-center">
                            <div class="col-xl-6">
                               <div class="shirtimg">
-                                 <img src="../../assets/img/1.-T-Shirt-Mockup_alleFarben.png" height="450px"/>
+                                 <img src="@/assets/img/1.-T-Shirt-Mockup_alleFarben.png" height="450px"/>
                                  <dd class="mt-4">
                                     Veranstaltungshirt erhältlich in 4 Farben
                                  </dd>
                               </div>
                            </div>
-                           <div class="col-xl-6">
+                           <div class="col-xl-3">
                               <div class="shirtimg">
-                                 <img src="../../assets/img/1.-T-Shirt-Mockup_Navy.png" height="200px"/>
+                                 <img src="@/assets/img/1.-T-Shirt-Mockup_Navy.png" height="200px"/>
                                  <dd class="mt-4">
                                     Voderseite Navy
                                  </dd>
-                                 <img src="../../assets/img/1.-T-Shirt-Mockup-Ru__ckseite.jpg" height="200px"/>
+                                 <img src="@/assets/img/1.-T-Shirt-Mockup-Ru__ckseite.jpg" height="200px"/>
                                  <dd class="mt-4">
                                     Rückseite Navy
                                  </dd>
@@ -34,7 +42,6 @@
                            </div>
                         </div>
                      </div>
-                  </div>
                </div>
                <div class="card">
                   <div class="card-header">
@@ -84,7 +91,7 @@
                            </div>
                            <div class="col-xl-6">
                               <div class="shirtimg mt-5 ml-5">
-                                 <img src="../../assets/img/TShirtHerren.jpg" class="img-thumbnail" height="200px"/>
+                                 <img src="@/assets/img/TShirtHerren.jpg" class="img-thumbnail" height="200px"/>
                                  <dd class="mt-4">
                                     Erhältlich in den Farben Navy, Schwarz, Fuchsia und Waldgrün
                                  </dd>
@@ -147,7 +154,7 @@
                            </div>
                            <div class="col-xl-6">
                               <div class="shirtimg mt-5 ml-5">
-                                 <img src="../../assets/img/TShirtDamen.jpg" class="img-thumbnail" height="200px"/>
+                                 <img src="@/assets/img/TShirtDamen.jpg" class="img-thumbnail" height="200px"/>
                                  <dd class="mt-4">
                                     Erhältlich in den Farben Navy, Schwarz, Fuchsia und Waldgrün
                                  </dd>
@@ -205,7 +212,7 @@
                            </div>
                            <div class="col-xl-6">
                               <div class="shirtimg mt-5 ml-5">
-                                 <img src="../../assets/img/Kapuzzer.jpg" class="img-thumbnail" height="200px"/>
+                                 <img src="@/assets/img/Kapuzzer.jpg" class="img-thumbnail" height="200px"/>
                                  <dd class="mt-4">
                                     Erhältlich in den Farben Navy und Schwarz
                                  </dd>
@@ -277,7 +284,7 @@
                            </div>
                            <div class="col-xl-6">
                               <div class="shirtimg mt-5 ml-5">
-                                 <img src="../../assets/img/Polo.jpg" class="img-thumbnail" height="200px"/>
+                                 <img src="@/assets/img/Polo.jpg" class="img-thumbnail" height="200px"/>
                                  <dd class="mt-4">
                                     Erhältlich in den Farben Navy und Schwarz
                                  </dd>
@@ -289,6 +296,17 @@
                </div>
             </div>
          </div>
+        </form>
       </div>
    </section>
 </template>
+
+<script>
+  export default {
+    methods: {
+      order () {
+        this.$router.push('shirt/order')
+      }
+    }
+  }
+</script>

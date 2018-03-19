@@ -61,10 +61,10 @@
                                     <div class="col-xl-9 text-right">
                                         <div class="select-wrapper">
                                             <select class="form-control  float-left" name="selectForm" id="diet" v-model="user.diet" required>
-                                                <option value="none">keine unverträglichkeiten</option>
-                                                <option value="vegetarian">vegetarisch</option>
+                                                <option value="keine Unverträglichkeiten">keine unverträglichkeiten</option>
+                                                <option value="vegetarisch">vegetarisch</option>
                                                 <option value="vegan">vegan</option>
-                                                <option value="glutenfree">glutenfrei</option>
+                                                <option value="glutenfrei">glutenfrei</option>
                                             </select>
                                         </div>
                                     </div>

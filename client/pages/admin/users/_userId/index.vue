@@ -1,7 +1,7 @@
 <template>
    <section class="container-fluid">
       <div class="animated fadeIn">
-         <h1>User bearbeiten</h1>
+         <h1>Profil</h1>
          <div class="row">
             <div class="col-lg-6">
                <!--Stammdaten -->
@@ -51,10 +51,10 @@
                      <div class="form-group row">
                         <label class="col-xl-3 col-form-label">Essensverträglichkeit</label>
                         <div class="col-xl-9">
-                           <p class="form-control-static mt-2 mb-0" v-if="user.diet === 'none'">Keine unverträglichkeiten</p>
-                           <p class="form-control-static mt-2 mb-0" v-if="user.diet === 'vegetarian'">Vegetarisch</p>
+                           <p class="form-control-static mt-2 mb-0" v-if="user.diet === 'keine Unverträglichkeiten'">Keine unverträglichkeiten</p>
+                           <p class="form-control-static mt-2 mb-0" v-if="user.diet === 'vegetarisch'">Vegetarisch</p>
                            <p class="form-control-static mt-2 mb-0" v-if="user.diet === 'vegan'">Vegan</p>
-                           <p class="form-control-static mt-2 mb-0" v-if="user.diet === 'glutenfree'">Glutenfrei</p>
+                           <p class="form-control-static mt-2 mb-0" v-if="user.diet === 'glutenfrei'">Glutenfrei</p>
                         </div>
                      </div>
                   </div>

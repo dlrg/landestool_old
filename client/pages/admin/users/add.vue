@@ -313,8 +313,8 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label class="col-xl-2 col-form-label" for="presenceDay">Tage*</label>
-                      <div class="col-xl-10">  
+                      <label class="col-xl-3 col-form-label" for="presenceDay">Tage*</label>
+                      <div class="col-xl-9">  
                         <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayMonday" name="day" v-model="user.presenceDay.monday">
                         <label class="mt-2 mb-0 mr-3" for="subscribeNews">Montag</label>
                         <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayTuesday" name="day" v-model="user.presenceDay.tuesday">
@@ -323,6 +323,9 @@
                         <label class="mt-2 mb-0 mr-3" for="subscribeNews">Mittwoch</label>
                         <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayThursday" name="day" v-model="user.presenceDay.thursday">
                         <label class="mt-2 mb-0 mr-3" for="subscribeNews">Donnerstag</label>
+                      </div>
+                      <label class="col-xl-3 col-form-label" for="presenceDay"></label>
+                      <div class="col-xl-9">  
                         <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayFriday" name="day" v-model="user.presenceDay.friday">
                         <label class="mt-2 mb-0 mr-3" for="subscribeNews">Freitag</label>
                         <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDaySaturday" name="day" v-model="user.presenceDay.saturday">
@@ -567,6 +570,12 @@
         street: '',
         zip: '',
         city: ''
+      },
+      shirt: {
+        style: '',
+        count: '',
+        color: '',
+        sex: ''
       },
       comment: '',
       division: '',

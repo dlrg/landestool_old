@@ -6,6 +6,9 @@
                 <li class="nav-item d-none">
                     <nuxt-link class="nav-link" to="/" target="_top"><i class="ca ca-home-1"></i>Dashboard</nuxt-link>
                 </li>
+                 <li class="nav-item">
+                    <nuxt-link class="nav-link" :to="`/admin/users/${$store.state.auth.user._id}`" target="_top"><i class="ca ca-person-2"></i>Profil</nuxt-link>
+                </li>
                 <li class="nav-item">
                     <nuxt-link class="nav-link" to="/program" target="_top"><i class="ca ca-anchor"></i>Programm</nuxt-link>
                 </li>

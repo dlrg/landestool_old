@@ -9,6 +9,7 @@
                     <div class="card">
                         <div class="card-header">
                             <i class="ca ca-anchor"></i> Stammdaten
+                            <!-- toDo: v-if user.role admin -->
                             <button class="btn btn-warning btn-sm float-right mr-1" @click="edit">Bearbeiten</button>
                         </div>
                         <div class="card-body">

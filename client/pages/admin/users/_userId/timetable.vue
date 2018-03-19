@@ -16,7 +16,6 @@
                                     <th>Tag</th>
                                     <th>von</th>
                                     <th>bis</th>
-                                    <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -24,7 +23,6 @@
                                     <td>{{ item.day }}</td>
                                     <td>{{ item.start }}</td>
                                     <td>{{ item.end }}</td>
-                                    <td><button class="btn btn-sm btn-danger float-right" @click.stop="remove(index)">Löschen</button></td>
                                   </tr>
                                 </tbody>
                             </table>
