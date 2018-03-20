@@ -9,16 +9,12 @@
                <div class="card">
                   <div class="card-header">
                     <i class="ca ca-high-heels"></i> Veranstaltungs T-Shirts 2018
+                     <button class="btn btn-lg btn-danger c-white float-right" type="order">Jetzt bestellen!</button>
                   </div>  
                      <div class="card-body">
                       <p>
                          Bestelle jetzt ein richtig cooles Shirt in deiner Lieblingsfarbe!
                       </p>
-                      <div class="form-group row">
-                        <div class="col-xl-12">
-                          <button class="btn btn-lg btn-info c-white" type="order">Jetzt bestellen!</button>
-                        </div>
-                      </div>
                         <div class="form-group row justify-content-center">
                            <div class="col-xl-6">
                               <div class="shirtimg">
@@ -90,8 +86,8 @@
                               </table>
                            </div>
                            <div class="col-xl-6">
-                              <div class="shirtimg mt-5 ml-5">
-                                 <img src="@/assets/img/TShirtHerren.jpg" class="img-thumbnail" height="200px"/>
+                              <div class="shirtimg ml-5">
+                                 <img src="@/assets/img/1.-T-Shirt-Mockup_Navy.png" class="img-thumbnail" height="150px"/>
                                  <dd class="mt-4">
                                     Erhältlich in den Farben Navy, Schwarz, Fuchsia und Waldgrün
                                  </dd>

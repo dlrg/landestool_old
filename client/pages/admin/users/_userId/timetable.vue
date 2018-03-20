@@ -6,7 +6,7 @@
                     <h1>Timetable</h1>
                     <div class="card">
                         <div class="card-header">
-                            <i class="ca ca-clock-2"></i> Anwesenheit an den Tagen
+                            <i class="ca ca-clock-2"></i>Anwesenheit an den Tagen
                             <button class="btn btn-sm btn-info c-white float-right" @click="edit">Bearbeiten</button>
                         </div>
                         <div class="card-body">

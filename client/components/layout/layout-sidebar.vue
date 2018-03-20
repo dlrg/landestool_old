@@ -18,13 +18,20 @@
                     <nuxt-link class="nav-link" to="/shirt" target="_top"><i class="ca ca-high-heels"></i>Shirt Bestellung</nuxt-link>
                 </li>
                 <li class="divider"></li>
-
-                <li class="nav-title text-center">
-                    <span>Administration</span>
-                </li>
-                <li class="nav-item">
-                    <nuxt-link class="nav-link" to="/admin/users" target="_top"><i class="ca ca-account-group-1"></i>Benutzerverwaltung</nuxt-link>
-                </li>
+                <div v-if="user.role === admin">
+                    <li class="nav-title text-center">
+                        <span>Administration</span>
+                    </li>
+                    <li class="nav-item">
+                        <nuxt-link class="nav-link" to="/admin/users" target="_top"><i class="ca ca-account-group-1"></i>Benutzerverwaltung</nuxt-link>
+                    </li>
+                    <li class="nav-item">
+                        <nuxt-link class="nav-link" :to="`/admin/users/${$store.state.auth.user._id}/staff`" target="_top"><i class="ca ca-account-group-1"></i>Mitarbeiter</nuxt-link>
+                    </li>
+                    <li class="nav-item">
+                        <nuxt-link class="nav-link" to="/shirt/list" target="_top"><i class="ca ca-shopping-cart-2"></i>Bestellliste</nuxt-link>
+                    </li>
+                </div>
                 <li class="nav-item px-3 pt-5 d-none">
                     <div class="text-uppercase mb-1">
                         <small><b>Fortschritt</b></small>
@@ -42,7 +49,13 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
   export default {
+    computed: {
+      ...mapGetters({
+        user: 'user/list'
+      })
+    },
     name: 'layout-sidebar',
     props: ['open'],
     methods: {
@@ -51,6 +64,9 @@
           this.$router.push('/steuer/' + this.$route.params.taxReturnId + '/data-overview')
         }
         elem.classList.toggle('open')
+      },
+      async fetch ({ store }) {
+        await store.dispatch('user/find')
       }
     }
   }

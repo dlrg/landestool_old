@@ -573,10 +573,12 @@
       },
       shirt: {
         style: '',
-        count: '',
+        count: '0',
         color: '',
-        sex: ''
+        sex: '',
+        size: ''
       },
+      role: 'user',
       comment: '',
       division: '',
       workgroup: ''

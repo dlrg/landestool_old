@@ -328,6 +328,7 @@
                                                 </div>
                                         </div>
                                     </div>
+                                    <pre>{{user}}</pre>
 
                                   <div class="form-group row">
                                         <label class="col-xl-3 col-form-label" for="presenceDay">Tage</label>

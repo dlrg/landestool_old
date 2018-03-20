@@ -28,9 +28,10 @@ module.exports = function (app) {
 
     shirt: {
       style: { type: String, required: false },
-      count: { type: Number, required: false },
+      count: { type: Number, required: true },
       color: { type: String, required: false },
-      sex: { type: String, required: false }
+      sex: { type: String, required: false },
+      size: { type: String, required: false }
     },
 
     address: {
@@ -61,6 +62,8 @@ module.exports = function (app) {
 
     role: {
       type: String,
+      required: true,
+      default: 'user',
       enum: ['admin', 'user', 'leader']
     }
   }, {
