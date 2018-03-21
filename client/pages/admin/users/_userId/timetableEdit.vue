@@ -48,7 +48,7 @@
                                   <button class="btn btn-sm btn-danger float-right" @click.stop="remove(index)">Löschen</button>
                                 </div>
                             </div>
-                            <button type="button" v-on:click="addForm()">Tag hinzufügen</button>
+                            <button type="button" class="btn btn-sm btn-success ml-1" v-on:click="addForm()">Tag hinzufügen</button>
                          </div>
                       </div>
                     </div>

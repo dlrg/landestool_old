@@ -9,7 +9,7 @@
                <div class="card">
                   <div class="card-header">
                     <i class="ca ca-high-heels"></i> Veranstaltungs T-Shirts 2018
-                     <button class="btn btn-lg btn-danger c-white float-right" type="order">Jetzt bestellen!</button>
+                     <button class="btn btn-md btn-danger c-white float-right" type="order">Jetzt bestellen!</button>
                   </div>  
                      <div class="card-body">
                       <p>
