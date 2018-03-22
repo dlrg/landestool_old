@@ -18,7 +18,7 @@
                     <nuxt-link class="nav-link" to="/shirt" target="_top"><i class="ca ca-high-heels"></i>Shirt Bestellung</nuxt-link>
                 </li>
                 <li class="divider"></li>
-                <div v-if="user.role === admin">
+                <div v-if="user.role.includes('admin')">
                     <li class="nav-title text-center">
                         <span>Administration</span>
                     </li>
@@ -30,6 +30,9 @@
                     </li>
                     <li class="nav-item">
                         <nuxt-link class="nav-link" to="/shirt/list" target="_top"><i class="ca ca-shopping-cart-2"></i>Bestellliste</nuxt-link>
+                    </li>
+                     <li class="nav-item">
+                        <nuxt-link class="nav-link" to="/admin/users/roles" target="_top"><i class="ca ca-alarm"></i>Rollenverteilung</nuxt-link>
                     </li>
                 </div>
                 <li class="nav-item px-3 pt-5 d-none">
@@ -54,7 +57,10 @@
     computed: {
       ...mapGetters({
         user: 'user/list'
-      })
+      }),
+      user () {
+        return this.$store.state.auth.user
+      }
     },
     name: 'layout-sidebar',
     props: ['open'],

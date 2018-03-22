@@ -144,16 +144,16 @@
       <tab-content title="Uhrzeit und Ort">
         <div class ="container">
           <div class="animated fadeIn">
-            <form>
+            <form name="Form">
               <div class="row">
                 <div class="col-lg-12">
                   <!-- Datum/Uhrzeit-->
                   <div class="card">
                     <div class="card-header">
-                      <i class="ca ca-clock-2"></i> Uhrzeit und Datum
+                      <i class="ca ca-clock-2"></i>Uhrzeit und Datum
                     </div>
                     <div class="card-body">
-                      <div  v-for="(item, index) in program.dates" :key="'date'+index">
+                      <div  v-for="(item, index) in program.dates" :key="'dates'+index">
                         <div class="form-group row">
                           <label class="col-xl-3 col-form-label" for="startend-date">Start/Ende</label>
                           <div class="col-xl-9">
@@ -174,7 +174,7 @@
                         <div class="form-group row">
                           <label class="col-xl-3 col-form-label" for="duration">Dauer</label>
                           <div class="col-xl-9">
-                            <input type="text" v-model="item.duration" name="text-input" id="duration" class="form-control">
+                            <input type="text" v-model="item.duration" name="duration" id="duration" class="form-control">
                           </div>
                         </div>
                         <div class="form-group row">
@@ -188,7 +188,7 @@
                         <div class="form-group row">
                           <label class="col-xl-3 col-form-label" for="comment">Hinweise zum Datum & Uhrzeit</label>
                           <div class="col-xl-9">
-                            <textarea type="text" v-model="item.comment" name="text-input" id="comment" class="form-control"></textarea>
+                            <textarea type="text" v-model="item.comment" name="comment" id="comment" class="form-control"></textarea>
                           </div>
                         </div>
                         <div class="delete-button col-xl-1">
@@ -386,7 +386,10 @@
         this.$router.push('/program/')
       },
       addForm () {
-        this.program.dates.push({})
+        var duration = document.forms['Form']['duration'].value
+        if (duration) {
+          this.program.dates.push({})
+        }
       },
       remove (index) {
         this.program.dates.splice(index, 1)

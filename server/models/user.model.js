@@ -60,12 +60,11 @@ module.exports = function (app) {
       end: { type: String, required: false }
     }],
 
-    role: {
+    role: [{
       type: String,
       required: true,
-      default: 'user',
-      enum: ['admin', 'user', 'leader']
-    }
+      default: 'user'
+    }]
   }, {
     timestamps: true
   })

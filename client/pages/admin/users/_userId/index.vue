@@ -158,48 +158,42 @@
                 <p class="form-control-static mt-2" v-if="user.presenceDay.monday==true">ja <i class="ca ca-check-2 ml-5"></i></p>
                 <p class="form-control-static mt-2" v-else>nein <i class="ca ca-remove-2 ml-5"></i></p>
               </div>
-              <div class="col-xl-3"></div>
-              <div class="col-xl-3">
+              <div class="col-xl-3  offset-md-3">
                 <p class="form-control-static mt-2 float-">Dienstag:</p>
               </div>
               <div class="col-xl-6">
                 <p class="form-control-static mt-2" v-if="user.presenceDay.tuesday==true">ja <i class="ca ca-check-2 ml-5"></i></p>
                 <p class="form-control-static mt-2" v-else>nein <i class="ca ca-remove-2 ml-5"></i></p>
               </div>
-              <div class="col-xl-3"></div>
-              <div class="col-xl-3">
+              <div class="col-xl-3  offset-md-3">
                 <p class="form-control-static mt-2">Mittwoch:</p>
               </div>
               <div class="col-xl-6">
                 <p class="form-control-static mt-2" v-if="user.presenceDay.wednesday==true">ja <i class="ca ca-check-2 ml-5"></i></p>
                 <p class="form-control-static mt-2" v-else>nein <i class="ca ca-remove-2 ml-5"></i></p>
               </div>
-              <div class="col-xl-3"></div>
-              <div class="col-xl-3">
+              <div class="col-xl-3  offset-md-3">
                 <p class="form-control-static mt-2">Donnerstag:</p>
               </div>
               <div class="col-xl-6">
                 <p class="form-control-static mt-2" v-if="user.presenceDay.thursday==true">ja <i class="ca ca-check-2 ml-5"></i></p>
                 <p class="form-control-static mt-2" v-else>nein <i class="ca ca-remove-2 ml-5"></i></p>
               </div>
-              <div class="col-xl-3"></div>
-              <div class="col-xl-3">
+              <div class="col-xl-3  offset-md-3">
                 <p class="form-control-static mt-2">Freitag:</p>
               </div>
               <div class="col-xl-6">
                 <p class="form-control-static mt-2" v-if="user.presenceDay.friday==true">ja <i class="ca ca-check-2 ml-5"></i></p>
                 <p class="form-control-static mt-2" v-else>nein <i class="ca ca-remove-2 ml-5"></i></p>
               </div>
-              <div class="col-xl-3"></div>
-              <div class="col-xl-3">
+              <div class="col-xl-3  offset-md-3">
                 <p class="form-control-static mt-2">Samstag:</p>
               </div>
               <div class="col-xl-6">
                 <p class="form-control-static mt-2" v-if="user.presenceDay.saturday==true">ja <i class="ca ca-check-2 ml-5"></i></p>
                 <p class="form-control-static mt-2" v-else>nein <i class="ca ca-remove-2 ml-5"></i></p>
               </div>
-              <div class="col-xl-3"></div>
-              <div class="col-xl-3">
+              <div class="col-xl-3  offset-md-3">
                 <p class="form-control-static mt-2">Sonntag:</p>
               </div>
               <div class="col-xl-6">

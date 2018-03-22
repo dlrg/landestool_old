@@ -43,8 +43,7 @@
                                         <option value="17:00">17:00</option>
                                     </select>
                                 </div>
-                                <div class="col-xl-1"></div>
-                                <div class="delete-button col-xl-1">
+                                <div class="delete-button col-xl-1 offset-xl-1">
                                   <button class="btn btn-sm btn-danger float-right" @click.stop="remove(index)">Löschen</button>
                                 </div>
                             </div>

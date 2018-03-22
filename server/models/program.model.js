@@ -11,6 +11,7 @@ module.exports = function (app) {
     category: { type: String },
     privacy: { type: String },
     dates: [{
+      day: { type: String },
       start: { type: Date },
       end: { type: Date },
       deadline: { type: Date },

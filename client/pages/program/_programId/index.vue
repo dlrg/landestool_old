@@ -53,7 +53,7 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-xl-3 col-form-label">Dauer</label>
+                <label class="col-xl-3 col-form-label">Datum</label>
                 <div class="col-xl-9">
                   <p class="form-control-static mt-2 mb-0">{{item.duration}}</p>
                 </div>

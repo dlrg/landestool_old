@@ -4,7 +4,7 @@
       subtitle="Trage Schritt für Schritt die Daten ein"
       back-button-text="Zurück"
       next-button-text="Weiter"
-      finish-button-text="Hinzufügen"
+      finish-button-text="Speichern"
       color="#ff5900">
       <h1 slot="title">Programm bearbeiten</h1>
       <tab-content title="Stammdaten">
@@ -172,9 +172,9 @@
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label class="col-xl-3 col-form-label" for="duration">Dauer</label>
+                        <label class="col-xl-3 col-form-label" for="duration">Datum</label>
                         <div class="col-xl-9">
-                          <input type="text" v-model="item.duration" name="text-input" id="duration" class="form-control">
+                          <input type="text" v-model="item.duration" name="duration" id="duration" class="form-control">
                         </div>
                       </div>
                       <div class="form-group row">
@@ -191,7 +191,10 @@
                           <textarea type="text" v-model="item.comment" name="text-input" id="comment" class="form-control"></textarea>
                         </div>
                       </div>
-                      <hr class="hr-primary" />
+                      <div class="delete-button col-xl-1">
+                        <button class="btn btn-sm btn-danger" type="button" @click.stop="remove(index)">Löschen</button>
+                      </div>
+                      <hr class="hr-success" />
                     </div>
                     <button type="button" class="btn-sm btn-success ml-3" v-on:click="addForm()">Uhrzeit hinzufügen</button>
                     </div>
@@ -370,7 +373,10 @@
     },
     computed: {
       program () {
-        return this.$store.getters['program/get'](this.$route.params.programId)
+        return {
+          dates: [],
+          ...this.$store.getters['program/get'](this.$route.params.programId)
+        }
       }
     },
     methods: {
@@ -379,9 +385,8 @@
         this.$store.dispatch('program/patch', [this.program._id, this.program])
         this.$router.push('/program/' + this.$route.params.programId)
       },
-      remove () {
-        this.$store.dispatch('program/remove', this.program._id)
-        this.$router.push('/program/')
+      remove (index) {
+        this.program.dates.splice(index, 1)
       },
       addForm () {
         this.program.dates.push({})
