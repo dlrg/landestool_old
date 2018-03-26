@@ -11,11 +11,10 @@ module.exports = function (app) {
     category: { type: String },
     privacy: { type: String },
     dates: [{
-      day: { type: String },
-      start: { type: Date },
-      end: { type: Date },
+      day: { type: Date },
+      start: { type: String },
+      end: { type: String },
       deadline: { type: Date },
-      duration: { type: Number },
       comment: { type: String }
     }],
     person: {

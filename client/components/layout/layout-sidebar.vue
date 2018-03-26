@@ -10,7 +10,7 @@
                     <nuxt-link class="nav-link" :to="`/admin/users/${$store.state.auth.user._id}`" target="_top"><i class="ca ca-person-2"></i>Profil</nuxt-link>
                 </li>
                 <li class="nav-item">
-                    <nuxt-link class="nav-link" to="/program" target="_top"><i class="ca ca-anchor"></i>Programm</nuxt-link>
+                    <nuxt-link class="nav-link" to="/program/programOverview" target="_top"><i class="ca ca-anchor"></i>Programm</nuxt-link>
                 </li>
                 <li class="divider"></li>
 
@@ -26,13 +26,19 @@
                         <nuxt-link class="nav-link" to="/admin/users" target="_top"><i class="ca ca-account-group-1"></i>Benutzerverwaltung</nuxt-link>
                     </li>
                     <li class="nav-item">
-                        <nuxt-link class="nav-link" :to="`/admin/users/${$store.state.auth.user._id}/staff`" target="_top"><i class="ca ca-account-group-1"></i>Mitarbeiter</nuxt-link>
+                      <nuxt-link class="nav-link" to="/program" target="_top"><i class="ca ca-anchor"></i>Programmverwaltung</nuxt-link>
+                    </li>
+                    <li class="nav-item">
+                      <nuxt-link class="nav-link" :to="`/admin/users/${$store.state.auth.user._id}/staff`" target="_top"><i class="ca ca-account-group-1"></i>Mitarbeiter</nuxt-link>
                     </li>
                     <li class="nav-item">
                         <nuxt-link class="nav-link" to="/shirt/list" target="_top"><i class="ca ca-shopping-cart-2"></i>Bestellliste</nuxt-link>
                     </li>
-                     <li class="nav-item">
+                    <li class="nav-item">
                         <nuxt-link class="nav-link" to="/admin/users/roles" target="_top"><i class="ca ca-alarm"></i>Rollenverteilung</nuxt-link>
+                    </li>
+                    <li class="nav-item">
+                      <nuxt-link class="nav-link" to="/admin/users/identification" target="_top"><i class="ca ca-alarm"></i>Ausweise</nuxt-link>
                     </li>
                 </div>
                 <li class="nav-item px-3 pt-5 d-none">

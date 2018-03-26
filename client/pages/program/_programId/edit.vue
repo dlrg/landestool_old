@@ -155,26 +155,72 @@
                     <div class="card-body">
                         <div class="mb-2" v-for="(item, index) in program.dates" :key="'dates'+index">
                       <div class="form-group row">
-                        <label class="col-xl-3 col-form-label" for="startend-date">Start/Ende</label>
+                        <label class="col-xl-3 col-form-label" for="startend-date">Datum</label>
                         <div class="col-xl-9">
                           <div class="row">
-                            <div class="col-6">
+                            <div class="col-12">
                               <no-ssr>
-                                <datepicker bootstrap-styling language="de" monday-first v-model="item.start"></datepicker>
-                              </no-ssr>
-                            </div>
-                            <div class="col-6">
-                              <no-ssr>
-                                <datepicker bootstrap-styling language="de" monday-first v-model="item.end"></datepicker>
+                                <datepicker bootstrap-styling language="de" monday-first v-model="item.day"></datepicker>
                               </no-ssr>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="form-group row">
-                        <label class="col-xl-3 col-form-label" for="duration">Datum</label>
+                       <div class="form-group row">
+                        <label class="col-xl-3 col-form-label" for="startend-date">Start/Ende</label>
                         <div class="col-xl-9">
-                          <input type="text" v-model="item.duration" name="duration" id="duration" class="form-control">
+                          <div class="row">
+                            <div class="col-6">
+                              <div class="select-wrapper">
+                                <select class="form-control  float-left" name="selectForm" id="selectForm" v-model="item.start" required>
+                                  <option value="6">6:00</option>
+                                  <option value="7">7:00</option>
+                                  <option value="8">8:00</option>
+                                  <option value="9">9:00</option>
+                                  <option value="10">10:00</option>
+                                  <option value="11">11:00</option>
+                                  <option value="12">12:00</option>
+                                  <option value="13">13:00</option>
+                                  <option value="14">14:00</option>
+                                  <option value="15">15:00</option>
+                                  <option value="16">16:00</option>
+                                  <option value="17">17:00</option>
+                                  <option value="18">18:00</option>
+                                  <option value="19">19:00</option>
+                                  <option value="20">20:00</option>
+                                  <option value="21">21:00</option>
+                                  <option value="22">22:00</option>
+                                  <option value="23">23:00</option>
+                                  <option value="24">24:00</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="select-wrapper">
+                                <select class="form-control  float-left" name="selectForm" id="selectForm" v-model="item.end" required>
+                                  <option value="6">6:00</option>
+                                  <option value="7">7:00</option>
+                                  <option value="8">8:00</option>
+                                  <option value="9">9:00</option>
+                                  <option value="10">10:00</option>
+                                  <option value="11">11:00</option>
+                                  <option value="12">12:00</option>
+                                  <option value="13">13:00</option>
+                                  <option value="14">14:00</option>
+                                  <option value="15">15:00</option>
+                                  <option value="16">16:00</option>
+                                  <option value="17">17:00</option>
+                                  <option value="18">18:00</option>
+                                  <option value="19">19:00</option>
+                                  <option value="20">20:00</option>
+                                  <option value="21">21:00</option>
+                                  <option value="22">22:00</option>
+                                  <option value="23">23:00</option>
+                                  <option value="24">24:00</option>
+                                </select>
+                                </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                       <div class="form-group row">
@@ -361,6 +407,7 @@
 <script>
   import getProgramFromRoute from '@/mixins/getProgramFromRoute'
   import datepicker from 'vuejs-datepicker'
+  import VueTimepicker from 'vue2-timepicker'
   import { FormWizard, TabContent } from 'vue-form-wizard'
   import 'vue-form-wizard/dist/vue-form-wizard.min.css'
 
@@ -368,6 +415,7 @@
     mixins: [getProgramFromRoute],
     components: {
       FormWizard,
+      VueTimepicker,
       TabContent,
       datepicker
     },

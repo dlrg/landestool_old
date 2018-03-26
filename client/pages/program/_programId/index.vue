@@ -47,15 +47,15 @@
             </div>
             <div class="card-body" v-for='(item, index) in program.dates' :key="'time'+index">
               <div class="form-group row">
-                <label class="col-xl-3 col-form-label">Start/Ende</label>
+                <label class="col-xl-3 col-form-label">Datum</label>
                 <div class="col-xl-4">
-                  <p class="form-control-static mt-2 mb-0">{{item.start | dateFormatter('DD.MM.YYYY')}} - {{item.end | dateFormatter('DD.MM.YYYY')}}</p>
+                  <p class="form-control-static mt-2 mb-0">{{item.day | dateFormatter('DD.MM.YYYY')}}</p>
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-xl-3 col-form-label">Datum</label>
-                <div class="col-xl-9">
-                  <p class="form-control-static mt-2 mb-0">{{item.duration}}</p>
+                <label class="col-xl-3 col-form-label">Start/Ende</label>
+                <div class="col-xl-4">
+                  <p class="form-control-static mt-2 mb-0">{{item.start}} - {{item.end}}</p>
                 </div>
               </div>
               <div class="form-group row">
@@ -240,6 +240,7 @@
 <script>
   import getProgramFromRoute from '@/mixins/getProgramFromRoute'
   import dateFormatter from '@/filters/date-formatter'
+
   export default {
     mixins: [getProgramFromRoute],
     filters: { dateFormatter },
