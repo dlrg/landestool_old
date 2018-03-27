@@ -172,7 +172,7 @@
                             <div class="row">
                               <div class="col-6">
                               <div class="select-wrapper">
-                                <select class="form-control  float-left" name="selectForm" id="selectForm" v-model="item.start" required>
+                                <select class="form-control  float-left" name="date-start" v-model="item.start" required>
                                   <option value="6">6:00</option>
                                   <option value="7">7:00</option>
                                   <option value="8">8:00</option>
@@ -197,7 +197,7 @@
                               </div>
                               <div class="col-6">
                                 <div class="select-wrapper">
-                                <select class="form-control  float-left" name="selectForm" id="selectForm" v-model="item.end" required>
+                                <select class="form-control  float-left" name="date-end" v-model="item.end" required>
                                   <option value="6">6:00</option>
                                   <option value="7">7:00</option>
                                   <option value="8">8:00</option>
@@ -237,13 +237,16 @@
                             <textarea type="text" v-model="item.comment" name="comment" id="comment" class="form-control"></textarea>
                           </div>
                         </div>
-                        <div class="delete-button col-xl-1">
+                        <div class="delete-button col-xl-1" v-if="index != 0">
                           <button class="btn btn-sm btn-danger" type="button" @click.stop="remove(index)">Löschen</button>
                         </div>
                         <hr class="hr-success" />
                       </div>
                       <div class="col-2">
                         <button type="button" class="btn btn-sm btn-success" v-on:click="addForm()">Uhrzeit hinzufügen</button>
+                      </div>
+                      <div class="col-10">
+                        <small class="text-danger" v-if="notValid">Fülle bitte die Felder aus, bevor du einen neuen Termin anlegst!</small>
                       </div>
                     </div>
                   </div>
@@ -411,20 +414,20 @@
 </template>
 
 <script>
-  import getProgramFromRoute from '@/mixins/getProgramFromRoute'
   import datepicker from 'vuejs-datepicker'
   import { FormWizard, TabContent } from 'vue-form-wizard'
   import 'vue-form-wizard/dist/vue-form-wizard.min.css'
 
   export default {
-    mixins: [getProgramFromRoute],
     components: {
       datepicker,
       FormWizard,
       TabContent
     },
-    data: {
-      index: 1
+    data () {
+      return {
+        notValid: false
+      }
     },
     methods: {
       save () {
@@ -432,13 +435,18 @@
         this.$router.push('/program/')
       },
       addForm () {
-        var duration = document.forms['Form']['duration'].value
-        if (duration) {
+        var start = document.forms['Form']['date-start'].value
+        var end = document.forms['Form']['date-end'].value
+        if (start && end) {
           this.program.dates.push({})
+          this.notValid = false
+        } else {
+          this.notValid = true
         }
       },
       remove (index) {
         this.program.dates.splice(index, 1)
+        this.notValid = false
       }
     },
     async asyncData ({params}) {

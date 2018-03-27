@@ -9,9 +9,7 @@
                             <i class="ca ca-anchor"></i> Alle Programmpunkte
                         </div>
                         <div class="card-body">
-                            <h3 class="h3-table">Montag</h3>
-                            <table class="table table-striped mb-5">
-                                <thead>
+                           <table class="table">
                                 <tr>
                                     <th>Titel</th>
                                     <th>Kategorie</th>
@@ -22,8 +20,10 @@
                                     <th>Alter</th>
                                     <th>Status</th>
                                 </tr>
-                                </thead>
-                                <tbody tag="tr" :to="item._id" append v-for="item in programMonday" :key="item._id">
+                            </table>
+                            <h4 class="h3-table c-white">Montag</h4>
+                            <table class="table table-striped mb-5">
+                                <tbody tag="tr" :to="`/program/${item._id}`" append v-for="item in programMonday" :key="item._id">
                                         <td>{{item.name}}</td>
                                         <td>{{item.category}}</td>
                                         <td><span v-for="(item) in item.dates" :key="item._id">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
@@ -36,23 +36,10 @@
                                         </td>
                                 </tbody>
                             </table>
-
-                            <h3 class="h3-table">Dienstag</h3>
+                            <h4 class="h3-table c-white">Dienstag</h4>
                             <table class="table table-striped mb-5">
-                                <thead>
-                                <tr >
-                                    <th>Titel</th>
-                                    <th>Kategorie</th>
-                                    <th>Datum</th>
-                                    <th>Start/Ende</th>
-                                    <th>TN Max</th>
-                                    <th>Treffpunkt</th>
-                                    <th>Alter</th>
-                                    <th>Status</th>
-                                </tr>
-                                </thead>
                                 <tbody>
-                                    <nuxt-link tag="tr" :to="item._id" append v-for="item in programThursday" :key="item._id">
+                                    <nuxt-link tag="tr" :to="`/program/${item._id}`" append v-for="item in programTuesday" :key="item._id">
                                         <td>{{item.name}}</td>
                                         <td>{{item.category}}</td>
                                         <td><span v-for="(item) in item.dates" :key="item._id">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
@@ -68,22 +55,10 @@
                                 
                             </table>
 
-                            <h3 class="h3-table">Mittwoch</h3>
+                            <h4 class="h3-table c-white">Mittwoch</h4>
                             <table class="table table-striped mb-5">
-                                <thead>
-                                <tr >
-                                    <th>Titel</th>
-                                    <th>Kategorie</th>
-                                    <th>Datum</th>
-                                    <th>Start/Ende</th>
-                                    <th>TN Max</th>
-                                    <th>Treffpunkt</th>
-                                    <th>Alter</th>
-                                    <th>Status</th>
-                                </tr>
-                                </thead>
                                 <tbody>
-                                    <nuxt-link tag="tr" :to="item._id" append v-for="item in programWednesday" :key="item._id">
+                                    <nuxt-link tag="tr" :to="`/program/${item._id}`" append v-for="item in programWednesday" :key="item._id">
                                         <td>{{item.name}}</td>
                                         <td>{{item.category}}</td>
                                         <td><span v-for="(item) in item.dates" :key="item._id">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
@@ -99,26 +74,68 @@
                                 
                             </table>
 
-                            <h3 class="h3-table">Donnerstag</h3>
+                            <h4 class="h3-table c-white">Donnerstag</h4>
                             <table class="table table-striped mb-5">
-                                <thead>
-                                <tr >
-                                    <th>Titel</th>
-                                    <th>Kategorie</th>
-                                    <th>Datum</th>
-                                    <th>Start/Ende</th>
-                                    <th>TN Max</th>
-                                    <th>Treffpunkt</th>
-                                    <th>Alter</th>
-                                    <th>Status</th>
-                                </tr>
-                                </thead>
                                 <tbody>
-                                    <nuxt-link tag="tr" :to="item._id" append v-for="item in programThursday" :key="item._id">
+                                    <nuxt-link tag="tr" :to="`/program/${item._id}`" append v-for="item in programThursday" :key="item._id">
                                         <td>{{item.name}}</td>
                                         <td>{{item.category}}</td>
-                                        <td><span v-for="(item) in item.dates" :key="item._id">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
-                                        <td><span v-for="(item) in item.dates" :key="item._id">{{item.start}} - {{item.end}}<br /></span></td>
+                                        <td><span v-for="(item, index) in item.dates" :key="index+'day'">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
+                                        <td><span v-for="(item, index) in item.dates" :key="index+'startEnd'">{{item.start}} - {{item.end}}<br /></span></td>
+                                        <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
+                                        <td>{{item.location.meetingpoint}}</td>
+                                        <td>{{item.person.agemin}} - {{item.person.agemax}}</td>
+                                        <td>
+                                            <span class="badge badge-success c-white">{{item.status}}</span>
+                                        </td>
+                                    </nuxt-link>
+                                </tbody>
+                            </table>
+
+                             <h4 class="h3-table c-white">Freitag</h4>
+                            <table class="table table-striped mb-5">
+                                <tbody>
+                                    <nuxt-link tag="tr" :to="`/program/${item._id}`" append v-for="item in programFriday" :key="item._id">
+                                        <td>{{item.name}}</td>
+                                        <td>{{item.category}}</td>
+                                        <td><span v-for="(item, index) in item.dates" :key="index+'day'">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
+                                        <td><span v-for="(item, index) in item.dates" :key="index+'startEnd'">{{item.start}} - {{item.end}}<br /></span></td>
+                                        <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
+                                        <td>{{item.location.meetingpoint}}</td>
+                                        <td>{{item.person.agemin}} - {{item.person.agemax}}</td>
+                                        <td>
+                                            <span class="badge badge-success c-white">{{item.status}}</span>
+                                        </td>
+                                    </nuxt-link>
+                                </tbody>
+                            </table>
+
+                             <h4 class="h3-table c-white">Samstag</h4>
+                            <table class="table table-striped mb-5">
+                                <tbody>
+                                    <nuxt-link tag="tr" :to="`/program/${item._id}`" append v-for="item in programSaturday" :key="item._id">
+                                        <td>{{item.name}}</td>
+                                        <td>{{item.category}}</td>
+                                        <td><span v-for="(item, index) in item.dates" :key="index+'day'">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
+                                        <td><span v-for="(item, index) in item.dates" :key="index+'startEnd'">{{item.start}} - {{item.end}}<br /></span></td>
+                                        <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
+                                        <td>{{item.location.meetingpoint}}</td>
+                                        <td>{{item.person.agemin}} - {{item.person.agemax}}</td>
+                                        <td>
+                                            <span class="badge badge-success c-white">{{item.status}}</span>
+                                        </td>
+                                    </nuxt-link>
+                                </tbody>
+                            </table>
+
+                             <h4 class="h3-table c-white">Sonntag</h4>
+                            <table class="table table-striped mb-5">
+                                <tbody>
+                                    <nuxt-link tag="tr" :to="`/program/${item._id}`" append v-for="item in programSunday" :key="item._id">
+                                        <td>{{item.name}}</td>
+                                        <td>{{item.category}}</td>
+                                        <td><span v-for="(item, index) in item.dates" :key="index+'day'">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
+                                        <td><span v-for="(item, index) in item.dates" :key="index+'startEnd'">{{item.start}} - {{item.end}}<br /></span></td>
                                         <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
                                         <td>{{item.location.meetingpoint}}</td>
                                         <td>{{item.person.agemin}} - {{item.person.agemax}}</td>
@@ -156,29 +173,25 @@
         program: 'program/list'
       }),
       programMonday () {
-        return this.program.filter(program => {
-          return program.dates.some(date => moment(date.day).format('dd') === 'Mo')
-        })
+        return this.getProgramsOfDay('Mo')
       },
       programTuesday () {
-        return this.program.filter(program => {
-          return program.dates.some(date => moment(date.day).format('dd') === 'Di')
-        })
+        return this.getProgramsOfDay('Di')
       },
       programWednesday () {
-        return this.program.filter(program => {
-          return program.dates.some(date => moment(date.day).format('dd') === 'Mi')
-        })
+        return this.getProgramsOfDay('Mi')
       },
       programThursday () {
-        return this.program.filter(program => {
-          return program.dates.some(date => moment(date.day).format('dd') === 'Do')
-        })
+        return this.getProgramsOfDay('Do')
       },
       programFriday () {
-        return this.program.filter(program => {
-          return program.dates.some(date => moment(date.day).format('dd') === 'Fr')
-        })
+        return this.getProgramsOfDay('Fr')
+      },
+      programSaturday () {
+        return this.getProgramsOfDay('Sa')
+      },
+      programSunday () {
+        return this.getProgramsOfDay('So')
       }
     },
     methods: {
@@ -187,6 +200,20 @@
       },
       async remove (_id) {
         await this.$store.dispatch('program/remove', _id)
+      },
+      getProgramsOfDay (day) {
+        return this.program.filter(program => {
+          return program.dates.some(date => moment(date.day).format('dd') === day)
+        }).map(program => {
+          let dates = program.dates.filter(date => this.isWeekday(date.day, day))
+          return {
+            ...program,
+            dates
+          }
+        })
+      },
+      isWeekday (date, weekday) {
+        return moment(date).format('dd') === weekday
       }
     },
     async fetch ({ store }) {

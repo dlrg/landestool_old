@@ -41,7 +41,7 @@
                                     <nuxt-link tag="tr" :to="item._id" append v-for="item in filteredPrograms" :key="item._id">
                                         <td>{{item.name}}</td>
                                         <td>{{item.category}}</td>
-                                        <td><span v-for="(item) in item.dates" :key="item._id">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
+                                        <td><span v-for="(item) in item.dates" :key="item._id">{{item.day | dateFormatter('dd')}}, {{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
                                         <td><span v-for="(item) in item.dates" :key="item._id">{{item.start}} - {{item.end}}<br /></span></td>
                                         <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
                                         <td>{{item.location.meetingpoint}}</td>

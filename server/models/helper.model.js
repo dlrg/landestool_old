@@ -13,7 +13,7 @@ module.exports = function (app) {
       end: { type: Date }
     },
     count: { type: Number, required: false },
-    status: { type: String, required: false },
+    status: { type: String, required: false }
   }, {
     timestamps: true
   })
