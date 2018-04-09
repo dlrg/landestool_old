@@ -24,7 +24,7 @@
                                  </dd>
                               </div>
                            </div>
-                           <div class="col-xl-3">
+                           <!--div class="col-xl-3">
                               <div class="shirtimg">
                                  <img src="@/assets/img/1.-T-Shirt-Mockup_Navy.png" height="200px"/>
                                  <dd class="mt-4">
@@ -35,7 +35,7 @@
                                     Rückseite Navy
                                  </dd>
                               </div>
-                           </div>
+                           </div-->
                         </div>
                      </div>
                </div>

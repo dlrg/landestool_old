@@ -19,7 +19,7 @@
                                 <div class="col-2"></div>
                             </div>
                             <div class="form-group row" v-for="(item, index) in user.time" :key="'time'+index">
-                                <div class="select-wrapper col-4 mb-3">
+                                <div class="select-wrapper col-xl-4 mb-3">
                                     <select class="form-control  float-left" id="timeDay" v-model="item.day" required>
                                         <option value="Donnerstag">Donnerstag</option>
                                         <option value="Freitag">Freitag</option>

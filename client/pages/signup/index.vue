@@ -27,31 +27,31 @@
                     </div>
                     <div class="card-body">
                       <div class="form-group row">
-                        <label class="col-xl-3 col-form-label" for="text-input">Vorname*</label>
+                        <label class="col-xl-3 col-form-label" for="firstname">Vorname*</label>
                         <div class="col-xl-9">
-                          <input type="text" id="text-input" v-model="user.firstname" name="text-input" class="form-control" required>
+                          <input type="text" id="firstname" v-model="user.firstname" name="text-input" class="form-control" required>
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label class="col-xl-3 col-form-label" for="text-input">Nachname*</label>
+                        <label class="col-xl-3 col-form-label" for="lastname">Nachname*</label>
                         <div class="col-xl-9">
-                          <input type="text" id="text-input" v-model="user.lastname" name="text-input" class="form-control" required>
+                          <input type="text" id="lastname" v-model="user.lastname" name="text-input" class="form-control" required>
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label class="col-xl-3 col-form-label" for="text-input">Email*</label>
+                        <label class="col-xl-3 col-form-label" for="email">Email*</label>
                         <div class="col-xl-9">
-                          <input type="email" id="text-input" v-model="user.email" name="text-input" class="form-control" required>
+                          <input type="email" id="email" v-model="user.email" name="text-input" class="form-control" required>
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label class="col-xl-3 col-form-label" for="text-input">Telefon*</label>
+                        <label class="col-xl-3 col-form-label" for="phone">Telefon*</label>
                         <div class="col-xl-9">
-                          <input type="text" id="text-input" v-model="user.phone" name="text-input" class="form-control" required>
+                          <input type="text" id="phone" v-model="user.phone" name="text-input" class="form-control" required>
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label class="col-xl-3 col-form-label" for="text-input">Geburtsdatum*</label>
+                        <label class="col-xl-3 col-form-label" for="birthdate">Geburtsdatum*</label>
                         <div class="col-xl-9">
                           <no-ssr>
                             <datepicker bootstrap-styling language="de" monday-first v-model="user.birthday"></datepicker>
@@ -276,16 +276,60 @@
                   </div>
                   <div class="card-body">
                     <div class="form-group row">
-                      <label class="col-xl-2 col-form-label" for="presenceDay">Tage*</label>
-                      <div class="col-xl-10">
+                      <label class="col-xl-3 col-form-label" for="selectFormEinsatz">Einsatz*</label>
+                      <div class="col-xl-9">
+                        <div class="select-wrapper">
+                          <select class="form-control  float-left" name="selectFormEinsatz" id="selectFormEinsatz" v-model="user.presence" required>
+                            <option value="Ausweis / Einsetzbar">Ausweis / Einsetzbar</option>
+                            <option value="kein Ausweis / Einsetzbar">kein Ausweis / Einsetzbar</option>
+                            <option value="Ausweis / nicht Einsetzbar bzw. anderweitig verplant">Ausweis / nicht Einsetzbar bzw. anderweitig verplant</option>
+                            <option value="kein Ausweis / nicht Einsetzbar bzw. anderweitig verplant">kein Ausweis / nicht Einsetzbar bzw. anderweitig verplant</option>
+                            <option value="Arbeitsgruppe">Arbeitsgruppe </option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row" v-if="user.presence=='Arbeitsgruppe'">
+                      <label class="col-xl-3 col-form-label" for="text-input">Arbeitsgruppe</label>
+                      <div class="col-xl-9">
+                        <div class="select-wrapper">
+                          <select class="form-control  float-left" name="selectFormArbeitsgruppe" id="selectFormArbeitsgruppe" v-model="user.workgroup">
+                            <option value="-">-</option>
+                            <option value="AK FLiB">AK FLiB</option>
+                            <option value="AK Juga">AK Juga</option>
+                            <option value="AK KiGA">AK KiGA</option>
+                            <option value="AK Medienredation">AK Medienreaktion</option>
+                            <option value="AK Rettungssport">AK Rettungssport</option>
+                            <option value="AK Uwe P.">AK Uwe P.</option>
+                            <option value="Ausrichter">Ausrichter</option>
+                            <option value="Bier- und Weinstube">Bier- und Weinstube</option>
+                            <option value="Café Kontakt">Café Kontakt</option>
+                            <option value="Ehrengäste">Ehrengäste</option>
+                            <option value="externer Mitarbeiter">externer Mitarbeiter</option>
+                            <option value="Funkleit/Fahrdienst">Funkleit/Fahrdienst</option>
+                            <option value="HaSi">Haussicherheit</option>
+                            <option value="Helferbüro">Helferbüro</option>
+                            <option value="PG Landes">PG Landes</option>
+                            <option value="Rödeltruppe">Rödeltruppe</option>
+                            <option value="Sanitäter">Sanitäter</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-xl-3 col-form-label" for="presenceDay">Tage*</label>
+                      <div class="col-xl-9">  
                         <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayMonday" name="day" v-model="user.presenceDay.monday">
                         <label class="mt-2 mb-0 mr-3" for="subscribeNews">Montag</label>
                         <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayTuesday" name="day" v-model="user.presenceDay.tuesday">
-                        <label class="mt-2 mb-0 mr-3" for="subscribeNews">Dienstag</label>   
+                        <label class="mt-2 mb-0 mr-3" for="subscribeNews">Dienstag</label>    
                         <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayWednesday" name="day" v-model="user.presenceDay.wednesday">
                         <label class="mt-2 mb-0 mr-3" for="subscribeNews">Mittwoch</label>
                         <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayThursday" name="day" v-model="user.presenceDay.thursday">
                         <label class="mt-2 mb-0 mr-3" for="subscribeNews">Donnerstag</label>
+                      </div>
+                      <label class="col-xl-3 col-form-label" for="presenceDay"></label>
+                      <div class="col-xl-9">  
                         <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDayFriday" name="day" v-model="user.presenceDay.friday">
                         <label class="mt-2 mb-0 mr-3" for="subscribeNews">Freitag</label>
                         <input class="mt-1 mb-0 mr-1" type="checkbox" id="presenceDaySaturday" name="day" v-model="user.presenceDay.saturday">
@@ -563,10 +607,20 @@ const data = {
       start: null,
       end: null
     },
+    role: {
+      name: ''
+    },
     address: {
       street: '',
       zip: '',
       city: ''
+    },
+    shirt: {
+      style: '',
+      count: '0',
+      color: '',
+      sex: '',
+      size: ''
     },
     comment: '',
     division: '',

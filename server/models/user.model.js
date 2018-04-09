@@ -28,7 +28,7 @@ module.exports = function (app) {
 
     shirt: {
       style: { type: String, required: false },
-      count: { type: Number, required: true },
+      count: { type: Number, required: false },
       color: { type: String, required: false },
       sex: { type: String, required: false },
       size: { type: String, required: false }
@@ -59,11 +59,8 @@ module.exports = function (app) {
       start: { type: String, required: false },
       end: { type: String, required: false }
     }],
-
     role: [{
-      type: String,
-      required: true,
-      default: 'user'
+      name: { type: String, required: false }
     }]
   }, {
     timestamps: true

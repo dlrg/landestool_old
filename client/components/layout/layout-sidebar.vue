@@ -18,7 +18,7 @@
                     <nuxt-link class="nav-link" to="/shirt" target="_top"><i class="ca ca-high-heels"></i>Shirt Bestellung</nuxt-link>
                 </li>
                 <li class="divider"></li>
-                <div v-if="user.role.includes('admin')">
+                <!--div v-if="user.role.name.includes('admin')"-->
                     <li class="nav-title text-center">
                         <span>Administration</span>
                     </li>
@@ -40,7 +40,7 @@
                     <li class="nav-item">
                       <nuxt-link class="nav-link" to="/admin/users/identification" target="_top"><i class="ca ca-alarm"></i>Ausweise</nuxt-link>
                     </li>
-                </div>
+                <!--/div-->
                 <li class="nav-item px-3 pt-5 d-none">
                     <div class="text-uppercase mb-1">
                         <small><b>Fortschritt</b></small>
@@ -59,6 +59,7 @@
 
 <script>
   import { mapGetters } from 'vuex'
+
   export default {
     computed: {
       ...mapGetters({
@@ -66,6 +67,11 @@
       }),
       user () {
         return this.$store.state.auth.user
+      }
+    },
+    data () {
+      return {
+        admin: false
       }
     },
     name: 'layout-sidebar',
@@ -79,6 +85,11 @@
       },
       async fetch ({ store }) {
         await store.dispatch('user/find')
+      },
+      checkAdmin () {
+        if (this.user.filter(e => e.role.name === 'admin').length > 0) {
+          this.admin = true
+        }
       }
     }
   }
