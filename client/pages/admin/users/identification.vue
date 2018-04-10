@@ -24,6 +24,7 @@
                                         <td>{{ item.firstname }}</td>
                                         <td>{{ item.lastname }}</td>
                                         <td></td>
+                                        <td></td>
                                         <td><button class="btn btn-sm btn-danger float-right" @click.stop="remove(item._id)">Löschen</button></td>
                                     </nuxt-link>
                                 </tbody>

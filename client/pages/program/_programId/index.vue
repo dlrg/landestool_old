@@ -9,7 +9,7 @@
             <div class="card-header">
               <i class="ca ca-anchor"></i> Stammdaten
               <!-- toDo: v-if user.role admin -->
-              <button class="btn btn-warning btn-sm float-right mr-1" v-if="`${$store.state.auth.user.role}`.includes('admin')" @click="edit">Bearbeiten</button>
+              <button class="btn btn-warning btn-sm float-right mr-1" @click="edit">Bearbeiten</button>
             </div>
             <div class="card-body">
               <div class="form-group row">

@@ -24,7 +24,7 @@
                            </div>
                             <table class="table table-striped">
                                 <thead>
-                                <tr >
+                                <tr>
                                     <th>Titel</th>
                                     <th>Kategorie</th>
                                     <th>Datum</th>
@@ -49,7 +49,8 @@
                                         <td>
                                             <span class="badge badge-success c-white">{{item.status}}</span>
                                         </td>
-                                        <td><td><button class="btn btn-sm btn-danger float-right" @click.stop="remove(item._id)">Löschen</button></td>
+                                        <td><button class="btn btn-sm btn-danger float-right" @click.stop="remove(item._id)">Löschen</button></td>
+                                        <td></td>
                                     </nuxt-link>
                                 </tbody>
                                 

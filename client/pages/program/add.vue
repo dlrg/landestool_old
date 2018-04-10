@@ -237,7 +237,7 @@
                             <textarea type="text" v-model="item.comment" name="comment" id="comment" class="form-control"></textarea>
                           </div>
                         </div>
-                        <div class="delete-button col-xl-1" v-if="index != 0">
+                        <div class="delete-button col-xl-1" v-if="program.dates.length >1">
                           <button class="btn btn-sm btn-danger" type="button" @click.stop="remove(index)">Löschen</button>
                         </div>
                         <hr class="hr-success" />
@@ -435,6 +435,7 @@
         this.$router.push('/program/')
       },
       addForm () {
+        if (!this.program.dates) this.$set(this.program, 'date', [])
         var start = document.forms['Form']['date-start'].value
         var end = document.forms['Form']['date-end'].value
         if (start && end) {

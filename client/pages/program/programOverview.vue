@@ -1,156 +1,256 @@
 <template>
-    <section class="container-fluid">
-        <div class="animated fadeIn">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Programm</h1>
-                    <div class="card">
-                        <div class="card-header">
-                            <i class="ca ca-anchor"></i> Alle Programmpunkte
-                        </div>
-                        <div class="card-body">
-                           <table class="table">
-                                <tr>
-                                    <th>Titel</th>
-                                    <th>Kategorie</th>
-                                    <th>Datum</th>
-                                    <th>Start/Ende</th>
-                                    <th>TN Max</th>
-                                    <th>Treffpunkt</th>
-                                    <th>Alter</th>
-                                    <th>Status</th>
-                                </tr>
-                            </table>
-                            <h4 class="h3-table c-white">Montag</h4>
-                            <table class="table table-striped mb-5">
-                                <tbody tag="tr" :to="`/program/${item._id}`" append v-for="item in programMonday" :key="item._id">
-                                        <td>{{item.name}}</td>
-                                        <td>{{item.category}}</td>
-                                        <td><span v-for="(item) in item.dates" :key="item._id">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
-                                        <td><span v-for="(item) in item.dates" :key="item._id">{{item.start}} - {{item.end}}<br /></span></td>
-                                        <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
-                                        <td>{{item.location.meetingpoint}}</td>
-                                        <td>{{item.person.agemin}} - {{item.person.agemax}}</td>
-                                        <td>
-                                            <span class="badge badge-success c-white">{{item.status}}</span>
-                                        </td>
-                                </tbody>
-                            </table>
-                            <h4 class="h3-table c-white">Dienstag</h4>
-                            <table class="table table-striped mb-5">
-                                <tbody>
-                                    <nuxt-link tag="tr" :to="`/program/${item._id}`" append v-for="item in programTuesday" :key="item._id">
-                                        <td>{{item.name}}</td>
-                                        <td>{{item.category}}</td>
-                                        <td><span v-for="(item) in item.dates" :key="item._id">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
-                                        <td><span v-for="(item) in item.dates" :key="item._id">{{item.start}} - {{item.end}}<br /></span></td>
-                                        <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
-                                        <td>{{item.location.meetingpoint}}</td>
-                                        <td>{{item.person.agemin}} - {{item.person.agemax}}</td>
-                                        <td>
-                                            <span class="badge badge-success c-white">{{item.status}}</span>
-                                        </td>
-                                    </nuxt-link>
-                                </tbody>
-                                
-                            </table>
-
-                            <h4 class="h3-table c-white">Mittwoch</h4>
-                            <table class="table table-striped mb-5">
-                                <tbody>
-                                    <nuxt-link tag="tr" :to="`/program/${item._id}`" append v-for="item in programWednesday" :key="item._id">
-                                        <td>{{item.name}}</td>
-                                        <td>{{item.category}}</td>
-                                        <td><span v-for="(item) in item.dates" :key="item._id">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
-                                        <td><span v-for="(item) in item.dates" :key="item._id">{{item.start}} - {{item.end}}<br /></span></td>
-                                        <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
-                                        <td>{{item.location.meetingpoint}}</td>
-                                        <td>{{item.person.agemin}} - {{item.person.agemax}}</td>
-                                        <td>
-                                            <span class="badge badge-success c-white">{{item.status}}</span>
-                                        </td>
-                                    </nuxt-link>
-                                </tbody>
-                                
-                            </table>
-
-                            <h4 class="h3-table c-white">Donnerstag</h4>
-                            <table class="table table-striped mb-5">
-                                <tbody>
-                                    <nuxt-link tag="tr" :to="`/program/${item._id}`" append v-for="item in programThursday" :key="item._id">
-                                        <td>{{item.name}}</td>
-                                        <td>{{item.category}}</td>
-                                        <td><span v-for="(item, index) in item.dates" :key="index+'day'">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
-                                        <td><span v-for="(item, index) in item.dates" :key="index+'startEnd'">{{item.start}} - {{item.end}}<br /></span></td>
-                                        <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
-                                        <td>{{item.location.meetingpoint}}</td>
-                                        <td>{{item.person.agemin}} - {{item.person.agemax}}</td>
-                                        <td>
-                                            <span class="badge badge-success c-white">{{item.status}}</span>
-                                        </td>
-                                    </nuxt-link>
-                                </tbody>
-                            </table>
-
-                             <h4 class="h3-table c-white">Freitag</h4>
-                            <table class="table table-striped mb-5">
-                                <tbody>
-                                    <nuxt-link tag="tr" :to="`/program/${item._id}`" append v-for="item in programFriday" :key="item._id">
-                                        <td>{{item.name}}</td>
-                                        <td>{{item.category}}</td>
-                                        <td><span v-for="(item, index) in item.dates" :key="index+'day'">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
-                                        <td><span v-for="(item, index) in item.dates" :key="index+'startEnd'">{{item.start}} - {{item.end}}<br /></span></td>
-                                        <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
-                                        <td>{{item.location.meetingpoint}}</td>
-                                        <td>{{item.person.agemin}} - {{item.person.agemax}}</td>
-                                        <td>
-                                            <span class="badge badge-success c-white">{{item.status}}</span>
-                                        </td>
-                                    </nuxt-link>
-                                </tbody>
-                            </table>
-
-                             <h4 class="h3-table c-white">Samstag</h4>
-                            <table class="table table-striped mb-5">
-                                <tbody>
-                                    <nuxt-link tag="tr" :to="`/program/${item._id}`" append v-for="item in programSaturday" :key="item._id">
-                                        <td>{{item.name}}</td>
-                                        <td>{{item.category}}</td>
-                                        <td><span v-for="(item, index) in item.dates" :key="index+'day'">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
-                                        <td><span v-for="(item, index) in item.dates" :key="index+'startEnd'">{{item.start}} - {{item.end}}<br /></span></td>
-                                        <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
-                                        <td>{{item.location.meetingpoint}}</td>
-                                        <td>{{item.person.agemin}} - {{item.person.agemax}}</td>
-                                        <td>
-                                            <span class="badge badge-success c-white">{{item.status}}</span>
-                                        </td>
-                                    </nuxt-link>
-                                </tbody>
-                            </table>
-
-                             <h4 class="h3-table c-white">Sonntag</h4>
-                            <table class="table table-striped mb-5">
-                                <tbody>
-                                    <nuxt-link tag="tr" :to="`/program/${item._id}`" append v-for="item in programSunday" :key="item._id">
-                                        <td>{{item.name}}</td>
-                                        <td>{{item.category}}</td>
-                                        <td><span v-for="(item, index) in item.dates" :key="index+'day'">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
-                                        <td><span v-for="(item, index) in item.dates" :key="index+'startEnd'">{{item.start}} - {{item.end}}<br /></span></td>
-                                        <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
-                                        <td>{{item.location.meetingpoint}}</td>
-                                        <td>{{item.person.agemin}} - {{item.person.agemax}}</td>
-                                        <td>
-                                            <span class="badge badge-success c-white">{{item.status}}</span>
-                                        </td>
-                                    </nuxt-link>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+  <section class="container-fluid">
+    <div class="animated fadeIn">
+      <div class="row">
+        <div class="col-12">
+          <h1>Programmübersicht</h1>
+          <div class="card">
+            <div class="card-header">
+              <i class="ca ca-anchor"></i>Montag
             </div>
+            <div class="card-body">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Titel</th>
+                    <th>Kategorie</th>
+                    <th>Datum</th>
+                    <th>Start/Ende</th>
+                    <th>TN Max</th>
+                    <th>Treffpunkt</th>
+                    <th>Alter</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody tag="tr" :to="`/program/${item._id}`" append v-for="item in programMonday" :key="item._id">
+                  <td>{{item.name}}</td>
+                  <td>{{item.category}}</td>
+                  <td><span v-for="(item) in item.dates" :key="item._id">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
+                  <td><span v-for="(item) in item.dates" :key="item._id">{{item.start}} - {{item.end}}<br /></span></td>
+                  <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
+                  <td>{{item.location.meetingpoint}}</td>
+                  <td>{{item.person.agemin}} - {{item.person.agemax}}</td>
+                  <td>
+                    <span class="badge badge-success c-white">{{item.status}}</span>
+                  </td>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <i class="ca ca-anchor"></i>Dienstag
+            </div>
+            <div class="card-body">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Titel</th>
+                    <th>Kategorie</th>
+                    <th>Datum</th>
+                    <th>Start/Ende</th>
+                    <th>TN Max</th>
+                    <th>Treffpunkt</th>
+                    <th>Alter</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <nuxt-link tag="tr" :to="`/program/${item._id}`" append v-for="item in programTuesday" :key="item._id">
+                    <td>{{item.name}}</td>
+                    <td>{{item.category}}</td>
+                    <td><span v-for="(item) in item.dates" :key="item._id">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
+                    <td><span v-for="(item) in item.dates" :key="item._id">{{item.start}} - {{item.end}}<br /></span></td>
+                    <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
+                    <td>{{item.location.meetingpoint}}</td>
+                    <td>{{item.person.agemin}} - {{item.person.agemax}}</td>
+                    <td>
+                      <span class="badge badge-success c-white">{{item.status}}</span>
+                    </td>
+                  </nuxt-link>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <i class="ca ca-anchor"></i>Mittwoch
+            </div>
+            <div class="card-body">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Titel</th>
+                    <th>Kategorie</th>
+                    <th>Datum</th>
+                    <th>Start/Ende</th>
+                    <th>TN Max</th>
+                    <th>Treffpunkt</th>
+                    <th>Alter</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <nuxt-link tag="tr" :to="`/program/${item._id}`" append v-for="item in programWednesday" :key="item._id">
+                    <td>{{item.name}}</td>
+                    <td>{{item.category}}</td>
+                    <td><span v-for="(item) in item.dates" :key="item._id">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
+                    <td><span v-for="(item) in item.dates" :key="item._id">{{item.start}} - {{item.end}}<br /></span></td>
+                    <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
+                    <td>{{item.location.meetingpoint}}</td>
+                    <td>{{item.person.agemin}} - {{item.person.agemax}}</td>
+                    <td>
+                      <span class="badge badge-success c-white">{{item.status}}</span>
+                    </td>
+                  </nuxt-link>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <i class="ca ca-anchor"></i>Donnerstag
+            </div>
+            <div class="card-body">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Titel</th>
+                    <th>Kategorie</th>
+                    <th>Datum</th>
+                    <th>Start/Ende</th>
+                    <th>TN Max</th>
+                    <th>Treffpunkt</th>
+                    <th>Alter</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <nuxt-link tag="tr" :to="`/program/${item._id}`" append v-for="item in programThursday" :key="item._id">
+                    <td>{{item.name}}</td>
+                    <td>{{item.category}}</td>
+                    <td><span v-for="(item, index) in item.dates" :key="index+'day'">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
+                    <td><span v-for="(item, index) in item.dates" :key="index+'startEnd'">{{item.start}} - {{item.end}}<br /></span></td>
+                    <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
+                    <td>{{item.location.meetingpoint}}</td>
+                    <td>{{item.person.agemin}} - {{item.person.agemax}}</td>
+                    <td>
+                      <span class="badge badge-success c-white">{{item.status}}</span>
+                    </td>
+                  </nuxt-link>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <i class="ca ca-anchor"></i>Freitag
+            </div>
+            <div class="card-body">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Titel</th>
+                    <th>Kategorie</th>
+                    <th>Datum</th>
+                    <th>Start/Ende</th>
+                    <th>TN Max</th>
+                    <th>Treffpunkt</th>
+                    <th>Alter</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <nuxt-link tag="tr" :to="`/program/${item._id}`" append v-for="item in programFriday" :key="item._id">
+                    <td>{{item.name}}</td>
+                    <td>{{item.category}}</td>
+                    <td><span v-for="(item, index) in item.dates" :key="index+'day'">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
+                    <td><span v-for="(item, index) in item.dates" :key="index+'startEnd'">{{item.start}} - {{item.end}}<br /></span></td>
+                    <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
+                    <td>{{item.location.meetingpoint}}</td>
+                    <td>{{item.person.agemin}} - {{item.person.agemax}}</td>
+                    <td>
+                      <span class="badge badge-success c-white">{{item.status}}</span>
+                    </td>
+                  </nuxt-link>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <i class="ca ca-anchor"></i>Samstag
+            </div>
+            <div class="card-body">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Titel</th>
+                    <th>Kategorie</th>
+                    <th>Datum</th>
+                    <th>Start/Ende</th>
+                    <th>TN Max</th>
+                    <th>Treffpunkt</th>
+                    <th>Alter</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <nuxt-link tag="tr" :to="`/program/${item._id}`" append v-for="item in programSaturday" :key="item._id">
+                    <td>{{item.name}}</td>
+                    <td>{{item.category}}</td>
+                    <td><span v-for="(item, index) in item.dates" :key="index+'day'">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
+                    <td><span v-for="(item, index) in item.dates" :key="index+'startEnd'">{{item.start}} - {{item.end}}<br /></span></td>
+                    <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
+                    <td>{{item.location.meetingpoint}}</td>
+                    <td>{{item.person.agemin}} - {{item.person.agemax}}</td>
+                    <td>
+                      <span class="badge badge-success c-white">{{item.status}}</span>
+                    </td>
+                  </nuxt-link>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <i class="ca ca-anchor"></i>Sonntag
+            </div>
+            <div class="card-body">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Titel</th>
+                    <th>Kategorie</th>
+                    <th>Datum</th>
+                    <th>Start/Ende</th>
+                    <th>TN Max</th>
+                    <th>Treffpunkt</th>
+                    <th>Alter</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <nuxt-link tag="tr" :to="`/program/${item._id}`" append v-for="item in programSunday" :key="item._id">
+                    <td>{{item.name}}</td>
+                    <td>{{item.category}}</td>
+                    <td><span v-for="(item, index) in item.dates" :key="index+'day'">{{item.day | dateFormatter('DD.MM.YYYY')}}<br /></span></td>
+                    <td><span v-for="(item, index) in item.dates" :key="index+'startEnd'">{{item.start}} - {{item.end}}<br /></span></td>
+                    <td>{{item.person.subscribermin}} - {{item.person.subscribermax}}</td>
+                    <td>{{item.location.meetingpoint}}</td>
+                    <td>{{item.person.agemin}} - {{item.person.agemax}}</td>
+                    <td>
+                      <span class="badge badge-success c-white">{{item.status}}</span>
+                    </td>
+                  </nuxt-link>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>

@@ -4,7 +4,7 @@
       subtitle="Trage Schritt für Schritt die Daten ein"
       back-button-text="Zurück"
       next-button-text="Weiter"
-      finish-button-text="Hinzufügen"
+      finish-button-text="Speichern"
       color="#ff5900">
       <h1 slot="title">Benutzer bearbeiten</h1>
 

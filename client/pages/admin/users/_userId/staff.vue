@@ -7,7 +7,6 @@
                     <div class="card" v-if="user.workgroup">
                         <div class="card-header">
                             <i class="ca ca-anchor"></i> Alle Mitarbeiter in {{ user.workgroup }}
-                            <button class="btn btn-sm btn-info c-white float-right" @click="add">Hinzufügen</button>
                         </div>
                         <div class="card-body">
                             <table class="table table-striped">
@@ -35,7 +34,10 @@
                         </div>
                     </div>
                     <div class="card" v-if="!user.workgroup">
-                      <p>Du bist keiner Arbeitsgruppe zugeteilt!</p>
+                      <div class="card-header">
+                            <i class="ca ca-anchor"></i> Alle Mitarbeiter
+                        </div>
+                        <div class="card-body pt-3 pl-3">Du bist keiner Arbeitsgruppe zugeteilt!</div>
                       
                     </div>
                 </div>
@@ -65,9 +67,6 @@
       }
     },
     methods: {
-      add () {
-        this.$router.push('/admin/users/add')
-      },
       async remove (_id) {
         await this.$store.dispatch('user/remove', _id)
       }
