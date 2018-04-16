@@ -6,14 +6,11 @@ module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient')
   const { Schema } = mongooseClient
   const helper = new Schema({
-    user: { type: String, required: false },
+    userId: { type: Schema.Types.ObjectId, ref: 'user' },
     time: {
-      date: { type: Date, required: true },
       start: { type: Date },
       end: { type: Date }
-    },
-    count: { type: Number, required: false },
-    status: { type: String, required: false }
+    }
   }, {
     timestamps: true
   })

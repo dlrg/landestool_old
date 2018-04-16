@@ -9,26 +9,26 @@
                             <i class="ca ca-anchor"></i>Alle Benutzer
                         </div>
                         <div class="card-body">
-                            <table class="table table-striped">
-                                <thead>
-																	<tr>
-																		<th>Vorname</th>
-																		<th>Nachname</th>
-																		<th>Rolle</th>
-																		<th></th>
-																		<th></th>
-																	</tr>
-                                </thead>
-                                <tbody>
-                                    <nuxt-link tag="tr" :to="`/admin/users/${item._id}/rolesEdit`" append v-for="item in users" :key="item._id">
-                                        <td>{{ item.firstname }}</td>
-                                        <td>{{ item.lastname }}</td>
-                                        <td><span v-for="(item, index) in item.role" :key="'roles' + index">{{ item.name }} </span></td>
-                                        <td></td>
-                                        <td><button class="btn btn-sm btn-danger float-right" @click.stop="remove(item._id)">Löschen</button></td>
-                                    </nuxt-link>
-                                </tbody>
-                            </table>
+													<table class="table table-striped">
+														<thead>
+															<tr>
+																	<th>Vorname</th>
+																	<th>Nachname</th>
+																	<th>Rolle</th>
+																	<th></th>
+																	<th></th>
+															</tr>
+														</thead>
+														<tbody>
+															<nuxt-link tag="tr" :to="`/admin/users/${item._id}/rolesEdit`" append v-for="item in users" :key="item._id">
+																	<td>{{ item.firstname }}</td>
+																	<td>{{ item.lastname }}</td>
+																	<td><span v-for="(item, index) in item.role" :key="'roles' + index">{{ item.name }} </span></td>
+																	<td></td>
+																	<td><button class="btn btn-sm btn-danger float-right" @click.stop="remove(item._id)">Löschen</button></td>
+															</nuxt-link>
+														</tbody>
+													</table>
                         </div>
                     </div>
                 </div>

@@ -33,6 +33,7 @@ export default () => new Vuex.Store({
   plugins: [
     service('user'),
     service('program'),
+    service('helper'),
     auth({
       userService: '/user',
       state: {

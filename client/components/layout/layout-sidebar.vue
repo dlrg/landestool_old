@@ -12,13 +12,14 @@
                 <li class="nav-item">
                     <nuxt-link class="nav-link" to="/program/programOverview" target="_top"><i class="ca ca-anchor"></i>Programm</nuxt-link>
                 </li>
-                <li class="divider"></li>
-
+                <li class="nav-item">
+                  <nuxt-link class="nav-link" :to="`/admin/users/${$store.state.auth.user._id}/timetable`" target="_top"><i class="ca ca-clock-2"></i>Timetable</nuxt-link>
+                </li>
                  <li class="nav-item">
                     <nuxt-link class="nav-link" to="/shirt" target="_top"><i class="ca ca-high-heels"></i>Shirt Bestellung</nuxt-link>
                 </li>
                 <li class="divider"></li>
-                <!--div v-if="user.role.name.includes('admin')"-->
+                <!--div v-if="user.role.includes('admin')"-->
                     <li class="nav-title text-center">
                         <span>Administration</span>
                     </li>

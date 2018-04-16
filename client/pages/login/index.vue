@@ -51,7 +51,7 @@
     email: '',
     password: ''
   }
-  export default{
+  export default {
     layout: 'login',
     data: () => data,
     methods: {

@@ -9,7 +9,7 @@
               <i class="ca ca-anchor"></i>Montag
             </div>
             <div class="card-body">
-              <table class="table table-striped">
+              <table class="table table-program table-striped">
                 <thead>
                   <tr>
                     <th>Titel</th>
@@ -42,7 +42,7 @@
               <i class="ca ca-anchor"></i>Dienstag
             </div>
             <div class="card-body">
-              <table class="table table-striped">
+              <table class="table table-program table-striped">
                 <thead>
                   <tr>
                     <th>Titel</th>
@@ -77,7 +77,7 @@
               <i class="ca ca-anchor"></i>Mittwoch
             </div>
             <div class="card-body">
-              <table class="table table-striped">
+              <table class="table table-program table-striped">
                 <thead>
                   <tr>
                     <th>Titel</th>
@@ -112,7 +112,7 @@
               <i class="ca ca-anchor"></i>Donnerstag
             </div>
             <div class="card-body">
-              <table class="table table-striped">
+              <table class="table table-program table-striped">
                 <thead>
                   <tr>
                     <th>Titel</th>
@@ -147,7 +147,7 @@
               <i class="ca ca-anchor"></i>Freitag
             </div>
             <div class="card-body">
-              <table class="table table-striped">
+              <table class="table table-program table-striped">
                 <thead>
                   <tr>
                     <th>Titel</th>
@@ -182,7 +182,7 @@
               <i class="ca ca-anchor"></i>Samstag
             </div>
             <div class="card-body">
-              <table class="table table-striped">
+              <table class="table table-program table-striped">
                 <thead>
                   <tr>
                     <th>Titel</th>
@@ -217,7 +217,7 @@
               <i class="ca ca-anchor"></i>Sonntag
             </div>
             <div class="card-body">
-              <table class="table table-striped">
+              <table class="table table-program table-striped">
                 <thead>
                   <tr>
                     <th>Titel</th>

@@ -35,6 +35,7 @@
                                     <th>Status</th>
                                     <th></th>
                                     <th></th>
+                                    <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -49,6 +50,7 @@
                                         <td>
                                             <span class="badge badge-success c-white">{{item.status}}</span>
                                         </td>
+                                        <td><router-link :to="'program/' + item._id + '/helper'"><i class="ca ca-person-add-2"></i></router-link></td>
                                         <td><button class="btn btn-sm btn-danger float-right" @click.stop="remove(item._id)">Löschen</button></td>
                                         <td></td>
                                     </nuxt-link>
