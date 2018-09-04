@@ -68,7 +68,7 @@
     "vue2-dropzone": "^3.5.2",
     "vuejs-datepicker": "^1.5.3",
     "vuejs-dialog": "^0.8.0",
-    "winston": "^2.4.4"
+    "winston": "^3.1.0"
   },
   "babel": {
     "presets": [
