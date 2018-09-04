@@ -82,9 +82,9 @@
   "devDependencies": {
     "babel-eslint": "^8.2.6",
     "babili-webpack-plugin": "0.1.1",
+    "eslint": "^5.0.1",
     "backpack-core": "^0.7.0",
     "coveralls": "^3.0.2",
-    "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-html": "^4.0.5",
