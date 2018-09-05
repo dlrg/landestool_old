@@ -261,7 +261,7 @@
   moment.locale('de')
 
   export default {
-    components: {NuxtLink},
+    components: { NuxtLink },
     filters: { dateFormatter },
     data () {
       return {
