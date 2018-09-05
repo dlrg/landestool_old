@@ -450,8 +450,8 @@
         this.notValid = false
       }
     },
-    async asyncData ({params}) {
-      return { program: {...programMask} }
+    async asyncData ({ params }) {
+      return { program: { ...programMask } }
     }
   }
   const programMask = {

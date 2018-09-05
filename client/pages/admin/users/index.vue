@@ -53,8 +53,10 @@
 
 <script>
   import { mapGetters } from 'vuex'
+  import NuxtLink from '@/../.nuxt/components/nuxt-link'
   
   export default {
+    components: { NuxtLink },
     computed: {
       ...mapGetters({
         users: 'user/list'
