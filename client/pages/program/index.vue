@@ -50,7 +50,7 @@
   import dateFormatter from '@/filters/date-formatter'
 
   export default {
-    components: {NuxtLink},
+    components: { NuxtLink },
     filters: { dateFormatter },
     computed: {
       ...mapGetters({

@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "backpack dev",
     "build": "nuxt build && backpack build",
+    "nuxt:build": "nuxt build --fix",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --config .eslintrc.js .",
     "lint:fix": "eslint server/. server/test/. --config .eslintrc.js --fix",
     "start": "node build/main.js",
@@ -82,10 +83,10 @@
   "devDependencies": {
     "babel-eslint": "^9.0.0",
     "babili-webpack-plugin": "0.1.1",
+    "eslint-config-standard": "^12.0.0",
     "eslint": "^5.0.1",
     "backpack-core": "^0.7.0",
     "coveralls": "^3.0.2",
-    "eslint-config-standard": "^11.0.0",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-promise": "^4.0.0",
     "eslint-loader": "^2.1.0",
