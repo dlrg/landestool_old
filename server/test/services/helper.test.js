@@ -1,5 +1,5 @@
 const assert = require('assert')
-const app = require('../../server/app')
+const app = require('../../app')
 
 describe('\'helper\' service', () => {
   it('registered the service', () => {
