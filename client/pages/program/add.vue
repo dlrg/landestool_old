@@ -316,8 +316,8 @@
         this.$router.push('/program/')
       }
     },
-    async asyncData ({params}) {
-      return { program: {...programMask} }
+    async asyncData ({ params }) {
+      return { program: { ...programMask } }
     }
   }
   const programMask = {

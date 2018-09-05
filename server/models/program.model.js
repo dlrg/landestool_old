@@ -18,12 +18,12 @@ module.exports = function (app) {
       comment: { type: String }
     },
     person: {
-      accountable: {type: String},
-      supervisor: {type: String},
-      subscribermin: {type: Number},
-      subscribermax: {type: Number},
-      agemin: {type: Number},
-      agemax: {type: Number}
+      accountable: { type: String },
+      supervisor: { type: String },
+      subscribermin: { type: Number },
+      subscribermax: { type: Number },
+      agemin: { type: Number },
+      agemax: { type: Number }
     },
     location: {
       local: { type: Boolean, default: true },

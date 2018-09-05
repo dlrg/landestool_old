@@ -54,7 +54,7 @@
   import NuxtLink from '@/../.nuxt/components/nuxt-link'
   
   export default {
-    components: {NuxtLink},
+    components: { NuxtLink },
     computed: {
       ...mapGetters({
         users: 'user/list'

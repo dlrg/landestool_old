@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "backpack dev",
     "build": "nuxt build && backpack build",
+    "nuxt:build": "nuxt build --fix",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --config .eslintrc.js .",
     "lint:fix": "eslint server/. server/test/. --config .eslintrc.js --fix",
     "start": "node build/main.js",
