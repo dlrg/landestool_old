@@ -10,13 +10,13 @@ module.exports = function (app) {
     status: { type: String, default: 'planing' },
     category: { type: String },
     privacy: { type: String },
-    dates: {
-      start: { type: Date },
-      end: { type: Date },
+    dates: [{
+      day: { type: Date },
+      start: { type: String },
+      end: { type: String },
       deadline: { type: Date },
-      duration: { type: Number },
       comment: { type: String }
-    },
+    }],
     person: {
       accountable: { type: String },
       supervisor: { type: String },

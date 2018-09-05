@@ -26,6 +26,14 @@ module.exports = function (app) {
       sunday: { type: Boolean, required: false }
     },
 
+    shirt: {
+      style: { type: String, required: false },
+      count: { type: Number, required: false },
+      color: { type: String, required: false },
+      sex: { type: String, required: false },
+      size: { type: String, required: false }
+    },
+
     address: {
       street: { type: String, required: true },
       zip: { type: String, required: true },
@@ -51,11 +59,9 @@ module.exports = function (app) {
       start: { type: String, required: false },
       end: { type: String, required: false }
     }],
-
-    role: {
-      type: String,
-      enum: ['admin', 'user', 'leader']
-    }
+    role: [{
+      name: { type: String, required: false }
+    }]
   }, {
     timestamps: true
   })

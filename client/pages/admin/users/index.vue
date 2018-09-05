@@ -28,6 +28,7 @@
                                     <th>Ort/Stadt</th>
                                     <th></th>
                                     <th></th>
+                                    <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -36,6 +37,7 @@
                                         <td>{{ item.lastname }}</td>
                                         <td>{{ item.email }}</td>
                                         <td>{{ item.address.city }}</td>
+                                        <td></td>
                                         <td><router-link :to="'users/' + item._id + '/timetable'"><i class="ca ca-clock-2"></i></router-link></td>
                                         <td><button class="btn btn-sm btn-danger float-right" @click.stop="remove(item._id)">Löschen</button></td>
                                     </nuxt-link>
