@@ -55,7 +55,7 @@
     "helmet": "^3.13.0",
     "js-cookie": "^2.2.0",
     "moment": "^2.22.2",
-    "mongoose": "^5.2.13",
+    "mongoose": "^5.4.16",
     "nedb": "^1.8.0",
     "vue-bootstrap-datetimepicker": "^5.0.0",
     "nuxt": "^1.4.2",
