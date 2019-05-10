@@ -95,7 +95,7 @@
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-html": "^4.0.5",
     "eslint-plugin-import": "^2.14.0",
-    "nyc": "^12.0.1",
+    "nyc": "^14.1.1",
     "mocha": "^5.2.0",
     "node-sass": "^4.9.3",
     "opencollective": "^1.0.3",
