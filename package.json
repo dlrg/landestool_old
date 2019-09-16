@@ -26,7 +26,7 @@
   "dependencies": {
     "@feathersjs/configuration": "^2.0.2",
     "@feathersjs/authentication": "^2.1.9",
-    "@feathersjs/authentication-client": "^1.0.4",
+    "@feathersjs/authentication-client": "^4.3.2",
     "@feathersjs/authentication-jwt": "^2.0.3",
     "@feathersjs/authentication-local": "^1.2.3",
     "@feathersjs/client": "^3.6.0",
