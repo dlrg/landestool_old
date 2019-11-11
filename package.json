@@ -24,7 +24,7 @@
     "styleguide:build": "vue-styleguidist build"
   },
   "dependencies": {
-    "@feathersjs/configuration": "^2.0.2",
+    "@feathersjs/configuration": "^4.3.11",
     "@feathersjs/authentication": "^2.1.9",
     "@feathersjs/authentication-client": "^1.0.4",
     "@feathersjs/authentication-jwt": "^2.0.3",
