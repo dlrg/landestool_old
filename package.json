@@ -33,7 +33,7 @@
     "@feathersjs/errors": "^3.3.2",
     "@feathersjs/express": "^1.2.5",
     "@feathersjs/feathers": "^3.2.1",
-    "@feathersjs/socketio": "^3.2.4",
+    "@feathersjs/socketio": "^4.5.1",
     "@feathersjs/socketio-client": "^1.1.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
