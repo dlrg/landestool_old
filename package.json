@@ -50,7 +50,7 @@
     "feathers-hooks-common": "^4.17.3",
     "feathers-mongoose": "^6.1.4",
     "feathers-nedb": "^3.1.0",
-    "feathers-vuex": "^1.4.8",
+    "feathers-vuex": "^3.6.1",
     "fs-blob-store": "^5.2.1",
     "helmet": "^3.13.0",
     "js-cookie": "^2.2.0",
